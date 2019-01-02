@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Extensions on HugoModo</title>
-    <link>http://example.org/extensions/</link>
+    <link>https://hugomodo.github.io/extensions/</link>
     <description>Recent content in Extensions on HugoModo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Dec 2018 20:08:37 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/extensions/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hugomodo.github.io/extensions/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Shortcode Partials</title>
-      <link>http://example.org/extensions/shortcode-partials/</link>
+      <link>https://hugomodo.github.io/extensions/shortcode-partials/</link>
       <pubDate>Mon, 31 Dec 2018 20:08:37 +0000</pubDate>
       
-      <guid>http://example.org/extensions/shortcode-partials/</guid>
+      <guid>https://hugomodo.github.io/extensions/shortcode-partials/</guid>
       <description>What&amp;rsquo;s the issue? HugoModo strives for third-party compatibility. The baseline for this is currently Forestry CMS. When asking the question, &amp;ldquo;does it work with Forestry CMS?&amp;rdquo; of the Image Processing extension, the answer was not yes - it was mostly.
 The problem is, Forestry is unaware of shortcodes. These could be hand-typed by a developer easily, but when it comes to non-technical authors adding images to content, they probably aren&amp;rsquo;t going to do that.</description>
     </item>
     
     <item>
       <title>Image Processing</title>
-      <link>http://example.org/extensions/image-processing/</link>
+      <link>https://hugomodo.github.io/extensions/image-processing/</link>
       <pubDate>Sun, 30 Dec 2018 16:54:08 +0000</pubDate>
       
-      <guid>http://example.org/extensions/image-processing/</guid>
+      <guid>https://hugomodo.github.io/extensions/image-processing/</guid>
       <description>Description Features  Provides imgproc and figproc shortcodes for image processing in your content files. Uses srcset to load responsive image sizes on different screen resolutions. Can be configured to use Page Bundles, a headless Resources bundle, or both!  Todo  Equivalents for theme layouts are provided: image-processing/imgproc.html and image-processing/figproc.html.  These already exist. Modification required so that context can be passed.  Option to override existing figure shortcode.</description>
     </item>
     

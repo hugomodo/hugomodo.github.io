@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Themes on HugoModo</title>
-    <link>http://example.org/themes/</link>
+    <link>https://hugomodo.github.io/themes/</link>
     <description>Recent content in Themes on HugoModo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 29 Dec 2018 14:39:14 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/themes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hugomodo.github.io/themes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Best Motherfucking Website</title>
-      <link>http://example.org/themes/best-motherfucking-website/</link>
+      <link>https://hugomodo.github.io/themes/best-motherfucking-website/</link>
       <pubDate>Sat, 29 Dec 2018 14:39:14 +0000</pubDate>
       
-      <guid>http://example.org/themes/best-motherfucking-website/</guid>
+      <guid>https://hugomodo.github.io/themes/best-motherfucking-website/</guid>
       <description>Based on The Best Motherfucking Website, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.</description>
     </item>
     
     <item>
       <title>Hugomodo</title>
-      <link>http://example.org/themes/hugomodo/</link>
+      <link>https://hugomodo.github.io/themes/hugomodo/</link>
       <pubDate>Sat, 29 Dec 2018 14:38:59 +0000</pubDate>
       
-      <guid>http://example.org/themes/hugomodo/</guid>
+      <guid>https://hugomodo.github.io/themes/hugomodo/</guid>
       <description>The base theme for HugoModo&amp;rsquo;s modular approach to Hugo website design. It provides the asset precompilation pipeline and bundler data files, clean and semantic HTML, and well-organised partials for ease of developing child themes.
 It provides minimal styling, so is best used as the base for a child theme. HugoModo themes which depend on it will include this theme automatically.</description>
     </item>
