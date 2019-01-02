@@ -69,7 +69,7 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
 
 <meta itemprop="datePublished" content="2019-01-02T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="124">
+<meta itemprop="wordCount" content="301">
 
 
 
@@ -222,7 +222,7 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
     
   <section>
     <dt>Reading time</dt>
-    <dd><time datetime="1m">1 minutes</time></dd>
+    <dd><time datetime="2m">2 minutes</time></dd>
   </section>
 
 
@@ -294,6 +294,30 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
 <p>I will revisit this and document the approach for project-based sites at another time, but <a href="https://forestry.io/docs/hosting/github-pages/">Forestry have a great guide</a> themselves should you need it.</p>
 
 <p>For the time being, where it comes to HugoModo, I&rsquo;m going to see if deployment via a CI service such as TravisCI is feasible.</p>
+
+<p>And do you know what, it is. There are a lot of blog posts on others online with setups that vary in complexity. None are as simple as this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># Clean and don&#39;t fail</span>
+install:
+  - rm -rf public |<span style="color:#e6db74">| exit 0</span>
+
+<span style="color:#75715e"># Build the website</span>
+script:
+  - bin/hugo
+
+deploy:
+  provider: pages
+  skip-cleanup: <span style="color:#66d9ef">true</span>
+  github-token: $GITHUB_TOKEN  <span style="color:#75715e"># Set in the settings page of your repository, as a secure variable</span>
+  keep-history: <span style="color:#66d9ef">true</span>
+  local-dir: public
+  repo: hugomodo/hugomodo.github.io
+  allow-empty-commit: <span style="color:#66d9ef">true</span>
+  target-branch: master
+  on:
+    branch: master</code></pre></div>
+<p>This is mostly TravisCI&rsquo;s own suggested configuration for publishing to GitHub Pages, with the exception of adding the <code>local-dir</code>, <code>repo</code>, <code>allow-empty-commit</code> and <code>target-branch</code> options. These tell Travis to publish the contents of <code>public</code> to our separate GitHub Pages repo at <code>hugomodo/hugomodo.github.io</code> and to push those contents to the <code>master</code> branch. <code>allow-empty-commit: true</code> is added in case of build failure, so that the site can be rebuilt without changes.</p>
+
+<p>The only other required setup is to add a GitHub token to the repo config in TravisCI, and provide Hugo as a binary in the <code>bin</code> folder.</p>
 
   
 </section>
