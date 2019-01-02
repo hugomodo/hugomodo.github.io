@@ -6,10 +6,22 @@
     <description>Recent content in Docs on HugoModo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Dec 2018 12:58:37 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://hugomodo.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Build with Forestry</title>
+      <link>https://hugomodo.github.io/docs/build-with-forestry/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/docs/build-with-forestry/</guid>
+      <description>Forestry has some configuration settings that will allow automatic builds whenever content is updated via their dashboard.
+I&amp;rsquo;ve just set this up and am publishing this post to check it out.
+As Forestry remains our benchmark for compatibility, it will always be important that builds are successful from this source.
+Unfortunately, it appears that Forestry can only handle project-based GitHub Pages, rather than user or organisation ones - which is what we want for HugoModo.</description>
+    </item>
     
     <item>
       <title>Shortcodes</title>
