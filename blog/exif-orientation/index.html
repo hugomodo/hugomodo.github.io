@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html><head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+  
+    Exif Orientation | HugoModo - A modular Hugo framework.
+  
+</title>
+
+
+  
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+  
+
+  
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.min.81fa46381dde6c29a3ec21dac777459df8de872747cd15687759aef0bff304e8.css" integrity="sha256-gfpGOB3ebCmj7CHax3dFnfjehydHzRVod1mu8L/zBOg=">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+<meta itemprop="name" content="Exif Orientation">
+<meta itemprop="description" content="When you take with your camera or phone, you can do so holding the device at any of four orientations. When using my iPhone for instance, I can take a photo vertically holding my phone with the home button at the bottom, I can take a photo with the home button oriented to the left or the right, I could even take a photo with the home button at the top - my phone upside down.">
+
+
+<meta itemprop="datePublished" content="2019-01-02T13:05:15&#43;00:00" />
+<meta itemprop="dateModified" content="2019-01-02T13:05:15&#43;00:00" />
+<meta itemprop="wordCount" content="473">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+  <meta property="og:title" content="Exif Orientation" />
+<meta property="og:description" content="When you take with your camera or phone, you can do so holding the device at any of four orientations. When using my iPhone for instance, I can take a photo vertically holding my phone with the home button at the bottom, I can take a photo with the home button oriented to the left or the right, I could even take a photo with the home button at the top - my phone upside down." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugomodo.github.io/blog/exif-orientation/" /><meta property="article:published_time" content="2019-01-02T13:05:15&#43;00:00"/>
+<meta property="article:modified_time" content="2019-01-02T13:05:15&#43;00:00"/>
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Exif Orientation"/>
+<meta name="twitter:description" content="When you take with your camera or phone, you can do so holding the device at any of four orientations. When using my iPhone for instance, I can take a photo vertically holding my phone with the home button at the bottom, I can take a photo with the home button oriented to the left or the right, I could even take a photo with the home button at the top - my phone upside down."/>
+
+
+  
+
+
+  
+  
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+
+
+  
+
+
+
+
+  
+  
+
+</head>
+<body><header>
+  <h1>
+    <a title="HugoModo" href="/">HugoModo</a>
+  </h1>
+  <nav>
+  <ul>
+    
+    
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/blog/" title="Blog">Blog</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/docs/" title="Docs">Docs</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/extensions/" title="Extensions">Extensions</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/themes/" title="Themes">Themes</a>
+        </li>
+      
+    
+  </ul>
+</nav>
+
+</header>
+
+  <main>
+    <header>
+      <nav>
+  <ul class="breadcrumbs">
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/">A modular framework for Hugo</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/blog/">Blog</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="active">
+    
+      
+        Exif Orientation
+      
+    
+  </li>
+
+  </ul>
+</nav>
+
+
+
+    </header>
+    <article>
+      <header>
+  <h1>Exif Orientation</h1>
+  
+</header>
+
+      <aside>
+  <dl>
+    <section>
+  <dt>Published</dt>
+  <dd><time datetime="2019-01-02 13:05:15 &#43;0000 GMT">02 Jan 2019</time></dd>
+</section>
+
+
+    
+
+    
+  <section>
+    <dt>Reading time</dt>
+    <dd><time datetime="3m">3 minutes</time></dd>
+  </section>
+
+
+
+    
+
+
+
+   
+  
+  
+
+   
+  
+  
+
+
+  </dl>
+</aside>
+
+      <section>
+  
+    
+      
+    
+      
+    
+
+    
+
+    
+
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    <p>When you take with your camera or phone, you can do so holding the device at any of four orientations. When using my iPhone for instance, I can take a photo vertically holding my phone with the home button at the bottom, I can take a photo with the home button oriented to the left or the right, I could even take a photo with the home button at the top - my phone upside down.</p>
+
+<p>When one takes a snap on a modern device, the device itself will factor in orientation and store a little snippet of information along with the image in what&rsquo;s called Exif metadata. So when I&rsquo;m flicking through the gallery on my phone, I tend to see my images oriented correctly. When I transfer them to my computer, the same is true when I&rsquo;m looking at them in the file system. Both devices know that despite the orientation of my phone at the time of taking the picture, I want to see the image as it was taken in reality. This is the most common expected user experience, and our devices are very good at intuiting how we&rsquo;d like to see these images.</p>
+
+<p>That said, here&rsquo;s a photo of a duck:</p>
+
+<p><img
+    srcset="
+      /uploads/duck_hugo_dev_hu1325575255883127947b5ed257fcfaa5_3927757_320x0_resize_q75_box.JPG 320w,
+      /uploads/duck_hugo_dev_hu1325575255883127947b5ed257fcfaa5_3927757_640x0_resize_q75_box.JPG 640w,
+      /uploads/duck_hugo_dev_hu1325575255883127947b5ed257fcfaa5_3927757_768x0_resize_q75_box.JPG 768w,
+      /uploads/duck_hugo_dev_hu1325575255883127947b5ed257fcfaa5_3927757_1024x0_resize_q75_box.JPG 1024w,
+      /uploads/duck_hugo_dev_hu1325575255883127947b5ed257fcfaa5_3927757_1366x0_resize_q75_box.JPG 1366w,
+      /uploads/duck_hugo_dev_hu1325575255883127947b5ed257fcfaa5_3927757_1600x0_resize_q75_box.JPG 1600w,
+      /uploads/duck_hugo_dev_hu1325575255883127947b5ed257fcfaa5_3927757_1920x0_resize_q75_box.JPG 1920w"
+    src="/uploads/duck_hugo_dev_hu1325575255883127947b5ed257fcfaa5_3927757_1600x0_resize_q75_box.JPG"/></p>
+
+<p>My phone and laptop know to show me this image the right way up, but Hugo doesn&rsquo;t (<a href="https://github.com/gohugoio/hugo/issues/4600">yet</a>).</p>
+
+<p>The above photo was added directly to my site offline via a text editor. A simple copy and paste from one folder to another. No magic is happening, because there&rsquo;s no room for it to.</p>
+
+<p>Next, we&rsquo;ll try adding the same image via Forestry (HugoModo&rsquo;s benchmark for compatibility):</p>
+
+<p><img
+    srcset="
+      /uploads/IMG_0760_hu1325575255883127947b5ed257fcfaa5_3927757_320x0_resize_q75_box.JPG 320w,
+      /uploads/IMG_0760_hu1325575255883127947b5ed257fcfaa5_3927757_640x0_resize_q75_box.JPG 640w,
+      /uploads/IMG_0760_hu1325575255883127947b5ed257fcfaa5_3927757_768x0_resize_q75_box.JPG 768w,
+      /uploads/IMG_0760_hu1325575255883127947b5ed257fcfaa5_3927757_1024x0_resize_q75_box.JPG 1024w,
+      /uploads/IMG_0760_hu1325575255883127947b5ed257fcfaa5_3927757_1366x0_resize_q75_box.JPG 1366w,
+      /uploads/IMG_0760_hu1325575255883127947b5ed257fcfaa5_3927757_1600x0_resize_q75_box.JPG 1600w,
+      /uploads/IMG_0760_hu1325575255883127947b5ed257fcfaa5_3927757_1920x0_resize_q75_box.JPG 1920w"
+    src="/uploads/IMG_0760_hu1325575255883127947b5ed257fcfaa5_3927757_1600x0_resize_q75_box.JPG"/></p>
+
+<p>The same image again, still displayed with incorrect orientation by default. And it looks as though Forestry currently lacks native image editing or processing capabilities (although it sounds like they have it in the works, as well).</p>
+
+<h2 id="we-have-some-options">We have some options&hellip;</h2>
+
+<p>Hugo&rsquo;s image processing functionality does already provide the possibility to rotate images, but this must currently be done manually and per image - as noted above, it seems Hugo yet lacks awareness of Exif info. This could be a cumbersome undertaking for an end user with a photo gallery on their site, particularly if they have no development experience.</p>
+
+<p>Hugo is set to gain that information, with a working implementation already. But it looks like we&rsquo;re waiting on an upstream bugfix before it finds its way into a release.</p>
+
+<p>So I will revisit this at that time.</p>
+
+<p>Fortunately, for now, there is another way. Forestry have a partnership with the actually phenomenal image storage service, <a href="https://cloudinary.com/">Cloudinary</a> who I believe handle this issue by default.</p>
+
+<p>One final test. Here&rsquo;s that duck again:</p>
+
+<p><img src="https://res.cloudinary.com/thombruce/image/upload/v1546437589/IMG_0760.jpg" alt="" /></p>
+
+<p>Oops. The orientation of our duck here was corrected in both Forestry and Cloudinary&rsquo;s media dashboards, but is still showing sideways in our content.</p>
+
+<p>Will look further into this.</p>
+
+  
+</section>
+
+    </article>
+    <footer>
+      
+
+    </footer>
+  </main>
+<footer>
+  
+    <section><h3>About HugoModo</h3>
+<p>A modular Hugo framework.</p>
+</section>
+  
+
+  <section><h3>Sitemap</h3>
+<nav>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+      <li>
+        <a href="/blog/" title="Blog">Blog</a>
+      </li>
+    
+      <li>
+        <a href="/docs/" title="Docs">Docs</a>
+      </li>
+    
+      <li>
+        <a href="/extensions/" title="Extensions">Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/themes/" title="Themes">Themes</a>
+      </li>
+    
+    
+    
+      
+    
+      
+    
+    <li>
+      <a title="Subscribe" aria-label="Subscribe" href="/index.xml">
+        RSS Feed
+      </a>
+    </li>
+  </ul>
+</nav>
+</section>
+
+  <section>
+    <p>
+  &copy; 2019 HugoModo.
+  Built with <a href='https://hugomodo.thombruce.com' target='_blank'>HugoModo</a>.
+</p>
+
+  </section>
+</footer>
+<div id="contrast">
+  Add more contrast
+</div>
+
+<div id="invmode">
+  Inverted mode
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+
+  
+    
+    <script src="https://hugomodo.github.io/js/global.min.3061d517a5807a3c616f65e087f91e0cd4afdbcacaa1b212770bff60d5bdc9e5.js" integrity="sha256-MGHVF6WAejxhb2Xgh/keDNSv28rKobISdwv/YNW9yeU="></script>
+  
+
+
+
+
+</body>
+</html>

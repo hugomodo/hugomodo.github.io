@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Exif Orientation</title>
+      <link>https://hugomodo.github.io/blog/exif-orientation/</link>
+      <pubDate>Wed, 02 Jan 2019 13:05:15 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/exif-orientation/</guid>
+      <description>When you take with your camera or phone, you can do so holding the device at any of four orientations. When using my iPhone for instance, I can take a photo vertically holding my phone with the home button at the bottom, I can take a photo with the home button oriented to the left or the right, I could even take a photo with the home button at the top - my phone upside down.</description>
+    </item>
+    
+    <item>
       <title>The Trouble With Chroma, Hugo&#39;s Syntax Highlighting Library</title>
       <link>https://hugomodo.github.io/blog/the-trouble-with-chroma/</link>
       <pubDate>Mon, 31 Dec 2018 22:57:07 +0000</pubDate>
