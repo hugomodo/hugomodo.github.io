@@ -284,9 +284,9 @@ Of course, HugoModo deliberately does a lot differently, emphasising the princip
 <p>I just don&rsquo;t yet know what to do about Chroma.</p>
 
 <p>Chroma is Hugo&rsquo;s in-built syntax highlighter, for rendering beautiful code samples like this one:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-hugo" data-lang="hugo">{{ if .IsPage }}
-  {{ .Content }}
-{{ end }}</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">.IsPage</span> <span style="color:#75715e">}}</span>
+  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Content</span> <span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span></code></pre></div>
 <p>At the time of writing, this code sample is being interpreted by Chroma and displayed with inline style declarations.</p>
 
 <p>Chroma has a couple of different flavours though. The default is these inline styles, but Hugo also provides a configuration option and CSS generator to serve Chroma syntax highlighting with classes used and styles served from a separate stylesheet.</p>
