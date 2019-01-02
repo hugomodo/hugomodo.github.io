@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html><head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+  
+    The Trouble With Chroma, Hugo&#39;s Syntax Highlighting Library | HugoModo - A modular Hugo framework.
+  
+</title>
+
+
+  
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+  
+
+  
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.min.81fa46381dde6c29a3ec21dac777459df8de872747cd15687759aef0bff304e8.css" integrity="sha256-gfpGOB3ebCmj7CHax3dFnfjehydHzRVod1mu8L/zBOg=">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+<meta itemprop="name" content="The Trouble With Chroma, Hugo&#39;s Syntax Highlighting Library">
+<meta itemprop="description" content="One of the core principles of HugoModo is to stick to the Hugo way of doing things where possible and sensible to do so. This reduces the likelihood of incompatibility, and should make for greater ease of use for anyone familiar with Hugo or working from the Hugo documentation.
+Of course, HugoModo deliberately does a lot differently, emphasising the principle of Convention over Configuration where Hugo otherwise emphasises speed. The aim is to achieve a comfortable middle-ground that remains blazing fast, but that also provides for greater ease of use and extension.">
+
+
+<meta itemprop="datePublished" content="2018-12-31T22:57:07&#43;00:00" />
+<meta itemprop="dateModified" content="2018-12-31T22:57:07&#43;00:00" />
+<meta itemprop="wordCount" content="303">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+  <meta property="og:title" content="The Trouble With Chroma, Hugo&#39;s Syntax Highlighting Library" />
+<meta property="og:description" content="One of the core principles of HugoModo is to stick to the Hugo way of doing things where possible and sensible to do so. This reduces the likelihood of incompatibility, and should make for greater ease of use for anyone familiar with Hugo or working from the Hugo documentation.
+Of course, HugoModo deliberately does a lot differently, emphasising the principle of Convention over Configuration where Hugo otherwise emphasises speed. The aim is to achieve a comfortable middle-ground that remains blazing fast, but that also provides for greater ease of use and extension." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/the-trouble-with-chroma/" /><meta property="article:published_time" content="2018-12-31T22:57:07&#43;00:00"/>
+<meta property="article:modified_time" content="2018-12-31T22:57:07&#43;00:00"/>
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Trouble With Chroma, Hugo&#39;s Syntax Highlighting Library"/>
+<meta name="twitter:description" content="One of the core principles of HugoModo is to stick to the Hugo way of doing things where possible and sensible to do so. This reduces the likelihood of incompatibility, and should make for greater ease of use for anyone familiar with Hugo or working from the Hugo documentation.
+Of course, HugoModo deliberately does a lot differently, emphasising the principle of Convention over Configuration where Hugo otherwise emphasises speed. The aim is to achieve a comfortable middle-ground that remains blazing fast, but that also provides for greater ease of use and extension."/>
+
+
+  
+
+
+  
+  
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+
+
+  
+
+
+
+
+  
+  
+
+</head>
+<body><header>
+  <h1>
+    <a title="HugoModo" href="/">HugoModo</a>
+  </h1>
+  <nav>
+  <ul>
+    
+    
+    
+      
+        <li>
+          <a href="http://example.org/blog/" title="Blog">Blog</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="http://example.org/docs/" title="Docs">Docs</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="http://example.org/extensions/" title="Extensions">Extensions</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="http://example.org/themes/" title="Themes">Themes</a>
+        </li>
+      
+    
+  </ul>
+</nav>
+
+</header>
+
+  <main>
+    <header>
+      <nav>
+  <ul class="breadcrumbs">
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="http://example.org/">HugoModo</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="http://example.org/blog/">Blog</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="active">
+    
+      
+        The Trouble With Chroma, Hugo&#39;s Syntax Highlighting Library
+      
+    
+  </li>
+
+  </ul>
+</nav>
+
+
+
+    </header>
+    <article>
+      <header>
+  <h1>The Trouble With Chroma, Hugo&#39;s Syntax Highlighting Library</h1>
+  
+</header>
+
+      <aside>
+  <dl>
+    <section>
+  <dt>Published</dt>
+  <dd><time datetime="2018-12-31 22:57:07 &#43;0000 UTC">31 Dec 2018</time></dd>
+</section>
+
+
+    
+
+    
+  <section>
+    <dt>Reading time</dt>
+    <dd><time datetime="2m">2 minutes</time></dd>
+  </section>
+
+
+
+    
+
+
+
+   
+  
+  
+
+   
+  
+  
+
+
+  </dl>
+</aside>
+
+      <section>
+  
+    
+      
+    
+      
+    
+
+    
+
+    
+
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    <p>One of the core principles of HugoModo is to stick to the Hugo way of doing things where possible and sensible to do so. This reduces the likelihood of incompatibility, and should make for greater ease of use for anyone familiar with Hugo or working from the Hugo documentation.</p>
+
+<p>Of course, HugoModo deliberately does a lot differently, emphasising the principle of <em>Convention over Configuration</em> where Hugo otherwise emphasises speed. The aim is to achieve a comfortable middle-ground that remains blazing fast, but that also provides for greater ease of use and extension.</p>
+
+<p>I just don&rsquo;t yet know what to do about Chroma.</p>
+
+<p>Chroma is Hugo&rsquo;s in-built syntax highlighter, for rendering beautiful code samples like this one:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-hugo" data-lang="hugo">{{ if .IsPage }}
+  {{ .Content }}
+{{ end }}</code></pre></div>
+<p>At the time of writing, this code sample is being interpreted by Chroma and displayed with inline style declarations.</p>
+
+<p>Chroma has a couple of different flavours though. The default is these inline styles, but Hugo also provides a configuration option and CSS generator to serve Chroma syntax highlighting with classes used and styles served from a separate stylesheet.</p>
+
+<p>Thing is, neither of these approaches is really the HugoModo way.</p>
+
+<p>Another principle of HugoModo is HTML minimalism. By this I mean that the markup is intended to be clear of style declarations and class attributes. Unless strictly necessary, I believe that HTML should be free from both, with a CSS file doing the heavy lifting to style a page. If necessary later, an additional script should be invoked to inline above-the-fold styles, for instance. The point is separation of scope in development: HTML files should be strictly markup, CSS should have almost total authority when it comes to styling.</p>
+
+<p>HugoModo will continue to support Chroma for now. But I am beginning to wonder&hellip; is it the HugoModo way?</p>
+
+  
+</section>
+
+    </article>
+    <footer>
+      
+
+    </footer>
+  </main>
+<footer>
+  
+    <section><h3>About HugoModo</h3>
+<p>A modular Hugo framework.</p>
+</section>
+  
+
+  <section><h3>Sitemap</h3>
+<nav>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+      <li>
+        <a href="/blog/" title="Blog">Blog</a>
+      </li>
+    
+      <li>
+        <a href="/docs/" title="Docs">Docs</a>
+      </li>
+    
+      <li>
+        <a href="/extensions/" title="Extensions">Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/themes/" title="Themes">Themes</a>
+      </li>
+    
+    
+    
+      
+    
+      
+    
+    <li>
+      <a title="Subscribe" aria-label="Subscribe" href="/index.xml">
+        RSS Feed
+      </a>
+    </li>
+  </ul>
+</nav>
+</section>
+
+  <section>
+    <p>
+  &copy; 2019 HugoModo.
+  Built with <a href='https://hugomodo.thombruce.com' target='_blank'>HugoModo</a>.
+</p>
+
+  </section>
+</footer>
+<div id="contrast">
+  Add more contrast
+</div>
+
+<div id="invmode">
+  Inverted mode
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+
+  
+    
+    <script src="http://example.org/js/global.min.3061d517a5807a3c616f65e087f91e0cd4afdbcacaa1b212770bff60d5bdc9e5.js" integrity="sha256-MGHVF6WAejxhb2Xgh/keDNSv28rKobISdwv/YNW9yeU="></script>
+  
+
+
+
+
+</body>
+</html>

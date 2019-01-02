@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html><head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+  
+    Hugo Goes Modular | HugoModo - A modular Hugo framework.
+  
+</title>
+
+
+  
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+  
+
+  
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.min.81fa46381dde6c29a3ec21dac777459df8de872747cd15687759aef0bff304e8.css" integrity="sha256-gfpGOB3ebCmj7CHax3dFnfjehydHzRVod1mu8L/zBOg=">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+<meta itemprop="name" content="Hugo Goes Modular">
+<meta itemprop="description" content="A Better Base HugoModo removes the main content div from Hugo&rsquo;s default base template, and adds a new partial called the &lsquo;foot&rsquo;. The aim is to follow certain best practices. We want to keep markup to a minimum, and where possible to only use HTML5&rsquo;s semantic elements (&lsquo;main&rsquo;, &lsquo;section&rsquo;, etc. rather than &lsquo;div&rsquo;). And the foot partial is provided mainly to load scripts after the main content, so as to provide for fast page rendering to visitors.">
+
+
+<meta itemprop="datePublished" content="2018-12-29T01:11:18&#43;00:00" />
+<meta itemprop="dateModified" content="2018-12-29T01:11:18&#43;00:00" />
+<meta itemprop="wordCount" content="483">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+  <meta property="og:title" content="Hugo Goes Modular" />
+<meta property="og:description" content="A Better Base HugoModo removes the main content div from Hugo&rsquo;s default base template, and adds a new partial called the &lsquo;foot&rsquo;. The aim is to follow certain best practices. We want to keep markup to a minimum, and where possible to only use HTML5&rsquo;s semantic elements (&lsquo;main&rsquo;, &lsquo;section&rsquo;, etc. rather than &lsquo;div&rsquo;). And the foot partial is provided mainly to load scripts after the main content, so as to provide for fast page rendering to visitors." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/hugo-goes-modular/" /><meta property="article:published_time" content="2018-12-29T01:11:18&#43;00:00"/>
+<meta property="article:modified_time" content="2018-12-29T01:11:18&#43;00:00"/>
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo Goes Modular"/>
+<meta name="twitter:description" content="A Better Base HugoModo removes the main content div from Hugo&rsquo;s default base template, and adds a new partial called the &lsquo;foot&rsquo;. The aim is to follow certain best practices. We want to keep markup to a minimum, and where possible to only use HTML5&rsquo;s semantic elements (&lsquo;main&rsquo;, &lsquo;section&rsquo;, etc. rather than &lsquo;div&rsquo;). And the foot partial is provided mainly to load scripts after the main content, so as to provide for fast page rendering to visitors."/>
+
+
+  
+
+
+  
+  
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+
+
+  
+
+
+
+
+  
+  
+
+</head>
+<body><header>
+  <h1>
+    <a title="HugoModo" href="/">HugoModo</a>
+  </h1>
+  <nav>
+  <ul>
+    
+    
+    
+      
+        <li>
+          <a href="http://example.org/blog/" title="Blog">Blog</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="http://example.org/docs/" title="Docs">Docs</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="http://example.org/extensions/" title="Extensions">Extensions</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="http://example.org/themes/" title="Themes">Themes</a>
+        </li>
+      
+    
+  </ul>
+</nav>
+
+</header>
+
+  <main>
+    <header>
+      <nav>
+  <ul class="breadcrumbs">
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="http://example.org/">HugoModo</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="http://example.org/blog/">Blog</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="active">
+    
+      
+        Hugo Goes Modular
+      
+    
+  </li>
+
+  </ul>
+</nav>
+
+
+
+    </header>
+    <article>
+      <header>
+  <h1>Hugo Goes Modular</h1>
+  
+</header>
+
+      <aside>
+  <dl>
+    <section>
+  <dt>Published</dt>
+  <dd><time datetime="2018-12-29 01:11:18 &#43;0000 UTC">29 Dec 2018</time></dd>
+</section>
+
+
+    
+
+    
+  <section>
+    <dt>Reading time</dt>
+    <dd><time datetime="3m">3 minutes</time></dd>
+  </section>
+
+
+
+    
+
+
+
+   
+  
+  
+
+   
+  
+  
+
+
+  </dl>
+</aside>
+
+      <section>
+  
+    
+      
+    
+      
+    
+
+    
+
+    
+
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    <h2 id="a-better-base">A Better Base</h2>
+
+<p>HugoModo removes the main content div from Hugo&rsquo;s default base template, and adds a new partial called the &lsquo;foot&rsquo;. The aim is to follow certain best practices. We want to keep markup to a minimum, and where possible to only use HTML5&rsquo;s semantic elements (&lsquo;main&rsquo;, &lsquo;section&rsquo;, etc. rather than &lsquo;div&rsquo;). And the foot partial is provided mainly to load scripts after the main content, so as to provide for fast page rendering to visitors.</p>
+
+<h3 id="the-hugo-way">The Hugo Way</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+    &lt;<span style="color:#f92672">body</span>&gt;
+        <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content&#34;</span>&gt;
+        <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">block</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<h3 id="the-hugomodo-way">The HugoModo Way</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+  &lt;<span style="color:#f92672">body</span>&gt;
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">block</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;foot.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<h2 id="theme-partial-organisation">Theme Partial Organisation</h2>
+
+<p>Hugo themes are easy to extend and make adjustments to by overwriting partials. Many themes however are comprised of partials that do an enormous amount. In order to change one small detail, the entire partial must be copied across. And if the base theme then receives an update, it can be a chore to find small changes in those files to upgrade your child theme or site.</p>
+
+<p>HugoModo aims to solve this problem by reducing partials to tightly scoped directories. Rather than having one &lsquo;head&rsquo; partial, HugoModo&rsquo;s &lsquo;head&rsquo; calls on many child partials in <code>partials/head</code>. Any one can be overwritten without throwing the rest of the theme out of sync with the upstream, meaning easier upgrades and lower maintenance over time.</p>
+
+<h2 id="list-pages">List Pages</h2>
+
+<p>Because Hugo builds sites that reflect the directory structure of its content files precisely, it is easy to create deeply nested pages.</p>
+
+<p>There is no list page behaviour by default, but the standard practise is to just list <code>.RegularPages</code> for each section. However, this is a poor reflection of Hugo&rsquo;s fuller capabilities which allows for sections inside of sections, and deeply nested collections of pages.</p>
+
+<p>HugoModo includes a default list template that combines and sorts a section&rsquo;s child sections and pages, listing and paginating them together.</p>
+
+<h2 id="superior-asset-bundling">Superior Asset Bundling</h2>
+
+<p>Hugo hasn&rsquo;t always had great support for CSS and JavaScript assets. It still doesn&rsquo;t have the greatest, but it&rsquo;s moving in the right direction.</p>
+
+<p>HugoModo gives Hugo a gentle nudge slightly further. It uses Hugo&rsquo;s support for data files to provide a single location where JavaScript and SASS resources may be listed. The included js and scss resource partials read these resource lists, concatenate and minify the named files.</p>
+
+<p>It&rsquo;s a lot like Ruby&rsquo;s Bundler, or NPM. Basically a pseudo package manager for Hugo. It&rsquo;s awesome!</p>
+
+<p>And this is where HugoModo gets truly modular. Regardless of how many child themes or extensions you invoke in your site, the resource bundler collects all of the associated assets and bundles them for you.</p>
+
+  
+</section>
+
+    </article>
+    <footer>
+      
+
+    </footer>
+  </main>
+<footer>
+  
+    <section><h3>About HugoModo</h3>
+<p>A modular Hugo framework.</p>
+</section>
+  
+
+  <section><h3>Sitemap</h3>
+<nav>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+      <li>
+        <a href="/blog/" title="Blog">Blog</a>
+      </li>
+    
+      <li>
+        <a href="/docs/" title="Docs">Docs</a>
+      </li>
+    
+      <li>
+        <a href="/extensions/" title="Extensions">Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/themes/" title="Themes">Themes</a>
+      </li>
+    
+    
+    
+      
+    
+      
+    
+    <li>
+      <a title="Subscribe" aria-label="Subscribe" href="/index.xml">
+        RSS Feed
+      </a>
+    </li>
+  </ul>
+</nav>
+</section>
+
+  <section>
+    <p>
+  &copy; 2019 HugoModo.
+  Built with <a href='https://hugomodo.thombruce.com' target='_blank'>HugoModo</a>.
+</p>
+
+  </section>
+</footer>
+<div id="contrast">
+  Add more contrast
+</div>
+
+<div id="invmode">
+  Inverted mode
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+
+  
+    
+    <script src="http://example.org/js/global.min.3061d517a5807a3c616f65e087f91e0cd4afdbcacaa1b212770bff60d5bdc9e5.js" integrity="sha256-MGHVF6WAejxhb2Xgh/keDNSv28rKobISdwv/YNW9yeU="></script>
+  
+
+
+
+
+</body>
+</html>

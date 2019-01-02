@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html><head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+  
+    Image Processing - Adds Hugo&#39;s image processing to HugoModo for Page Bundles. | HugoModo
+  
+</title>
+
+
+  
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+  
+
+  
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.min.81fa46381dde6c29a3ec21dac777459df8de872747cd15687759aef0bff304e8.css" integrity="sha256-gfpGOB3ebCmj7CHax3dFnfjehydHzRVod1mu8L/zBOg=">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+<meta itemprop="name" content="Image Processing">
+<meta itemprop="description" content="Adds Hugo&#39;s image processing to HugoModo for Page Bundles.">
+
+
+<meta itemprop="datePublished" content="2018-12-30T16:54:08&#43;00:00" />
+<meta itemprop="dateModified" content="2018-12-30T16:54:08&#43;00:00" />
+<meta itemprop="wordCount" content="450">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+  <meta property="og:title" content="Image Processing" />
+<meta property="og:description" content="Adds Hugo&#39;s image processing to HugoModo for Page Bundles." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/extensions/image-processing/" /><meta property="article:published_time" content="2018-12-30T16:54:08&#43;00:00"/>
+<meta property="article:modified_time" content="2018-12-30T16:54:08&#43;00:00"/>
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Image Processing"/>
+<meta name="twitter:description" content="Adds Hugo&#39;s image processing to HugoModo for Page Bundles."/>
+
+
+  
+
+
+  
+  
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+
+
+  
+
+
+
+
+  
+  
+
+</head>
+<body><header>
+  <h1>
+    <a title="HugoModo" href="/">HugoModo</a>
+  </h1>
+  <nav>
+  <ul>
+    
+    
+    
+      
+        <li>
+          <a href="http://example.org/blog/" title="Blog">Blog</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="http://example.org/docs/" title="Docs">Docs</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="http://example.org/extensions/" title="Extensions">Extensions</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="http://example.org/themes/" title="Themes">Themes</a>
+        </li>
+      
+    
+  </ul>
+</nav>
+
+</header>
+
+  <main>
+    <header>
+      <nav>
+  <ul class="breadcrumbs">
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="http://example.org/">HugoModo</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="http://example.org/extensions/">Extensions</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="active">
+    
+      
+        Image Processing
+      
+    
+  </li>
+
+  </ul>
+</nav>
+
+
+
+    </header>
+    <article>
+      <header>
+  <h1>Image Processing</h1>
+  
+</header>
+
+      <aside>
+  <dl>
+    <section>
+  <dt>Published</dt>
+  <dd><time datetime="2018-12-30 16:54:08 &#43;0000 UTC">30 Dec 2018</time></dd>
+</section>
+
+
+    
+
+    
+  <section>
+    <dt>Reading time</dt>
+    <dd><time datetime="3m">3 minutes</time></dd>
+  </section>
+
+
+
+    
+
+
+
+   
+  
+  
+
+   
+  
+  
+
+
+  </dl>
+</aside>
+
+      <section>
+  
+    
+      
+    
+      
+    
+
+    
+
+    
+
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    <h2 id="description">Description</h2>
+
+<h3 id="features">Features</h3>
+
+<ul>
+<li>Provides <code>imgproc</code> and <code>figproc</code> shortcodes for image processing in your content files.</li>
+<li>Uses <code>srcset</code> to load responsive image sizes on different screen resolutions.</li>
+<li>Can be configured to use Page Bundles, a headless Resources bundle, or both!</li>
+</ul>
+
+<h4 id="todo">Todo</h4>
+
+<ol>
+<li>Equivalents for theme layouts are provided: <code>image-processing/imgproc.html</code> and <code>image-processing/figproc.html</code>.
+
+<ul>
+<li>These already exist. Modification required so that context can be passed.</li>
+</ul></li>
+<li>Option to override existing <code>figure</code> shortcode.</li>
+<li>Additional <code>imgcrop</code> shortcode using <code>.Fill</code> image processing function to crop images to given dimensions.</li>
+<li>Potentially an <code>imgfit</code> shortcode as well, using <code>.Fit</code>. Could be useful for masonry layouts.</li>
+<li>Support for featured and thumbnail images in page frontmatter and site config.</li>
+<li>Support for opengraph and other meta tag images to be resized appropriately.</li>
+<li>Support for <code>sizes</code> attribute alongside <code>srcset</code>; allow this to be altered in config.</li>
+<li>Consider having minSize and maxSize settings in config and per proc.
+
+<ul>
+<li>Allowing these to be set where used will help to reduce repo bloat.</li>
+</ul></li>
+<li>Add support for social and search graph image resizing.
+
+<ul>
+<li>opengraph</li>
+<li>schema</li>
+<li>twitter cards</li>
+<li>structured data</li>
+</ul></li>
+</ol>
+
+<h2 id="installation">Installation</h2>
+
+<p>From your Hugo site&rsquo;s root directory:</p>
+
+<p><em>Recommended</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add https://github.com/hugomodo/hugomodo-image-processing.git themes/hugomodo-image-processing</code></pre></div>
+<p>Or:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd themes
+git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre></div>
+<p>Then add <code>hugomodo-image-processing</code> to your site&rsquo;s themes in <code>config.toml</code>. Because it is considered an extension, it should be listed above any other HugoModo themes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">themes</span> = [
+  <span style="color:#e6db74">&#34;hugomodo-image-processing&#34;</span>,
+  ...
+]</code></pre></div>
+<h2 id="configuration">Configuration</h2>
+
+<p>HugoModo Image Processing can be configured one of two ways. The default is to use Hugo&rsquo;s Page Bundles, but an alternative approach using an uploads directory that provides compatibility with third party Content Management Systems can be setup with minimal configuration.</p>
+
+<h3 id="page-bundles">Page Bundles</h3>
+
+<p>By default, HugoModo Image Processing uses Page Bundles as described by the Hugo docs: <a href="https://gohugo.io/content-management/organization/#page-bundles">Page Bundles</a></p>
+
+<p>No additional configuration is required to use HugoModo Image Processing this way.</p>
+
+<h3 id="uploads-directory">Uploads Directory</h3>
+
+<p>You can configure HugoModo Image Processing to use an uploads directory instead, for compatibility with some Content Management Systems such as Forestry who write up the idea behind the uploads directory here: <a href="https://forestry.io/blog/how-to-use-hugo-s-image-processing-with-forestry/">How To Use Hugo&rsquo;s Image Processing With Forestry</a></p>
+
+<p>The HugoModo implementation is a little bit different, but fully compatible with Forestry at the time of writing.</p>
+
+<p>To set it up add a file to your site at <code>data/imageProcessing/config.toml</code> with the following configuration:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">uploadsDir</span> = <span style="color:#e6db74">&#34;uploads&#34;</span></code></pre></div>
+<p>&hellip;and that&rsquo;s it! You can now add your images to a <code>content/uploads</code> directory and have HugoModo&rsquo;s image processing shortcodes will look for your resources there instead.</p>
+
+<h3 id="or-both">&hellip;or both!</h3>
+
+<p>It is also possible to mix the two approaches. If the <code>src</code> string passed to imgproc contains a directory structure, it will look for your images in the given directory:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span> <span style="color:#a6e22e">imgproc</span> <span style="color:#a6e22e">src</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;/uploads/jakob-owens-212555-unsplash.jpg&#34;</span> <span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<p><img
+    srcset="
+      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_320x0_resize_q75_box.jpg 320w,
+      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_640x0_resize_q75_box.jpg 640w,
+      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_768x0_resize_q75_box.jpg 768w,
+      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1024x0_resize_q75_box.jpg 1024w,
+      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1366x0_resize_q75_box.jpg 1366w,
+      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1600x0_resize_q75_box.jpg 1600w,
+      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1920x0_resize_q75_box.jpg 1920w"
+    src="/uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1600x0_resize_q75_box.jpg"/></p>
+
+<h2 id="shortcodes">Shortcodes</h2>
+
+<h3 id="imgproc">imgproc</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span> <span style="color:#a6e22e">imgproc</span> <span style="color:#a6e22e">src</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;fabian-grohs-423591-unsplash.jpg&#34;</span> <span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<p><img
+    srcset="
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_320x0_resize_q75_box.jpg 320w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_640x0_resize_q75_box.jpg 640w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_768x0_resize_q75_box.jpg 768w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1024x0_resize_q75_box.jpg 1024w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1366x0_resize_q75_box.jpg 1366w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg 1600w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1920x0_resize_q75_box.jpg 1920w"
+    src="/extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg"/></p>
+
+<h3 id="figproc">figproc</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span> <span style="color:#a6e22e">figproc</span> <span style="color:#a6e22e">src</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;fabian-grohs-423591-unsplash.jpg&#34;</span> <span style="color:#a6e22e">caption</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;Computer on a desk&#34;</span> <span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<figure>
+
+  
+
+
+
+
+
+
+
+
+
+  <img
+    srcset="
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_320x0_resize_q75_box.jpg 320w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_640x0_resize_q75_box.jpg 640w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_768x0_resize_q75_box.jpg 768w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1024x0_resize_q75_box.jpg 1024w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1366x0_resize_q75_box.jpg 1366w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg 1600w,
+      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1920x0_resize_q75_box.jpg 1920w"
+    src="/extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg"
+      alt="Computer on a desk"/>
+
+<figcaption>
+      <p>Computer on a desk</p>
+    </figcaption>
+</figure>
+
+  
+</section>
+
+    </article>
+    <footer>
+      
+
+    </footer>
+  </main>
+<footer>
+  
+    <section><h3>About HugoModo</h3>
+<p>A modular Hugo framework.</p>
+</section>
+  
+
+  <section><h3>Sitemap</h3>
+<nav>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+      <li>
+        <a href="/blog/" title="Blog">Blog</a>
+      </li>
+    
+      <li>
+        <a href="/docs/" title="Docs">Docs</a>
+      </li>
+    
+      <li>
+        <a href="/extensions/" title="Extensions">Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/themes/" title="Themes">Themes</a>
+      </li>
+    
+    
+    
+      
+    
+      
+    
+    <li>
+      <a title="Subscribe" aria-label="Subscribe" href="/index.xml">
+        RSS Feed
+      </a>
+    </li>
+  </ul>
+</nav>
+</section>
+
+  <section>
+    <p>
+  &copy; 2019 HugoModo.
+  Built with <a href='https://hugomodo.thombruce.com' target='_blank'>HugoModo</a>.
+</p>
+
+  </section>
+</footer>
+<div id="contrast">
+  Add more contrast
+</div>
+
+<div id="invmode">
+  Inverted mode
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+
+  
+    
+    <script src="http://example.org/js/global.min.3061d517a5807a3c616f65e087f91e0cd4afdbcacaa1b212770bff60d5bdc9e5.js" integrity="sha256-MGHVF6WAejxhb2Xgh/keDNSv28rKobISdwv/YNW9yeU="></script>
+  
+
+
+
+
+</body>
+</html>
