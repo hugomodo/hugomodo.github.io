@@ -66,7 +66,7 @@
 
 <meta itemprop="datePublished" content="2019-01-02T13:05:15&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-02T13:05:15&#43;00:00" />
-<meta itemprop="wordCount" content="473">
+<meta itemprop="wordCount" content="601">
 
 
 
@@ -326,7 +326,24 @@
 
 <p>Oops. The orientation of our duck here was corrected in both Forestry and Cloudinary&rsquo;s media dashboards, but is still showing sideways in our content.</p>
 
-<p>Will look further into this.</p>
+<p>So as a final correction, it looks like we still have to adjust that URL. Not ideal. But this is where Cloudinary shines.</p>
+
+<p>Cloudinary takes a parameter for the angle of an image like so:</p>
+
+<pre><code>https://res.cloudinary.com/example/a_90/image.jpg
+</code></pre>
+
+<p>The <code>a_90</code> tells Cloudinary we want that image rotated 90 degrees, and it will serve us just that.</p>
+
+<p>This isn&rsquo;t what we want in this case, as Cloudinary displays the image corrected by default, at least in the dashboard. So we add <code>a_0</code> instead, to tell Cloudinary we want this image served the right way up:</p>
+
+<p><img src="https://res.cloudinary.com/thombruce/image/upload/a_0/IMG_0760.jpg" alt="" /></p>
+
+<p>Hey presto!</p>
+
+<p>Is this ideal? No. It still took some work to get us to this point, where we&rsquo;d like to just upload our images and have 0 degrees be considered the default orientation.</p>
+
+<p>I will continue to look into this.</p>
 
   
 </section>
