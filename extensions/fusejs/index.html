@@ -9,7 +9,7 @@
 
   <title>
   
-    Best Motherfucking Website - A highly readable theme for HugoModo with minimal custom CSS and JavaScript. | HugoModo
+    Fusejs | HugoModo - A modular Hugo framework.
   
 </title>
 
@@ -62,29 +62,32 @@
   
   
   
-<meta itemprop="name" content="Best Motherfucking Website">
-<meta itemprop="description" content="A highly readable theme for HugoModo with minimal custom CSS and JavaScript.">
+<meta itemprop="name" content="Fusejs">
+<meta itemprop="description" content="Installation Follow the usual steps for installing a HugoModo extension, then:
+ Add a JSON output for home in your site config:  [outputs] home = [ &#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34; ]  Add a content file at content/search.md with frontmatter:  --- title: Search layout: search ---  That&rsquo;s it! Were you expecting extra steps? Load up your site and visit /search to see it working.  Roadmap  Searchbar partial for inclusion in templates.">
 
 
-<meta itemprop="datePublished" content="2018-12-29T14:39:14&#43;00:00" />
-<meta itemprop="dateModified" content="2018-12-29T14:39:14&#43;00:00" />
-<meta itemprop="wordCount" content="34">
+<meta itemprop="datePublished" content="2019-01-03T03:09:44&#43;00:00" />
+<meta itemprop="dateModified" content="2019-01-03T03:09:44&#43;00:00" />
+<meta itemprop="wordCount" content="68">
 
 
 
 <meta itemprop="keywords" content="" />
 
 
-  <meta property="og:title" content="Best Motherfucking Website" />
-<meta property="og:description" content="A highly readable theme for HugoModo with minimal custom CSS and JavaScript." />
+  <meta property="og:title" content="Fusejs" />
+<meta property="og:description" content="Installation Follow the usual steps for installing a HugoModo extension, then:
+ Add a JSON output for home in your site config:  [outputs] home = [ &#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34; ]  Add a content file at content/search.md with frontmatter:  --- title: Search layout: search ---  That&rsquo;s it! Were you expecting extra steps? Load up your site and visit /search to see it working.  Roadmap  Searchbar partial for inclusion in templates." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hugomodo.github.io/themes/best-motherfucking-website/" /><meta property="article:published_time" content="2018-12-29T14:39:14&#43;00:00"/>
-<meta property="article:modified_time" content="2018-12-29T14:39:14&#43;00:00"/>
+<meta property="og:url" content="https://hugomodo.github.io/extensions/fusejs/" /><meta property="article:published_time" content="2019-01-03T03:09:44&#43;00:00"/>
+<meta property="article:modified_time" content="2019-01-03T03:09:44&#43;00:00"/>
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Best Motherfucking Website"/>
-<meta name="twitter:description" content="A highly readable theme for HugoModo with minimal custom CSS and JavaScript."/>
+<meta name="twitter:title" content="Fusejs"/>
+<meta name="twitter:description" content="Installation Follow the usual steps for installing a HugoModo extension, then:
+ Add a JSON output for home in your site config:  [outputs] home = [ &#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34; ]  Add a content file at content/search.md with frontmatter:  --- title: Search layout: search ---  That&rsquo;s it! Were you expecting extra steps? Load up your site and visit /search to see it working.  Roadmap  Searchbar partial for inclusion in templates."/>
 
 
   
@@ -178,7 +181,7 @@
 
   <li class="">
     
-      <a href="https://hugomodo.github.io/themes/">Themes</a>
+      <a href="https://hugomodo.github.io/extensions/">Extensions</a>
     
   </li>
 
@@ -191,7 +194,7 @@
   <li class="active">
     
       
-        Best Motherfucking Website
+        Fusejs
       
     
   </li>
@@ -204,7 +207,7 @@
     </header>
     <article>
       <header>
-  <h1>Best Motherfucking Website</h1>
+  <h1>Fusejs</h1>
   
 </header>
 
@@ -212,7 +215,7 @@
   <dl>
     <section>
   <dt>Published</dt>
-  <dd><time datetime="2018-12-29 14:39:14 &#43;0000 UTC">29 Dec 2018</time></dd>
+  <dd><time datetime="2019-01-03 03:09:44 &#43;0000 UTC">03 Jan 2019</time></dd>
 </section>
 
 
@@ -282,7 +285,36 @@
       
     
 
-    Based on <a href="https://thebestmotherfucking.website">The Best Motherfucking Website</a>, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.
+    <h2 id="installation">Installation</h2>
+
+<p>Follow the usual steps for installing a HugoModo extension, then:</p>
+
+<ul>
+<li>Add a JSON output for <code>home</code> in your site config:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">outputs</span>]
+  <span style="color:#a6e22e">home</span> = [
+    <span style="color:#e6db74">&#34;HTML&#34;</span>,
+    <span style="color:#e6db74">&#34;RSS&#34;</span>,
+    <span style="color:#e6db74">&#34;JSON&#34;</span>
+  ]</code></pre></div>
+<ul>
+<li>Add a content file at <code>content/search.md</code> with frontmatter:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+title: Search
+layout: search
+---</code></pre></div>
+<ul>
+<li>That&rsquo;s it! Were you expecting extra steps? Load up your site and visit <code>/search</code> to see it working.</li>
+</ul>
+
+<h2 id="roadmap">Roadmap</h2>
+
+<ol>
+<li>Searchbar partial for inclusion in templates.</li>
+</ol>
+
   
 </section>
 

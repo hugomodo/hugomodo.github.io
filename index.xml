@@ -12,6 +12,25 @@
     
     
     <item>
+      <title>Search</title>
+      <link>https://hugomodo.github.io/search/</link>
+      <pubDate>Thu, 03 Jan 2019 03:26:04 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fusejs</title>
+      <link>https://hugomodo.github.io/extensions/fusejs/</link>
+      <pubDate>Thu, 03 Jan 2019 03:09:44 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/extensions/fusejs/</guid>
+      <description>Installation Follow the usual steps for installing a HugoModo extension, then:
+ Add a JSON output for home in your site config:  [outputs] home = [ &amp;#34;HTML&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;JSON&amp;#34; ]  Add a content file at content/search.md with frontmatter:  --- title: Search layout: search ---  That&amp;rsquo;s it! Were you expecting extra steps? Load up your site and visit /search to see it working.  Roadmap  Searchbar partial for inclusion in templates.</description>
+    </item>
+    
+    <item>
       <title>Exif Orientation</title>
       <link>https://hugomodo.github.io/blog/exif-orientation/</link>
       <pubDate>Wed, 02 Jan 2019 13:05:15 +0000</pubDate>

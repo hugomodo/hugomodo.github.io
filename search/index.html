@@ -9,7 +9,7 @@
 
   <title>
   
-    Best Motherfucking Website - A highly readable theme for HugoModo with minimal custom CSS and JavaScript. | HugoModo
+    Search | HugoModo - A modular Hugo framework.
   
 </title>
 
@@ -62,29 +62,29 @@
   
   
   
-<meta itemprop="name" content="Best Motherfucking Website">
-<meta itemprop="description" content="A highly readable theme for HugoModo with minimal custom CSS and JavaScript.">
+<meta itemprop="name" content="Search">
+<meta itemprop="description" content="">
 
 
-<meta itemprop="datePublished" content="2018-12-29T14:39:14&#43;00:00" />
-<meta itemprop="dateModified" content="2018-12-29T14:39:14&#43;00:00" />
-<meta itemprop="wordCount" content="34">
+<meta itemprop="datePublished" content="2019-01-03T03:26:04&#43;00:00" />
+<meta itemprop="dateModified" content="2019-01-03T03:26:04&#43;00:00" />
+<meta itemprop="wordCount" content="0">
 
 
 
 <meta itemprop="keywords" content="" />
 
 
-  <meta property="og:title" content="Best Motherfucking Website" />
-<meta property="og:description" content="A highly readable theme for HugoModo with minimal custom CSS and JavaScript." />
+  <meta property="og:title" content="Search" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hugomodo.github.io/themes/best-motherfucking-website/" /><meta property="article:published_time" content="2018-12-29T14:39:14&#43;00:00"/>
-<meta property="article:modified_time" content="2018-12-29T14:39:14&#43;00:00"/>
+<meta property="og:url" content="https://hugomodo.github.io/search/" /><meta property="article:published_time" content="2019-01-03T03:26:04&#43;00:00"/>
+<meta property="article:modified_time" content="2019-01-03T03:26:04&#43;00:00"/>
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Best Motherfucking Website"/>
-<meta name="twitter:description" content="A highly readable theme for HugoModo with minimal custom CSS and JavaScript."/>
+<meta name="twitter:title" content="Search"/>
+<meta name="twitter:description" content=""/>
 
 
   
@@ -150,11 +150,11 @@
 </header>
 
   <main>
-    <header>
-      <nav>
-  <ul class="breadcrumbs">
     
-  
+      
+      <header>
+        <nav>
+  <ul class="breadcrumbs">
     
   
     
@@ -176,22 +176,10 @@
     
   
 
-  <li class="">
-    
-      <a href="https://hugomodo.github.io/themes/">Themes</a>
-    
-  </li>
-
-  
-
-  
-    
-  
-
   <li class="active">
     
       
-        Best Motherfucking Website
+        Search
       
     
   </li>
@@ -201,97 +189,46 @@
 
 
 
-    </header>
+      </header>
+    
     <article>
-      <header>
-  <h1>Best Motherfucking Website</h1>
+      
+        
+        <header>
+  <h1>Search</h1>
   
 </header>
 
-      <aside>
-  <dl>
-    <section>
-  <dt>Published</dt>
-  <dd><time datetime="2018-12-29 14:39:14 &#43;0000 UTC">29 Dec 2018</time></dd>
-</section>
-
-
-    
-
-    
-  <section>
-    <dt>Reading time</dt>
-    <dd><time datetime="1m">1 minutes</time></dd>
-  </section>
-
-
-
-    
-
-
-
-   
-  
-  
-
-   
-  
-  
-
-
-  </dl>
-</aside>
-
+      
       <section>
-  
-    
-      
-    
-      
-    
-
-    
-
-    
-
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-
-    Based on <a href="https://thebestmotherfucking.website">The Best Motherfucking Website</a>, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.
-  
-</section>
-
+        
+      </section>
+      <section id="search-results">
+        <aside>
+          <form action="https://hugomodo.github.io/search">
+            <input id="search-query" name="s"/>
+            <button type="submit">Search</button>
+          </form>
+        </aside>
+      </section>
     </article>
-    <footer>
-      
-
-    </footer>
   </main>
+
+  
+  <script id="search-result-template" type="text/x-js-template">
+    <article id="summary-${key}">
+      <header>
+        <h2><a href="${link}">${title}</a></h2>
+      </header>
+      <section>
+        <p>${snippet}</p>
+      </section>
+      <footer>
+        ${ isset tags }<p>Tags: ${tags}</p>${ end }
+        ${ isset categories }<p>Categories: ${categories}</p>${ end }
+      </footer>
+    </article>
+  </script>
 <footer>
   
     <section><h3>About HugoModo</h3>

@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hugomodo.github.io/search/</loc>
+    <lastmod>2019-01-03T03:26:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugomodo.github.io/extensions/fusejs/</loc>
+    <lastmod>2019-01-03T03:09:44+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hugomodo.github.io/blog/exif-orientation/</loc>
     <lastmod>2019-01-02T13:05:15+00:00</lastmod>
   </url>
@@ -75,7 +85,7 @@
   
   <url>
     <loc>https://hugomodo.github.io/extensions/</loc>
-    <lastmod>2018-12-31T20:08:37+00:00</lastmod>
+    <lastmod>2019-01-03T03:09:44+00:00</lastmod>
     <priority>0</priority>
   </url>
   
