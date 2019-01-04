@@ -31,6 +31,16 @@
     </item>
     
     <item>
+      <title>Image Processing and SVGs</title>
+      <link>https://hugomodo.github.io/blog/image-processing-and-svgs/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/image-processing-and-svgs/</guid>
+      <description>One of the first HugoModo extensions I&amp;rsquo;ve written is HugoModo Image Processing. This extension does a few things. By default it just provides a pair of shortcodes for Hugo that achieve image processing in content files. This is &amp;ldquo;the Hugo way&amp;rdquo;, so is the sensible behaviour. But we go beyond that.
+A config setting may also be adjusted to have the extension interpret image markdown in the same way as it does shortcodes.</description>
+    </item>
+    
+    <item>
       <title>Exif Orientation</title>
       <link>https://hugomodo.github.io/blog/exif-orientation/</link>
       <pubDate>Wed, 02 Jan 2019 13:05:15 +0000</pubDate>

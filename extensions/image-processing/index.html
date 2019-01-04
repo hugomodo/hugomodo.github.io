@@ -364,31 +364,33 @@ git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre>
 
 <p>It is also possible to mix the two approaches. If the <code>src</code> string passed to imgproc contains a directory structure, it will look for your images in the given directory:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span> <span style="color:#a6e22e">imgproc</span> <span style="color:#a6e22e">src</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;/uploads/jakob-owens-212555-unsplash.jpg&#34;</span> <span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
-<p><img
-    srcset="
-      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_320x0_resize_q75_box.jpg 320w,
-      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_640x0_resize_q75_box.jpg 640w,
-      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_768x0_resize_q75_box.jpg 768w,
-      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1024x0_resize_q75_box.jpg 1024w,
-      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1366x0_resize_q75_box.jpg 1366w,
-      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1600x0_resize_q75_box.jpg 1600w,
-      /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1920x0_resize_q75_box.jpg 1920w"
-    src="/uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1600x0_resize_q75_box.jpg"/></p>
+<pre><code>&lt;img
+  srcset=&quot;
+    /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_320x0_resize_q75_box.jpg 320w,
+    /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_640x0_resize_q75_box.jpg 640w,
+    /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_768x0_resize_q75_box.jpg 768w,
+    /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1024x0_resize_q75_box.jpg 1024w,
+    /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1366x0_resize_q75_box.jpg 1366w,
+    /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1600x0_resize_q75_box.jpg 1600w,
+    /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1920x0_resize_q75_box.jpg 1920w&quot;
+  src=&quot;/uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1600x0_resize_q75_box.jpg&quot;/&gt;
+</code></pre>
 
 <h2 id="shortcodes">Shortcodes</h2>
 
 <h3 id="imgproc">imgproc</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span> <span style="color:#a6e22e">imgproc</span> <span style="color:#a6e22e">src</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;fabian-grohs-423591-unsplash.jpg&#34;</span> <span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
-<p><img
-    srcset="
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_320x0_resize_q75_box.jpg 320w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_640x0_resize_q75_box.jpg 640w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_768x0_resize_q75_box.jpg 768w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1024x0_resize_q75_box.jpg 1024w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1366x0_resize_q75_box.jpg 1366w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg 1600w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1920x0_resize_q75_box.jpg 1920w"
-    src="/extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg"/></p>
+<pre><code>&lt;img
+  srcset=&quot;
+    /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_320x0_resize_q75_box.jpg 320w,
+    /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_640x0_resize_q75_box.jpg 640w,
+    /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_768x0_resize_q75_box.jpg 768w,
+    /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1024x0_resize_q75_box.jpg 1024w,
+    /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1366x0_resize_q75_box.jpg 1366w,
+    /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg 1600w,
+    /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1920x0_resize_q75_box.jpg 1920w&quot;
+  src=&quot;/extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg&quot;/&gt;
+</code></pre>
 
 <h3 id="figproc">figproc</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span> <span style="color:#a6e22e">figproc</span> <span style="color:#a6e22e">src</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;fabian-grohs-423591-unsplash.jpg&#34;</span> <span style="color:#a6e22e">caption</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;Computer on a desk&#34;</span> <span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
@@ -404,17 +406,20 @@ git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre>
 
 
 
-  <img
-    srcset="
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_320x0_resize_q75_box.jpg 320w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_640x0_resize_q75_box.jpg 640w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_768x0_resize_q75_box.jpg 768w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1024x0_resize_q75_box.jpg 1024w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1366x0_resize_q75_box.jpg 1366w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg 1600w,
-      /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1920x0_resize_q75_box.jpg 1920w"
-    src="/extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg"
-      alt="Computer on a desk"/>
+
+  
+    <img
+      srcset="
+        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_320x0_resize_q75_box.jpg 320w,
+        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_640x0_resize_q75_box.jpg 640w,
+        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_768x0_resize_q75_box.jpg 768w,
+        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1024x0_resize_q75_box.jpg 1024w,
+        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1366x0_resize_q75_box.jpg 1366w,
+        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg 1600w,
+        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1920x0_resize_q75_box.jpg 1920w"
+      src="/extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg"
+        alt="Computer on a desk"/>
+  
 
 <figcaption>
       <p>Computer on a desk</p>
