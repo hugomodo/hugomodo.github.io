@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hugomodo.github.io/blog/static-site-search-and-gitlab-pages/</loc>
+    <lastmod>2019-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hugomodo.github.io/search/</loc>
     <lastmod>2019-01-03T03:26:04+00:00</lastmod>
   </url>
