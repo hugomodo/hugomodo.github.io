@@ -292,11 +292,11 @@
       
     
 
-    <h2 id="a-better-base">A Better Base</h2>
+    <h3 id="a-better-base">A Better Base</h3>
 
 <p>HugoModo removes the main content div from Hugo&rsquo;s default base template, and adds a new partial called the &lsquo;foot&rsquo;. The aim is to follow certain best practices. We want to keep markup to a minimum, and where possible to only use HTML5&rsquo;s semantic elements (&lsquo;main&rsquo;, &lsquo;section&rsquo;, etc. rather than &lsquo;div&rsquo;). And the foot partial is provided mainly to load scripts after the main content, so as to provide for fast page rendering to visitors.</p>
 
-<h3 id="the-hugo-way">The Hugo Way</h3>
+<h4 id="the-hugo-way">The Hugo Way</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
     <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
@@ -308,7 +308,7 @@
         <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<h3 id="the-hugomodo-way">The HugoModo Way</h3>
+<h4 id="the-hugomodo-way">The HugoModo Way</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
   <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
@@ -322,13 +322,13 @@
     <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;foot.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
   &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<h2 id="theme-partial-organisation">Theme Partial Organisation</h2>
+<h3 id="theme-partial-organisation">Theme Partial Organisation</h3>
 
 <p>Hugo themes are easy to extend and make adjustments to by overwriting partials. Many themes however are comprised of partials that do an enormous amount. In order to change one small detail, the entire partial must be copied across. And if the base theme then receives an update, it can be a chore to find small changes in those files to upgrade your child theme or site.</p>
 
 <p>HugoModo aims to solve this problem by reducing partials to tightly scoped directories. Rather than having one &lsquo;head&rsquo; partial, HugoModo&rsquo;s &lsquo;head&rsquo; calls on many child partials in <code>partials/head</code>. Any one can be overwritten without throwing the rest of the theme out of sync with the upstream, meaning easier upgrades and lower maintenance over time.</p>
 
-<h2 id="list-pages">List Pages</h2>
+<h3 id="list-pages">List Pages</h3>
 
 <p>Because Hugo builds sites that reflect the directory structure of its content files precisely, it is easy to create deeply nested pages.</p>
 
@@ -336,7 +336,7 @@
 
 <p>HugoModo includes a default list template that combines and sorts a section&rsquo;s child sections and pages, listing and paginating them together.</p>
 
-<h2 id="superior-asset-bundling">Superior Asset Bundling</h2>
+<h3 id="superior-asset-bundling">Superior Asset Bundling</h3>
 
 <p>Hugo hasn&rsquo;t always had great support for CSS and JavaScript assets. It still doesn&rsquo;t have the greatest, but it&rsquo;s moving in the right direction.</p>
 
