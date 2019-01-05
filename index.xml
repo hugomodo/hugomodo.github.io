@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Updating Themes</title>
+      <link>https://hugomodo.github.io/docs/updating-themes/</link>
+      <pubDate>Sat, 05 Jan 2019 18:55:01 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/docs/updating-themes/</guid>
+      <description>The recommended way to install HugoModo themes and extensions is as Git submodules.
+If you have done this, the easiest way to bring your themes and extensions up to date with the latest versions is as so:
+git submodule update --recursive --remote</description>
+    </item>
+    
+    <item>
       <title>Fuse.js Static Site Search and GitLab Pages</title>
       <link>https://hugomodo.github.io/blog/static-site-search-and-gitlab-pages/</link>
       <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
