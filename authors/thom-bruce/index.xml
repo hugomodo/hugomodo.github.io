@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thom Bruce on HugoModo</title>
+    <link>https://hugomodo.github.io/authors/thom-bruce/</link>
+    <description>Recent content in Thom Bruce on HugoModo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Jan 2019 03:25:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://hugomodo.github.io/authors/thom-bruce/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo&#39;s Author and Authors</title>
+      <link>https://hugomodo.github.io/blog/hugo-s-author-and-authors/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/hugo-s-author-and-authors/</guid>
+      <description>HugoModo aims, best as it can, to do things the Hugo way. This means not superseding any functionality, and not providing a wildly different setup. Essentially, one should be able to build a Hugo site by following Hugo&amp;rsquo;s own docs, and that site should be compatible with HugoModo&amp;rsquo;s themes and extensions. And so far, I believe that&amp;rsquo;s true.
+I characterise HugoModo as a framework built around Hugo that provides an approach to managing functionality in a way that I think a lot of developers will find more approachable.</description>
+    </item>
+    
+    <item>
+      <title>Fuse.js Static Site Search and GitLab Pages</title>
+      <link>https://hugomodo.github.io/blog/static-site-search-and-gitlab-pages/</link>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/static-site-search-and-gitlab-pages/</guid>
+      <description>The greatest selling point of static sites over dynamic is also their greatest drawback. They&amp;rsquo;re essentially serverless. That means no logins, no dynamic rendering and no form submissions. Of course there are workarounds for all of these, and with the right setup nobody will be able to tell the difference.
+So, how does search work? Classically, you&amp;rsquo;d require a server. Your search query would be delivered to the server, it would query its own database for matches, and the results would be returned with the next page load (or delivered as a parseable document in the case of dynamic queries made using JavaScript).</description>
+    </item>
+    
+    <item>
+      <title>Image Processing and SVGs</title>
+      <link>https://hugomodo.github.io/blog/image-processing-and-svgs/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/image-processing-and-svgs/</guid>
+      <description>One of the first HugoModo extensions I&amp;rsquo;ve written is HugoModo Image Processing. This extension does a few things. By default it just provides a pair of shortcodes for Hugo that achieve image processing in content files. This is &amp;ldquo;the Hugo way&amp;rdquo;, so is the sensible behaviour. But we go beyond that.
+A config setting may also be adjusted to have the extension interpret image markdown in the same way as it does shortcodes.</description>
+    </item>
+    
+    <item>
+      <title>Exif Orientation</title>
+      <link>https://hugomodo.github.io/blog/exif-orientation/</link>
+      <pubDate>Wed, 02 Jan 2019 13:05:15 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/exif-orientation/</guid>
+      <description>When you take a picture with your camera or phone, you can do so holding the device at any of four orientations. When using my iPhone for instance, I can take a photo vertically holding my phone with the home button at the bottom, I can take a photo with the home button oriented to the left or the right, I could even take a photo with the home button at the top - my phone upside down.</description>
+    </item>
+    
+    <item>
+      <title>The Trouble With Chroma, Hugo&#39;s Syntax Highlighting Library</title>
+      <link>https://hugomodo.github.io/blog/the-trouble-with-chroma/</link>
+      <pubDate>Mon, 31 Dec 2018 22:57:07 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/the-trouble-with-chroma/</guid>
+      <description>One of the core principles of HugoModo is to stick to the Hugo way of doing things where possible and sensible to do so. This reduces the likelihood of incompatibility, and should make for greater ease of use for anyone familiar with Hugo or working from the Hugo documentation.
+Of course, HugoModo deliberately does a lot differently, emphasising the principle of Convention over Configuration where Hugo otherwise emphasises speed. The aim is to achieve a comfortable middle-ground that remains blazing fast, but that also provides for greater ease of use and extension.</description>
+    </item>
+    
+    <item>
+      <title>Forestry Compatible</title>
+      <link>https://hugomodo.github.io/blog/forestry-compatible/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/forestry-compatible/</guid>
+      <description>HugoModo is designed to be compatible with the static site, headless CMS, Forestry.
+When you first hook a site up with Forestry, it assumes the same default behaviour that HugoModo does. In particular, this means images are stored in the static directory and are exempt from image processing.
+But Forestry has offered configuration for using a content directory instead for quite a while now. Enabling this feature will store uploads as page resources, and will allow for the use of Hugo&amp;rsquo;s in-built image processing.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Goes Modular</title>
+      <link>https://hugomodo.github.io/blog/hugo-goes-modular/</link>
+      <pubDate>Sat, 29 Dec 2018 01:11:18 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/hugo-goes-modular/</guid>
+      <description>A Better Base HugoModo removes the main content div from Hugo&amp;rsquo;s default base template, and adds a new partial called the &amp;lsquo;foot&amp;rsquo;. The aim is to follow certain best practices. We want to keep markup to a minimum, and where possible to only use HTML5&amp;rsquo;s semantic elements (&amp;lsquo;main&amp;rsquo;, &amp;lsquo;section&amp;rsquo;, etc. rather than &amp;lsquo;div&amp;rsquo;). And the foot partial is provided mainly to load scripts after the main content, so as to provide for fast page rendering to visitors.</description>
+    </item>
+    
+  </channel>
+</rss>
