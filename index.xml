@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Hugo&#39;s Author and Authors</title>
+      <link>https://hugomodo.github.io/blog/hugo-s-author-and-authors/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/hugo-s-author-and-authors/</guid>
+      <description>HugoModo aims, best as it can, to do things the Hugo way. This means not superseding any functionality, and not providing a wildly different setup. Essentially, one should be able to build a Hugo site by following Hugo&amp;rsquo;s own docs, and that site should be compatible with HugoModo&amp;rsquo;s themes and extensions. And so far, I believe that&amp;rsquo;s true.
+I characterise HugoModo as a framework built around Hugo that provides an approach to managing functionality in a way that I think a lot of developers will find more approachable.</description>
+    </item>
+    
+    <item>
       <title>Updating Themes</title>
       <link>https://hugomodo.github.io/docs/updating-themes/</link>
       <pubDate>Sat, 05 Jan 2019 18:55:01 +0000</pubDate>
