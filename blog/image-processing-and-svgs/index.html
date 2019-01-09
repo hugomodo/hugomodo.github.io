@@ -403,24 +403,15 @@ A config setting may also be adjusted to have the extension interpret image mark
 <p>For content files, Hugo provides a handy <code>.File.Ext</code> variable for looking at a file&rsquo;s extension. But with our approach to image processing, we are using a <code>string</code> to find a Hugo <code>Resource</code>. Neither&rsquo;s a content file, so it won&rsquo;t work here. We&rsquo;ll have to examine the string instead for its extension.</p>
 
 <p>To do this, we&rsquo;ll split the string on <code>.</code> like so:</p>
-
-<pre><code>{{ $pathArr := split $src &quot;.&quot; }}
-{{ $pathLen := len $pathArr }}
-{{ $ext := index $pathArr (sub $pathLen 1) }}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$pathArr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">split</span> <span style="color:#a6e22e">$src</span> <span style="color:#e6db74">&#34;.&#34;</span> <span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span> <span style="color:#a6e22e">$pathLen</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">len</span> <span style="color:#a6e22e">$pathArr</span> <span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span> <span style="color:#a6e22e">$ext</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">index</span> <span style="color:#a6e22e">$pathArr</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">sub</span> <span style="color:#a6e22e">$pathLen</span> <span style="color:#a6e22e">1</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span></code></pre></div>
 <p>We already have the <code>$src</code> var, it&rsquo;s simply the path to the image. And now before we do anything else with it, we can check whether its extension is equal to <code>svg</code> like so:</p>
-
-<pre><code>{{ if eq $ext &quot;svg&quot; }}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">eq</span> <span style="color:#a6e22e">$ext</span> <span style="color:#e6db74">&#34;svg&#34;</span> <span style="color:#75715e">}}</span></code></pre></div>
 <p>We then act on that accordingly, using a different block than we will for further image processing.</p>
 
 <p>Unfortunately, this hasn&rsquo;t immediately worked. It looks like some pre-existing steps I&rsquo;ve taken strip the path to my <code>uploads</code> folder from the <code>src</code> string. I should refactor a little to improve the approach, but for a quick fix while I still have the <code>uploads</code> context kicking around I simply:</p>
-
-<pre><code>{{ printf &quot;/%s%s&quot; .context.Dir $src }}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span> <span style="color:#66d9ef">printf</span> <span style="color:#e6db74">&#34;/%s%s&#34;</span> <span style="color:#a6e22e">.context.Dir</span> <span style="color:#a6e22e">$src</span> <span style="color:#75715e">}}</span></code></pre></div>
 <p><code>.context</code> is a variable I&rsquo;ve passed to this partial, and represents the resource bundle itself (in my case &ldquo;uploads&rdquo;). The <code>.Dir</code> variable provides the path to the folder containing that bundle, and we&rsquo;ve already discussed <code>$src</code>. The rest merely combines those two variables back into the original source path. A hack for now, but a working one.</p>
 
 <p>That handles SVGs in my content files. I now see the above image displaying when I build my site (which means you will too, hurray!).</p>

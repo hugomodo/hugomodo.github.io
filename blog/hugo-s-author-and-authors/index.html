@@ -332,13 +332,10 @@ I characterise HugoModo as a framework built around Hugo that provides an approa
 <p>I believe that a common need of blogging websites is an authors list, with author pages displaying their articles. And at the moment, this is only <a href="https://github.com/gohugoio/hugo/issues/3088">proposed Hugo functionality</a>.</p>
 
 <p>At present, Hugo supports a single author by default in a site&rsquo;s config:</p>
-
-<pre><code>Author:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">Author:
   givenName: John
   familyName: Doe
-  displayName: John Doe
-</code></pre>
-
+  displayName: John Doe</code></pre></div>
 <p>It does extend a <code>map</code> of authors for a site via <code>.Site.Authors</code>, but I am unsure of how or even if this can be populated at present. Which means&hellip; we&rsquo;ll have to deviate from the path a little and rejoin Hugo along the way, when the Authors model is in a more complete state.</p>
 
 <p>There exist many write-ups online for how to add authors to Hugo, and they differ greatly. We&rsquo;re going to do <a href="https://www.netlify.com/blog/2018/07/24/hugo-tips-how-to-create-author-pages/">the Netlify way</a>, because it provides the discussed functionality with minimal configuration. And because Netlify are big proponents of the JAMstack and I dig that! ❤️</p>
@@ -350,36 +347,27 @@ I characterise HugoModo as a framework built around Hugo that provides an approa
 <p>And we will make the assumption that our new author pages will provide all of the same information as the <code>Author</code> config permits.</p>
 
 <p>The first steps to activating an authors list for a site are ones we cannot take in a theme or extension (well, we could but it&rsquo;s best we don&rsquo;t). &lsquo;Authors&rsquo; needs to be configured as a taxonomy:</p>
-
-<pre><code>taxonomies:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">taxonomies:
   category: categories
   series: series
   tag: tags
-  author: authors
-</code></pre>
-
+  author: authors</code></pre></div>
 <p>When you add a taxonomy in Hugo, you&rsquo;re actually overwriting the hash of taxonomies Hugo assumes active by default. These are categories, series and tags. You can safely leave them out if you don&rsquo;t want them.</p>
 
 <p>With that done, we can now add authors in our content files as frontmatter:</p>
-
-<pre><code>title: Some Piece of Content
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">title: Some Piece of Content
 authors:
-- John Doe
-</code></pre>
-
+- John Doe</code></pre></div>
 <p>That&rsquo;s it. When we now build our site, an author page will exist for listed author and all of his/her associated content will be shown there. In fact, HugoModo&rsquo;s themes already output the author tag with each post. No further work needed.</p>
 
 <p>In two really easy steps, we now have author pages. But they don&rsquo;t tell us very much. They merely list an author&rsquo;s name and content.</p>
 
 <p>For customisable author pages, we&rsquo;ll have to add a section for our <code>authors</code> taxonomy as well as a page for each author. The resultant directory structure should look something like this:</p>
-
-<pre><code>content
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">content
 - authors
   - _index.md
   - john-doe
-    - _index.md
-</code></pre>
-
+    - _index.md</code></pre></div>
 <p>Both <code>authors</code> and <code>john-doe</code> here are what Hugo defines as <code>Branch Bundles</code>, designated by the presence of a <code>_index.md</code> file (don&rsquo;t forget the underscore). This is important, as this will lead Hugo to interpret the author page as a collection, rather than as a single page. And this will enable Hugo to list the author&rsquo;s content.</p>
 
 <h3 id="next-steps">Next Steps</h3>
