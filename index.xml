@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>An Opinionated Approach to Markup</title>
+      <link>https://hugomodo.github.io/blog/an-opinionated-approach-to-markup/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/an-opinionated-approach-to-markup/</guid>
+      <description>I was asked today how many users Hugomodo has at the moment. I expect the answer is actually just the one, and I kind of hope that&amp;rsquo;s the case for now too. I do have plans to introduce a sort of semantic versioning strategy for themes but it isn&amp;rsquo;t my immediate priority. So for the time being, HugoModo development is unstable. I&amp;rsquo;m still moving the pieces around before they settle into place.</description>
+    </item>
+    
+    <item>
       <title>Hugo&#39;s Author and Authors</title>
       <link>https://hugomodo.github.io/blog/hugo-s-author-and-authors/</link>
       <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
