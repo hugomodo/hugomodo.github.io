@@ -314,9 +314,9 @@
 <p>But if you&rsquo;re using Tachyons that way, I argue there&rsquo;s a better way.</p>
 
 <p>That better way is a CSS preprocessor like <a href="https://sass-lang.com/" title="SASS CSS Preprocessor">SASS</a>. Y&rsquo;see, SASS allows you to write style rules like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sass" data-lang="sass"><span style="color:#960050;background-color:#1e0010">.my-selector {</span>
-<span style="color:#960050;background-color:#1e0010">  @extend .some-other-selector;</span>
-<span style="color:#960050;background-color:#1e0010">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#a6e22e">.my-selector</span> {
+  <span style="color:#66d9ef">@extend</span> <span style="color:#a6e22e">.some-other-selector</span><span style="color:#f92672">;</span>
+}</code></pre></div>
 <p>In that example, the <code>.my-selector</code> selector will obtain all of the style rules that <code>.some-other-selector</code> possesses, and any element in your HTML having the class <code>.my-selector</code> will be provided those styles.</p>
 
 <p>Let&rsquo;s take a look at how we might one of Tachyons&rsquo; styles in a practical example.</p>
@@ -390,7 +390,7 @@
 
 <p>We might also consider adding a class to the body, to differentiate between pages of blog posts and of product listings. <code>&lt;body class=&quot;blog&quot;&gt;</code> and <code>&lt;body class=&quot;store&quot;&gt;</code> for instance. And from that we could style every item on the page differently straight from the stylesheet.</p>
 
-<p>And given that we&rsquo;ve used semantic HTML5 elements, we don&rsquo;t have countless divs that need differentiating between. <em>Although I should note that while I recommend this approach, these HTML5 elements should not be used merely for styling purposes but should absolutely also be descriptive of their contents. Do use</em> <code>_div_</code> <em>for arbitrary styling of block-level elements (and</em> <code>_span_</code> <em>incidentally for text, not</em> <code>_u_</code><em>).</em></p>
+<p>And given that we&rsquo;ve used semantic HTML5 elements, we don&rsquo;t have countless divs that need differentiating between. <em>Although I should note that while I recommend this approach, these HTML5 elements should not be used merely for styling purposes but should absolutely also be descriptive of their contents. Do use <code>div</code> for arbitrary styling of block-level elements (and <code>span</code> incidentally for text, not <code>u</code>).</em></p>
 
 <p>I guess what I&rsquo;m arguing for is an approach to styling that&rsquo;s semantic, like the HTML it ought to be being applied to here in 2019 (I don&rsquo;t blame you if you don&rsquo;t - I&rsquo;m as bad as you are for not keeping up).</p>
 
