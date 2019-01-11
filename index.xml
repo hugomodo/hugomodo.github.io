@@ -147,7 +147,8 @@ But Forestry has offered configuration for using a content directory instead for
       <pubDate>Sat, 29 Dec 2018 14:39:14 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/best-motherfucking-website/</guid>
-      <description>Based on The Best Motherfucking Website, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.</description>
+      <description> Based on The Best Motherfucking Website, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.
+Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugomodo git submodule add https://github.com/hugomodo/hugomodo-best-motherfucking-website themes/hugomodo-best-motherfucking-websitethemes = [&amp;#34;hugomodo-best-motherfucking-website&amp;#34;]</description>
     </item>
     
     <item>
@@ -156,8 +157,9 @@ But Forestry has offered configuration for using a content directory instead for
       <pubDate>Sat, 29 Dec 2018 14:38:59 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/hugomodo/</guid>
-      <description>The base theme for HugoModo&amp;rsquo;s modular approach to Hugo website design. It provides the asset precompilation pipeline and bundler data files, clean and semantic HTML, and well-organised partials for ease of developing child themes.
-It provides minimal styling, so is best used as the base for a child theme. HugoModo themes which depend on it will include this theme automatically.</description>
+      <description> The base theme for HugoModo&amp;rsquo;s modular approach to Hugo website design. It provides the asset precompilation pipeline and bundler data files, clean and semantic HTML, and well-organised partials for ease of developing child themes.
+It provides minimal styling, so is best used as the base for a child theme. HugoModo themes which depend on it will include this theme automatically.
+Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugomodothemes = [&amp;#34;hugomodo&amp;#34;]</description>
     </item>
     
     <item>
