@@ -6,9 +6,28 @@
     <description>Recent content in Tags on HugoModo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 12 Jan 2019 15:01:17 +0000</lastBuildDate>
     
 	<atom:link href="https://hugomodo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Minimalist</title>
+      <link>https://hugomodo.github.io/tags/minimalist/</link>
+      <pubDate>Sat, 12 Jan 2019 15:01:17 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/tags/minimalist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semantic Html5</title>
+      <link>https://hugomodo.github.io/tags/semantic-html5/</link>
+      <pubDate>Sat, 29 Dec 2018 14:38:59 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/tags/semantic-html5/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

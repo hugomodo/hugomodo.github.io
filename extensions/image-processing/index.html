@@ -77,7 +77,7 @@
 
 <meta itemprop="datePublished" content="2018-12-30T16:54:08&#43;00:00" />
 <meta itemprop="dateModified" content="2018-12-30T16:54:08&#43;00:00" />
-<meta itemprop="wordCount" content="450">
+<meta itemprop="wordCount" content="0">
 
 
 
@@ -236,7 +236,7 @@
 
     
   <dt>Reading time</dt>
-  <dd><time datetime="3m">3 minutes</time></dd>
+  <dd><time datetime="0m">0 minutes</time></dd>
 
 
 
@@ -264,50 +264,31 @@
   </dl>
 </aside>
 
-      <section>
-  
-    
-      
-    
-      
-    
 
-    
+      
+      
+        
+        <h1 id="hugomodo-image-processing">HugoModo Image Processing</h1>
 
-    
+<p>Image Processing for Hugo sites.</p>
 
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+<h2 id="shim">Shim</h2>
 
-    
-      <h3 id="description">Description</h3>
+<p>HugoModo Image Processing includes a collection of shims for providing the same image processing treatment to markdown in your site&rsquo;s content.</p>
 
-<h4 id="features">Features</h4>
+<p>To activate it, create a file in your Hugo site at <code>data/config/imageProcessing.toml</code> with the content:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">contentShim</span> = <span style="color:#66d9ef">true</span></code></pre></div>
+<p>This will break other shortcodes on your site, so you may also want to install <a href="https://github.com/hugomodo/hugomodo-shortcode-partials">HugoModo Shortcode Partials</a>, which contains shims to fix some of the shortcodes.</p>
+
+<h2 id="support-on-beerpay">Support on Beerpay</h2>
+
+<p>Hey dude! Help me out for a couple of 🍻!</p>
+
+<p><a href="https://beerpay.io/hugomodo/hugomodo-image-processing"><img src="https://beerpay.io/hugomodo/hugomodo-image-processing/badge.svg?style=beer-square" alt="Beerpay" /></a>  <a href="https://beerpay.io/hugomodo/hugomodo-image-processing?focus=wish"><img src="https://beerpay.io/hugomodo/hugomodo-image-processing/make-wish.svg?style=flat-square" alt="Beerpay" /></a></p>
+
+<h2 id="description">Description</h2>
+
+<h3 id="features">Features</h3>
 
 <ul>
 <li>Provides <code>imgproc</code> and <code>figproc</code> shortcodes for image processing in your content files.</li>
@@ -315,7 +296,7 @@
 <li>Can be configured to use Page Bundles, a headless Resources bundle, or both!</li>
 </ul>
 
-<h5 id="todo">Todo</h5>
+<h4 id="todo">Todo</h4>
 
 <ol>
 <li>Equivalents for theme layouts are provided: <code>image-processing/imgproc.html</code> and <code>image-processing/figproc.html</code>.
@@ -344,7 +325,7 @@
 </ul></li>
 </ol>
 
-<h3 id="installation">Installation</h3>
+<h2 id="installation">Installation</h2>
 
 <p>From your Hugo site&rsquo;s root directory:</p>
 
@@ -358,17 +339,17 @@ git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre>
   <span style="color:#e6db74">&#34;hugomodo-image-processing&#34;</span>,
   ...
 ]</code></pre></div>
-<h3 id="configuration">Configuration</h3>
+<h2 id="configuration">Configuration</h2>
 
 <p>HugoModo Image Processing can be configured one of two ways. The default is to use Hugo&rsquo;s Page Bundles, but an alternative approach using an uploads directory that provides compatibility with third party Content Management Systems can be setup with minimal configuration.</p>
 
-<h4 id="page-bundles">Page Bundles</h4>
+<h3 id="page-bundles">Page Bundles</h3>
 
 <p>By default, HugoModo Image Processing uses Page Bundles as described by the Hugo docs: <a href="https://gohugo.io/content-management/organization/#page-bundles">Page Bundles</a></p>
 
 <p>No additional configuration is required to use HugoModo Image Processing this way.</p>
 
-<h4 id="uploads-directory">Uploads Directory</h4>
+<h3 id="uploads-directory">Uploads Directory</h3>
 
 <p>You can configure HugoModo Image Processing to use an uploads directory instead, for compatibility with some Content Management Systems such as Forestry who write up the idea behind the uploads directory here: <a href="https://forestry.io/blog/how-to-use-hugo-s-image-processing-with-forestry/">How To Use Hugo&rsquo;s Image Processing With Forestry</a></p>
 
@@ -378,74 +359,23 @@ git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">uploadsDir</span> = <span style="color:#e6db74">&#34;uploads&#34;</span></code></pre></div>
 <p>&hellip;and that&rsquo;s it! You can now add your images to a <code>content/uploads</code> directory and have HugoModo&rsquo;s image processing shortcodes will look for your resources there instead.</p>
 
-<h4 id="or-both">&hellip;or both!</h4>
+<h3 id="or-both">&hellip;or both!</h3>
 
 <p>It is also possible to mix the two approaches. If the <code>src</code> string passed to imgproc contains a directory structure, it will look for your images in the given directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span> <span style="color:#a6e22e">imgproc</span> <span style="color:#a6e22e">src</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;/uploads/jakob-owens-212555-unsplash.jpg&#34;</span> <span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
-<p><img
-      srcset="
-        /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_320x0_resize_q75_box.jpg 320w,
-        /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_640x0_resize_q75_box.jpg 640w,
-        /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_768x0_resize_q75_box.jpg 768w,
-        /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1024x0_resize_q75_box.jpg 1024w,
-        /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1366x0_resize_q75_box.jpg 1366w,
-        /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1600x0_resize_q75_box.jpg 1600w,
-        /uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1920x0_resize_q75_box.jpg 1920w"
-      src="/uploads/jakob-owens-212555-unsplash_hu4ec37cb5c859e2bad80ab1d78d75f630_1060056_1600x0_resize_q75_box.jpg"/></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#75715e">/* imgproc src=&#34;/uploads/jakob-owens-212555-unsplash.jpg&#34; */</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<p>{{&lt; imgproc src=&ldquo;/uploads/jakob-owens-212555-unsplash.jpg&rdquo; &gt;}}</p>
 
-<h3 id="shortcodes">Shortcodes</h3>
+<h2 id="shortcodes">Shortcodes</h2>
 
-<h4 id="imgproc">imgproc</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span> <span style="color:#a6e22e">imgproc</span> <span style="color:#a6e22e">src</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;fabian-grohs-423591-unsplash.jpg&#34;</span> <span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
-<p><img
-      srcset="
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_320x0_resize_q75_box.jpg 320w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_640x0_resize_q75_box.jpg 640w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_768x0_resize_q75_box.jpg 768w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1024x0_resize_q75_box.jpg 1024w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1366x0_resize_q75_box.jpg 1366w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg 1600w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1920x0_resize_q75_box.jpg 1920w"
-      src="/extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg"/></p>
+<h3 id="imgproc">imgproc</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#75715e">/* imgproc src=&#34;fabian-grohs-423591-unsplash.jpg&#34; */</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<p>{{&lt; imgproc src=&ldquo;fabian-grohs-423591-unsplash.jpg&rdquo; &gt;}}</p>
 
-<h4 id="figproc">figproc</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span> <span style="color:#a6e22e">figproc</span> <span style="color:#a6e22e">src</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;fabian-grohs-423591-unsplash.jpg&#34;</span> <span style="color:#a6e22e">caption</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#e6db74">&#34;Computer on a desk&#34;</span> <span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
-<figure>
+<h3 id="figproc">figproc</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#75715e">/* figproc src=&#34;fabian-grohs-423591-unsplash.jpg&#34; caption=&#34;Computer on a desk&#34; */</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<p>{{&lt; figproc src=&ldquo;fabian-grohs-423591-unsplash.jpg&rdquo; caption=&ldquo;Computer on a desk&rdquo; &gt;}}</p>
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-<img
-      srcset="
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_320x0_resize_q75_box.jpg 320w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_640x0_resize_q75_box.jpg 640w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_768x0_resize_q75_box.jpg 768w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1024x0_resize_q75_box.jpg 1024w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1366x0_resize_q75_box.jpg 1366w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg 1600w,
-        /extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1920x0_resize_q75_box.jpg 1920w"
-      src="/extensions/image-processing/fabian-grohs-423591-unsplash_hu3d03a01dcc18bc5be0e67db3d8d209a6_3043934_1600x0_resize_q75_box.jpg"
-        alt="Computer on a desk"/>
-  
-
-<figcaption>
-      <p>Computer on a desk</p>
-    </figcaption>
-</figure>
-
-    
-  
-</section>
+      
 
       
         
@@ -540,6 +470,10 @@ git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre>
     
       
     
+      
+        <li>
+          <a href="/tags" title="Tags">Tags</a>
+        </li>
       
     
     <li>

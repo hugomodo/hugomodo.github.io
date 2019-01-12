@@ -17,8 +17,7 @@
       <pubDate>Thu, 03 Jan 2019 03:09:44 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/extensions/fusejs/</guid>
-      <description>Installation Follow the usual steps for installing a HugoModo extension, then:
- Add a JSON output for home in your site config:  [outputs] home = [ &amp;#34;HTML&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;JSON&amp;#34; ]  Add a content file at content/search.md with frontmatter:  --- title: Search layout: search ---  That&amp;rsquo;s it! Were you expecting extra steps? Load up your site and visit /search to see it working.  Roadmap  Searchbar partial for inclusion in templates.</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Mon, 31 Dec 2018 20:08:37 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/extensions/shortcode-partials/</guid>
-      <description>What&amp;rsquo;s the issue? HugoModo strives for third-party compatibility. The baseline for this is currently Forestry CMS. When asking the question, &amp;ldquo;does it work with Forestry CMS?&amp;rdquo; of the Image Processing extension, the answer was not yes - it was mostly.
-The problem is, Forestry is unaware of shortcodes. These could be hand-typed by a developer easily, but when it comes to non-technical authors adding images to content, they probably aren&amp;rsquo;t going to do that.</description>
+      <description></description>
     </item>
     
     <item>
@@ -37,7 +35,7 @@ The problem is, Forestry is unaware of shortcodes. These could be hand-typed by 
       <pubDate>Sun, 30 Dec 2018 16:54:08 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/extensions/image-processing/</guid>
-      <description>Description Features  Provides imgproc and figproc shortcodes for image processing in your content files. Uses srcset to load responsive image sizes on different screen resolutions. Can be configured to use Page Bundles, a headless Resources bundle, or both!  Todo  Equivalents for theme layouts are provided: image-processing/imgproc.html and image-processing/figproc.html.  These already exist. Modification required so that context can be passed.  Option to override existing figure shortcode.</description>
+      <description></description>
     </item>
     
   </channel>

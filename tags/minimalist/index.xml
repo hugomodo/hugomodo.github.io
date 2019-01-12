@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Themes on HugoModo</title>
-    <link>https://hugomodo.github.io/themes/</link>
-    <description>Recent content in Themes on HugoModo</description>
+    <title>Minimalist on HugoModo</title>
+    <link>https://hugomodo.github.io/tags/minimalist/</link>
+    <description>Recent content in Minimalist on HugoModo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Jan 2019 15:01:17 +0000</lastBuildDate>
     
-	<atom:link href="https://hugomodo.github.io/themes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hugomodo.github.io/tags/minimalist/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -26,15 +26,6 @@
       <pubDate>Sat, 29 Dec 2018 14:39:14 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/best-motherfucking-website/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugomodo</title>
-      <link>https://hugomodo.github.io/themes/hugomodo/</link>
-      <pubDate>Sat, 29 Dec 2018 14:38:59 +0000</pubDate>
-      
-      <guid>https://hugomodo.github.io/themes/hugomodo/</guid>
       <description></description>
     </item>
     

@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Milligram</title>
+      <link>https://hugomodo.github.io/themes/milligram/</link>
+      <pubDate>Sat, 12 Jan 2019 15:01:17 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/themes/milligram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>An Opinionated Approach to Markup</title>
       <link>https://hugomodo.github.io/blog/an-opinionated-approach-to-markup/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
@@ -66,8 +75,7 @@ So, how does search work? Classically, you&amp;rsquo;d require a server. Your se
       <pubDate>Thu, 03 Jan 2019 03:09:44 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/extensions/fusejs/</guid>
-      <description>Installation Follow the usual steps for installing a HugoModo extension, then:
- Add a JSON output for home in your site config:  [outputs] home = [ &amp;#34;HTML&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;JSON&amp;#34; ]  Add a content file at content/search.md with frontmatter:  --- title: Search layout: search ---  That&amp;rsquo;s it! Were you expecting extra steps? Load up your site and visit /search to see it working.  Roadmap  Searchbar partial for inclusion in templates.</description>
+      <description></description>
     </item>
     
     <item>
@@ -117,8 +125,7 @@ Of course, HugoModo deliberately does a lot differently, emphasising the princip
       <pubDate>Mon, 31 Dec 2018 20:08:37 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/extensions/shortcode-partials/</guid>
-      <description>What&amp;rsquo;s the issue? HugoModo strives for third-party compatibility. The baseline for this is currently Forestry CMS. When asking the question, &amp;ldquo;does it work with Forestry CMS?&amp;rdquo; of the Image Processing extension, the answer was not yes - it was mostly.
-The problem is, Forestry is unaware of shortcodes. These could be hand-typed by a developer easily, but when it comes to non-technical authors adding images to content, they probably aren&amp;rsquo;t going to do that.</description>
+      <description></description>
     </item>
     
     <item>
@@ -138,7 +145,7 @@ But Forestry has offered configuration for using a content directory instead for
       <pubDate>Sun, 30 Dec 2018 16:54:08 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/extensions/image-processing/</guid>
-      <description>Description Features  Provides imgproc and figproc shortcodes for image processing in your content files. Uses srcset to load responsive image sizes on different screen resolutions. Can be configured to use Page Bundles, a headless Resources bundle, or both!  Todo  Equivalents for theme layouts are provided: image-processing/imgproc.html and image-processing/figproc.html.  These already exist. Modification required so that context can be passed.  Option to override existing figure shortcode.</description>
+      <description></description>
     </item>
     
     <item>
@@ -147,8 +154,7 @@ But Forestry has offered configuration for using a content directory instead for
       <pubDate>Sat, 29 Dec 2018 14:39:14 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/best-motherfucking-website/</guid>
-      <description> Based on The Best Motherfucking Website, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.
-Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugomodo git submodule add https://github.com/hugomodo/hugomodo-best-motherfucking-website themes/hugomodo-best-motherfucking-websitethemes = [&amp;#34;hugomodo-best-motherfucking-website&amp;#34;]</description>
+      <description></description>
     </item>
     
     <item>
@@ -157,9 +163,7 @@ Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugom
       <pubDate>Sat, 29 Dec 2018 14:38:59 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/hugomodo/</guid>
-      <description> The base theme for HugoModo&amp;rsquo;s modular approach to Hugo website design. It provides the asset precompilation pipeline and bundler data files, clean and semantic HTML, and well-organised partials for ease of developing child themes.
-It provides minimal styling, so is best used as the base for a child theme. HugoModo themes which depend on it will include this theme automatically.
-Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugomodothemes = [&amp;#34;hugomodo&amp;#34;]</description>
+      <description></description>
     </item>
     
     <item>

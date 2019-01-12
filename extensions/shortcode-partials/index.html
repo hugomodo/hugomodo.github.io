@@ -72,13 +72,12 @@
   
 
 <meta itemprop="name" content="Shortcode Partials">
-<meta itemprop="description" content="What&rsquo;s the issue? HugoModo strives for third-party compatibility. The baseline for this is currently Forestry CMS. When asking the question, &ldquo;does it work with Forestry CMS?&rdquo; of the Image Processing extension, the answer was not yes - it was mostly.
-The problem is, Forestry is unaware of shortcodes. These could be hand-typed by a developer easily, but when it comes to non-technical authors adding images to content, they probably aren&rsquo;t going to do that.">
+<meta itemprop="description" content="">
 
 
 <meta itemprop="datePublished" content="2018-12-31T20:08:37&#43;00:00" />
 <meta itemprop="dateModified" content="2018-12-31T20:08:37&#43;00:00" />
-<meta itemprop="wordCount" content="254">
+<meta itemprop="wordCount" content="0">
 
 
 
@@ -87,8 +86,7 @@ The problem is, Forestry is unaware of shortcodes. These could be hand-typed by 
 
   
   <meta property="og:title" content="Shortcode Partials" />
-  <meta property="og:description" content="What&rsquo;s the issue? HugoModo strives for third-party compatibility. The baseline for this is currently Forestry CMS. When asking the question, &ldquo;does it work with Forestry CMS?&rdquo; of the Image Processing extension, the answer was not yes - it was mostly.
-The problem is, Forestry is unaware of shortcodes. These could be hand-typed by a developer easily, but when it comes to non-technical authors adding images to content, they probably aren&rsquo;t going to do that." />
+  <meta property="og:description" content="" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://hugomodo.github.io/extensions/shortcode-partials/" />
 
@@ -102,8 +100,7 @@ The problem is, Forestry is unaware of shortcodes. These could be hand-typed by 
   
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Shortcode Partials"/>
-<meta name="twitter:description" content="What&rsquo;s the issue? HugoModo strives for third-party compatibility. The baseline for this is currently Forestry CMS. When asking the question, &ldquo;does it work with Forestry CMS?&rdquo; of the Image Processing extension, the answer was not yes - it was mostly.
-The problem is, Forestry is unaware of shortcodes. These could be hand-typed by a developer easily, but when it comes to non-technical authors adding images to content, they probably aren&rsquo;t going to do that."/>
+<meta name="twitter:description" content=""/>
 
 
   
@@ -239,7 +236,7 @@ The problem is, Forestry is unaware of shortcodes. These could be hand-typed by 
 
     
   <dt>Reading time</dt>
-  <dd><time datetime="2m">2 minutes</time></dd>
+  <dd><time datetime="0m">0 minutes</time></dd>
 
 
 
@@ -267,48 +264,21 @@ The problem is, Forestry is unaware of shortcodes. These could be hand-typed by 
   </dl>
 </aside>
 
-      <section>
-  
-    
-      
-    
-      
-    
 
-    
+      
+      
+        
+        <h1 id="hugomodo-shortcode-partials">HugoModo Shortcode Partials</h1>
 
-    
+<p>Provides the default Hugo shortcodes as a collection of partials for use in templates.</p>
 
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+<h2 id="support-on-beerpay">Support on Beerpay</h2>
 
-    
-      <h3 id="what-s-the-issue">What&rsquo;s the issue?</h3>
+<p>Hey dude! Help me out for a couple of 🍻!</p>
+
+<p><a href="https://beerpay.io/hugomodo/hugomodo-shortcode-partials"><img src="https://beerpay.io/hugomodo/hugomodo-shortcode-partials/badge.svg?style=beer-square" alt="Beerpay" /></a>  <a href="https://beerpay.io/hugomodo/hugomodo-shortcode-partials?focus=wish"><img src="https://beerpay.io/hugomodo/hugomodo-shortcode-partials/make-wish.svg?style=flat-square" alt="Beerpay" /></a></p>
+
+<h2 id="what-s-the-issue">What&rsquo;s the issue?</h2>
 
 <p>HugoModo strives for third-party compatibility. The baseline for this is currently Forestry CMS. When asking the question, &ldquo;does it work with Forestry CMS?&rdquo; of the <a href="/extensions/image-processing">Image Processing</a> extension, the answer was not yes - it was <em>mostly</em>.</p>
 
@@ -318,19 +288,17 @@ The problem is, Forestry is unaware of shortcodes. These could be hand-typed by 
 
 <p>HugoModo Image Processing aims to circumvent that issue with an interpreter of its own for outputting content. But while this interpreter then succeeds in producing resized image resources, it breaks all of the other shortcodes that can be used in Hugo.</p>
 
-<h3 id="the-solution">The solution</h3>
+<h2 id="the-solution">The solution</h2>
 
 <p>HugoModo Shortcode Partials aims to provide all of the existing Hugo shortcodes as partials, as well as an override for content interpretation. This solves the problem above, and provides a clear best practise for adding additional shortcodes.</p>
 
-<h3 id="this-is-not-recommended">This is not recommended</h3>
+<h2 id="this-is-not-recommended">This is not recommended</h2>
 
 <p>Where absolutely possible, it is better to do without overriding Hugo&rsquo;s own <code>.Content</code> function. Using this shim and/or the Image Processing override may lead to a severe decrease in performance.</p>
 
 <p>It is provided as a convenience, for anywhere markdown reinterpretation is preferred.</p>
 
-    
-  
-</section>
+      
 
       
         
@@ -425,6 +393,10 @@ The problem is, Forestry is unaware of shortcodes. These could be hand-typed by 
     
       
     
+      
+        <li>
+          <a href="/tags" title="Tags">Tags</a>
+        </li>
       
     
     <li>
