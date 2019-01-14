@@ -17,7 +17,7 @@
       <pubDate>Sat, 12 Jan 2019 15:01:17 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/milligram/</guid>
-      <description></description>
+      <description>HugoModo Milligram Based on Milligram by CJ Patoilo.</description>
     </item>
     
     <item>
@@ -26,7 +26,8 @@
       <pubDate>Sat, 29 Dec 2018 14:39:14 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/best-motherfucking-website/</guid>
-      <description></description>
+      <description>HugoModo Best Motherfucking Website Based on The Best Motherfucking Website, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.
+Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugomodo git submodule add https://github.com/hugomodo/hugomodo-best-motherfucking-website themes/hugomodo-best-motherfucking-websitethemes = [&amp;#34;hugomodo-best-motherfucking-website&amp;#34;] Support on Beerpay Hey dude! Help me out for a couple of 🍻!</description>
     </item>
     
     <item>
@@ -35,7 +36,9 @@
       <pubDate>Sat, 29 Dec 2018 14:38:59 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/hugomodo/</guid>
-      <description></description>
+      <description>HugoModo The base theme for HugoModo&amp;rsquo;s modular approach to Hugo website design. It provides the asset precompilation pipeline and bundler data files, clean and semantic HTML, and well-organised partials for ease of developing child themes.
+It provides minimal styling, so is best used as the base for a child theme. HugoModo themes which depend on it will include this theme automatically.
+Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugomodothemes = [&amp;#34;hugomodo&amp;#34;] Support on Beerpay Hey dude!</description>
     </item>
     
   </channel>

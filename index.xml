@@ -17,7 +17,7 @@
       <pubDate>Sat, 12 Jan 2019 15:01:17 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/milligram/</guid>
-      <description></description>
+      <description>HugoModo Milligram Based on Milligram by CJ Patoilo.</description>
     </item>
     
     <item>
@@ -75,7 +75,11 @@ So, how does search work? Classically, you&amp;rsquo;d require a server. Your se
       <pubDate>Thu, 03 Jan 2019 03:09:44 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/extensions/fusejs/</guid>
-      <description></description>
+      <description>HugoModo FuseJS Adds site search functionality to Hugo sites.
+Support on Beerpay Hey dude! Help me out for a couple of 🍻!
+ 
+Installation Follow the usual steps for installing a HugoModo extension, then:
+ Add a JSON output for home in your site config:  [outputs] home = [ &amp;#34;HTML&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;JSON&amp;#34; ]  Add a content file at content/search.md with frontmatter:  --- title: Search layout: search ---  That&amp;rsquo;s it!</description>
     </item>
     
     <item>
@@ -125,7 +129,10 @@ Of course, HugoModo deliberately does a lot differently, emphasising the princip
       <pubDate>Mon, 31 Dec 2018 20:08:37 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/extensions/shortcode-partials/</guid>
-      <description></description>
+      <description>HugoModo Shortcode Partials Provides the default Hugo shortcodes as a collection of partials for use in templates.
+Support on Beerpay Hey dude! Help me out for a couple of 🍻!
+ 
+What&amp;rsquo;s the issue? HugoModo strives for third-party compatibility. The baseline for this is currently Forestry CMS. When asking the question, &amp;ldquo;does it work with Forestry CMS?&amp;rdquo; of the Image Processing extension, the answer was not yes - it was mostly.</description>
     </item>
     
     <item>
@@ -145,7 +152,10 @@ But Forestry has offered configuration for using a content directory instead for
       <pubDate>Sun, 30 Dec 2018 16:54:08 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/extensions/image-processing/</guid>
-      <description></description>
+      <description>HugoModo Image Processing Image Processing for Hugo sites.
+Shim HugoModo Image Processing includes a collection of shims for providing the same image processing treatment to markdown in your site&amp;rsquo;s content.
+To activate it, create a file in your Hugo site at data/config/imageProcessing.toml with the content:
+contentShim = true This will break other shortcodes on your site, so you may also want to install HugoModo Shortcode Partials, which contains shims to fix some of the shortcodes.</description>
     </item>
     
     <item>
@@ -154,7 +164,8 @@ But Forestry has offered configuration for using a content directory instead for
       <pubDate>Sat, 29 Dec 2018 14:39:14 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/best-motherfucking-website/</guid>
-      <description></description>
+      <description>HugoModo Best Motherfucking Website Based on The Best Motherfucking Website, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.
+Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugomodo git submodule add https://github.com/hugomodo/hugomodo-best-motherfucking-website themes/hugomodo-best-motherfucking-websitethemes = [&amp;#34;hugomodo-best-motherfucking-website&amp;#34;] Support on Beerpay Hey dude! Help me out for a couple of 🍻!</description>
     </item>
     
     <item>
@@ -163,7 +174,9 @@ But Forestry has offered configuration for using a content directory instead for
       <pubDate>Sat, 29 Dec 2018 14:38:59 +0000</pubDate>
       
       <guid>https://hugomodo.github.io/themes/hugomodo/</guid>
-      <description></description>
+      <description>HugoModo The base theme for HugoModo&amp;rsquo;s modular approach to Hugo website design. It provides the asset precompilation pipeline and bundler data files, clean and semantic HTML, and well-organised partials for ease of developing child themes.
+It provides minimal styling, so is best used as the base for a child theme. HugoModo themes which depend on it will include this theme automatically.
+Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugomodothemes = [&amp;#34;hugomodo&amp;#34;] Support on Beerpay Hey dude!</description>
     </item>
     
     <item>
