@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Cookie Consent</title>
+      <link>https://hugomodo.github.io/extensions/cookie-consent/</link>
+      <pubDate>Wed, 16 Jan 2019 18:29:53 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/extensions/cookie-consent/</guid>
+      <description> Cookie Consent Adds Cookie Consent modal to HugoModo sites, provided by Insites https://cookieconsent.insites.com/
+Installation git submodule add https://github.com/hugomodo/hugomodo-cookie-consent.git themes/hugomodo-cookie-consentthemes = [ &amp;#34;hugomodo-cookie-consent&amp;#34;, ... ]</description>
+    </item>
+    
+    <item>
       <title>Milligram</title>
       <link>https://hugomodo.github.io/themes/milligram/</link>
       <pubDate>Sat, 12 Jan 2019 15:01:17 +0000</pubDate>

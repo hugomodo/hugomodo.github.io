@@ -6,10 +6,20 @@
     <description>Recent content in Extensions on HugoModo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jan 2019 03:09:44 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 18:29:53 +0000</lastBuildDate>
     
 	<atom:link href="https://hugomodo.github.io/extensions/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cookie Consent</title>
+      <link>https://hugomodo.github.io/extensions/cookie-consent/</link>
+      <pubDate>Wed, 16 Jan 2019 18:29:53 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/extensions/cookie-consent/</guid>
+      <description> Cookie Consent Adds Cookie Consent modal to HugoModo sites, provided by Insites https://cookieconsent.insites.com/
+Installation git submodule add https://github.com/hugomodo/hugomodo-cookie-consent.git themes/hugomodo-cookie-consentthemes = [ &amp;#34;hugomodo-cookie-consent&amp;#34;, ... ]</description>
+    </item>
     
     <item>
       <title>Fusejs</title>
