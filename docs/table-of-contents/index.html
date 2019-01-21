@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+  <title>
+  
+    Table of Contents | HugoModo - A modular Hugo framework.
+  
+</title>
+
+
+  <meta name="description" content="A modular Hugo framework." />
+
+  
+  
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+  
+
+  
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.min.66d1984a70f7fd69410f8c65ae73ba94c9c743baa61213ef7dc80860daca6f19.css" integrity="sha256-ZtGYSnD3/WlBD4xlrnO6lMnHQ7qmEhPvfcgIYNrKbxk=" crossorigin="anonymous">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+
+<meta itemprop="name" content="Table of Contents">
+<meta itemprop="description" content="HugoModo features Hugo&rsquo;s built-in support for generating a table of contents for a page.
+This is off by default, and can be enabled or disabled for the entire site or individual pages.
+Enable for your site Add this to your site&rsquo;s config.toml file:
+[Params] toc = true Enable for a single page If you only want it enabled for a single page, add this to your page&rsquo;s frontmatter:
+toc = true Disable for a single page To disable the table of contents for certain pages, add this to your page&rsquo;s frontmatter:">
+
+
+<meta itemprop="datePublished" content="2019-01-21T20:09:38&#43;00:00" />
+<meta itemprop="dateModified" content="2019-01-21T20:09:38&#43;00:00" />
+<meta itemprop="wordCount" content="94">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+  
+  <meta property="og:title" content="Table of Contents" />
+  <meta property="og:description" content="HugoModo features Hugo&rsquo;s built-in support for generating a table of contents for a page.
+This is off by default, and can be enabled or disabled for the entire site or individual pages.
+Enable for your site Add this to your site&rsquo;s config.toml file:
+[Params] toc = true Enable for a single page If you only want it enabled for a single page, add this to your page&rsquo;s frontmatter:
+toc = true Disable for a single page To disable the table of contents for certain pages, add this to your page&rsquo;s frontmatter:" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://hugomodo.github.io/docs/table-of-contents/" />
+
+  
+
+
+<meta property="article:published_time" content="2019-01-21T20:09:38&#43;00:00"/>
+  <meta property="article:modified_time" content="2019-01-21T20:09:38&#43;00:00"/>
+
+
+  
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Table of Contents"/>
+<meta name="twitter:description" content="HugoModo features Hugo&rsquo;s built-in support for generating a table of contents for a page.
+This is off by default, and can be enabled or disabled for the entire site or individual pages.
+Enable for your site Add this to your site&rsquo;s config.toml file:
+[Params] toc = true Enable for a single page If you only want it enabled for a single page, add this to your page&rsquo;s frontmatter:
+toc = true Disable for a single page To disable the table of contents for certain pages, add this to your page&rsquo;s frontmatter:"/>
+
+
+  
+
+
+
+  
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+
+
+
+
+  
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+
+  
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left"
+})});
+</script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-58994131-3', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+</head>
+<body><header>
+  <strong id="siteTitle">
+    <a title="HugoModo" href="/">HugoModo</a>
+  </strong>
+  <nav>
+  <ul>
+    
+    
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/blog/" title="Blog">Blog</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/docs/" title="Docs">Docs</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/extensions/" title="Extensions">Extensions</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/themes/" title="Themes">Themes</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/search/" title="Search">Search</a>
+        </li>
+      
+    
+  </ul>
+</nav>
+
+</header>
+
+  <main>
+    <header>
+      <nav>
+  <ul class="breadcrumbs">
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/">HugoModo</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/docs/">Docs</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="active">
+    
+      
+        Table of Contents
+      
+    
+  </li>
+
+  </ul>
+</nav>
+
+
+
+    </header>
+    <article>
+      
+
+      <header>
+  <h1>Table of Contents</h1>
+</header>
+
+      <aside>
+  <dl>
+    <dt>Published</dt>
+<dd><time datetime="2019-01-21T20:09:38&#43;00:00" itemprop="datePublished">21 Jan 2019</time></dd>
+
+
+    
+
+    
+  <dt>Reading time</dt>
+  <dd><time datetime="1m">1 minutes</time></dd>
+
+
+
+    
+
+
+
+   
+  
+  
+
+   
+  
+  
+
+   
+  
+  
+
+   
+  
+  
+
+
+  </dl>
+</aside>
+
+      
+
+
+  <aside>
+    <header>
+      <h2>Table of Contents</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#enable-for-your-site">Enable for your site</a></li>
+<li><a href="#enable-for-a-single-page">Enable for a single page</a></li>
+<li><a href="#disable-for-a-single-page">Disable for a single page</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+      <div>
+  
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    
+
+    
+
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+      
+      <p>HugoModo features <a href="https://gohugo.io/content-management/toc/">Hugo&rsquo;s built-in support for generating a table of contents</a> for a page.</p>
+
+<p>This is off by default, and can be enabled or disabled for the entire site or individual pages.</p>
+
+<h2 id="enable-for-your-site">Enable for your site</h2>
+
+<p>Add this to your site&rsquo;s <code>config.toml</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">Params</span>]
+  <span style="color:#a6e22e">toc</span> = <span style="color:#66d9ef">true</span></code></pre></div>
+<h2 id="enable-for-a-single-page">Enable for a single page</h2>
+
+<p>If you only want it enabled for a single page, add this to your page&rsquo;s frontmatter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">toc</span> = <span style="color:#66d9ef">true</span></code></pre></div>
+<h2 id="disable-for-a-single-page">Disable for a single page</h2>
+
+<p>To disable the table of contents for certain pages, add this to your page&rsquo;s frontmatter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">toc</span> = <span style="color:#66d9ef">false</span></code></pre></div>
+    
+  
+</div>
+
+      
+        
+      
+    </article>
+    <footer>
+      
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugomodo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </footer>
+  </main>
+<footer>
+  
+    <section><h2>About HugoModo</h2>
+
+
+  <p>A modular Hugo framework.</p>
+
+
+
+  
+  
+  <address>
+    <dl>
+      
+      
+  
+  
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/hugomodo">hugomodo</a></dd>
+  
+  
+  
+  
+  
+  
+
+
+    </dl>
+  </address>
+
+
+
+</section>
+  
+
+  <section><h2>Sitemap</h2>
+<nav>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+      <li>
+        <a href="/blog/" title="Blog">Blog</a>
+      </li>
+    
+      <li>
+        <a href="/docs/" title="Docs">Docs</a>
+      </li>
+    
+      <li>
+        <a href="/extensions/" title="Extensions">Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/themes/" title="Themes">Themes</a>
+      </li>
+    
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/search/" title="Search">Search</a>
+        </li>
+      
+    
+    
+      
+        <li>
+          <a href="/authors" title="Authors">Authors</a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="/tags" title="Tags">Tags</a>
+        </li>
+      
+    
+    <li>
+      <a title="Subscribe" aria-label="Subscribe" href="/index.xml">
+        RSS Feed
+      </a>
+    </li>
+  </ul>
+</nav>
+</section>
+
+  <aside>
+    <p>
+  &copy; 2019 HugoModo.
+  Built with <a href='https://hugomodo.github.io/' target='_blank'>HugoModo</a>.
+</p>
+
+  </aside>
+</footer>
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  <div id="contrast">
+  Add more contrast
+</div>
+
+<div id="invmode">
+  Inverted mode
+</div>
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+
+  
+    
+    <script src="https://hugomodo.github.io/js/global.min.a0eb8d3d97ebd9f8dc07d64b140c5820c24085a8df9d53ab1b2faf15d64436ca.js" integrity="sha256-oOuNPZfr2fjcB9ZLFAxYIMJAhajfnVOrGy&#43;vFdZENso=" crossorigin="anonymous"></script>
+  
+
+
+
+
+</body>
+</html>
