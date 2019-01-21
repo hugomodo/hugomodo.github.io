@@ -373,17 +373,17 @@ if (!doNotTrack) {
 
     
       
-      <h3 id="hugo">Hugo</h3>
+      <h2 id="hugo">Hugo</h2>
 
 <p>All of the standard <a href="https://gohugo.io/content-management/shortcodes/">Hugo shortcodes</a> work with HugoModo by default.</p>
 
 <p>Those listed below also work with the shims provided by the <a href="/extensions/shortcode-partials">Shortcode Partials</a> extension.</p>
 
-<h4 id="figure">figure</h4>
+<h3 id="figure">figure</h3>
 
-<h5 id="markup">Markup</h5>
+<h4 id="markup">Markup</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">figure</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/img/mountaineer.jpg&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A walk with a view.&#34;</span> &gt;}}</code></pre></div>
-<h5 id="example">Example</h5>
+<h4 id="example">Example</h4>
 
 <figure>
     <img src="/img/mountaineer.jpg"/> <figcaption>
@@ -391,17 +391,17 @@ if (!doNotTrack) {
         </figcaption>
 </figure>
 
-<h4 id="gist">gist</h4>
+<h3 id="gist">gist</h3>
 
-<h5 id="markup-1">Markup</h5>
+<h4 id="markup-1">Markup</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">gist</span> <span style="color:#a6e22e">spf13</span> <span style="color:#a6e22e">7896402</span> &gt;}}</code></pre></div>
-<h5 id="example-1">Example</h5>
+<h4 id="example-1">Example</h4>
 
 <script type="application/javascript" src="//gist.github.com/spf13/7896402.js"></script>
 
-<h4 id="highlight">highlight</h4>
+<h3 id="highlight">highlight</h3>
 
-<h5 id="markup-2">Markup</h5>
+<h4 id="markup-2">Markup</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">highlight</span> <span style="color:#a6e22e">go-html-template</span> &gt;}}
 &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
   &lt;<span style="color:#f92672">div</span>&gt;
@@ -412,7 +412,7 @@ if (!doNotTrack) {
   &lt;/<span style="color:#f92672">div</span>&gt;
 &lt;/<span style="color:#f92672">section</span>&gt;
 {{&lt; /<span style="color:#f92672">highlight</span> &gt;}}</code></pre></div>
-<h5 id="example-2">Example</h5>
+<h4 id="example-2">Example</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
   &lt;<span style="color:#f92672">div</span>&gt;
    &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Title</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">h1</span>&gt;
@@ -424,84 +424,84 @@ if (!doNotTrack) {
 <p><em>Note: If you use one of the content shims provided by a HugoModo extension, the above shortcode example will fail. You should opt for markdown code fences instead. Check out the Hugo docs for setup instructions: <a href="https://gohugo.io/content-management/syntax-highlighting/#highlight-in-code-fences">Highlight in Code Fences</a>.</em></p>
 
 <!---
-#### instagram
+### instagram
 
-##### Markup
+#### Markup
 
 ``` html
 {{< instagram BWNjjyYFxVx >}}
 ```
 
-##### Example
+#### Example
 
 {{< instagram BWNjjyYFxVx >}}
 
-#### param
+### param
 
 *Requires Hugo version 0.52 or higher*
 
-##### Markup
+#### Markup
 
 ``` html
 {{< param description >}}
 ```
 
-##### Example
+#### Example
 
 {{< param description >}}
 
-#### ref and relref
+### ref and relref
 
-##### Markup
+#### Markup
 
 ``` markdown
 [Hugo Goes Modular]({{< ref "/blog/hugo-goes-modular.md" >}})
 [List Pages]({{< relref "/blog/hugo-goes-modular.md#list-pages" >}})
 ```
 
-##### Example
+#### Example
 
 [Hugo Goes Modular]({{< ref "/blog/hugo-goes-modular.md" >}})
 [List Pages]({{< relref "/blog/hugo-goes-modular.md#list-pages" >}})
 
-#### tweet
+### tweet
 
-##### Markup
+#### Markup
 
 ``` html
 {{< tweet 877500564405444608 >}}
 ```
 
-##### Example
+#### Example
 
 {{< tweet 877500564405444608 >}}
 
-#### vimeo
+### vimeo
 
-##### Markup
+#### Markup
 
 ``` html
 {{< vimeo 146022717 >}}
 ```
 
-##### Example
+#### Example
 
 {{< vimeo 146022717 >}}
 
-#### youtube
+### youtube
 
-##### Markup
+#### Markup
 
 ``` html
 {{< youtube w7Ft2ymGmfc >}}
 ```
 
-##### Example
+#### Example
 
 {{< youtube w7Ft2ymGmfc >}}
 --->
 
-<h3 id="hugomodo">HugoModo</h3>
+<h2 id="hugomodo">HugoModo</h2>
 
 <p>HugoModo will extend the standard set of shortcodes. Take a look at the extensions library for a complete list.</p>
 
