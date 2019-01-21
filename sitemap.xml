@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hugomodo.github.io/blog/hugo-s-table-of-contents/</loc>
+    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hugomodo.github.io/extensions/cookie-consent/</loc>
     <lastmod>2019-01-16T18:29:53+00:00</lastmod>
   </url>
