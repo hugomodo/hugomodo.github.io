@@ -544,9 +544,9 @@ if (!doNotTrack) {
 <h2 id="h1-is-like-h2-or-h1-5">h1 is like h2 or h1.5</h2>
 
 <p>Quick note: Regardless of the theme or framework I&rsquo;m using, the use of <code>h1</code> is still going to result in <strong>BIG STYLING</strong> of the text. A little quick fix for that (not tested) might be:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sass" data-lang="sass"><span style="color:#960050;background-color:#1e0010">h1:not(:first-of-type) {</span>
-<span style="color:#960050;background-color:#1e0010">  @extend h2;</span>
-<span style="color:#960050;background-color:#1e0010">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#f92672">h1</span><span style="color:#a6e22e">:not</span><span style="color:#f92672">(</span><span style="color:#a6e22e">:first-of-type</span><span style="color:#f92672">)</span> {
+  <span style="color:#66d9ef">@extend</span> <span style="color:#f92672">h2</span><span style="color:#f92672">;</span>
+}</code></pre></div>
 <p>&hellip;maybe. Just thinking out loud here. This will (or should) at least get any <code>h1</code> but the first on the page to adopt the styling rules of a <code>h2</code> instead.</p>
 
 <p>But actually&hellip; We don&rsquo;t want it to be identical to an actual <code>h2</code>. We do still want to respect those users&rsquo; nesting decisions. So probably better, rather than <code>@extend h2</code> to do something more like <code>font-size:2.25em;</code> or whatever styling choices we have to make to have the result stylistically appear to be a &ldquo;h1.5&rdquo;, with size and weight somewhere between the main <code>h1</code> and an <code>h2</code>.</p>
@@ -592,13 +592,13 @@ if (!doNotTrack) {
 <p>We can&rsquo;t just be rid of the first nesting level, as our type 2 people will then be missing a level. So we&rsquo;ll have to style it in such a way as it remains present but is practically invisible.</p>
 
 <p>So first things first, let&rsquo;s get rid of the bullet points. They have got to go. We&rsquo;ll also get rid of indentation and&hellip; maybe bring it back afterwards based on certain conditions, but we might also consider denoting the nesting level using font-size instead.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sass" data-lang="sass"><span style="color:#960050;background-color:#1e0010">nav#TableOfContents {</span>
-<span style="color:#960050;background-color:#1e0010">  ul {</span>
-<span style="color:#960050;background-color:#1e0010">    padding:0;</span>
-<span style="color:#960050;background-color:#1e0010">    list-style-type: none;</span>
-<span style="color:#960050;background-color:#1e0010">    font-size:0.95em;</span>
-<span style="color:#960050;background-color:#1e0010">  }</span>
-<span style="color:#960050;background-color:#1e0010">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#f92672">nav</span>#TableOfContents {
+  <span style="color:#f92672">ul</span> {
+    <span style="color:#f92672">padding</span><span style="color:#a6e22e">:0</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">list-style-type</span><span style="color:#a6e22e">:</span> <span style="color:#f92672">none</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">font-size</span><span style="color:#a6e22e">:0</span><span style="color:#a6e22e">.95em</span><span style="color:#f92672">;</span>
+  }
+}</code></pre></div>
 <p>That removes the indentation, removes the bullets and reduces the font-size on the <code>ul</code> elements contents. At this point, it would be useful to have the whole range of header elements to play with to ensure that the font-size never gets too small. <code>em</code> adjusts the size relative to the containing element, so each subsequent level will be, with the above style rules, 5% smaller than its parent. Let&rsquo;s just throw down some dummy headers here:</p>
 
 <h2 id="header-2">Header 2</h2>
@@ -641,24 +641,24 @@ if (!doNotTrack) {
 <p>That isn&rsquo;t in the spec. And neither is a <code>parent</code> selector, which we could alternatively use to select only <code>li</code> elements that are the parent of an <code>a</code> element.</p>
 
 <p>What we can use is the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator" title="Mozilla Article on the Adjacent Sibling Combinator">adjacent sibling combinator</a>. So to add padding to subsequent levels that are not children of an empty level, we&rsquo;ll do this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sass" data-lang="sass"><span style="color:#960050;background-color:#1e0010">a + ul {</span>
-<span style="color:#960050;background-color:#1e0010">  padding-left:1em;</span>
-<span style="color:#960050;background-color:#1e0010">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#f92672">a</span> <span style="color:#f92672">+</span> <span style="color:#f92672">ul</span> {
+  <span style="color:#f92672">padding-left</span><span style="color:#a6e22e">:1em</span><span style="color:#f92672">;</span>
+}</code></pre></div>
 <h2 id="as-good-as-it-gets-for-now">As Good as it Gets&hellip; For Now</h2>
 
 <p>I&rsquo;ve worked on this problem long enough for today and I&rsquo;ve reached something I&rsquo;m satisfied with. In the final result, I&rsquo;ve commented out the font-size adjustment because I don&rsquo;t feel it was adding anything. I may revisit - perhaps a second level decrease followed by subsequent levels at the same size would be preferable.</p>
 
 <p>Here&rsquo;s the final SCSS:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sass" data-lang="sass"><span style="color:#960050;background-color:#1e0010">nav#TableOfContents {</span>
-<span style="color:#960050;background-color:#1e0010">  ul {</span>
-<span style="color:#960050;background-color:#1e0010">    padding: 0;</span>
-<span style="color:#960050;background-color:#1e0010">    list-style-type: none;</span>
-<span style="color:#960050;background-color:#1e0010">    // font-size:0.95em;</span>
-<span style="color:#960050;background-color:#1e0010">    a + ul {</span>
-<span style="color:#960050;background-color:#1e0010">      padding-left:1em;</span>
-<span style="color:#960050;background-color:#1e0010">    }</span>
-<span style="color:#960050;background-color:#1e0010">  }</span>
-<span style="color:#960050;background-color:#1e0010">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#f92672">nav</span>#TableOfContents {
+  <span style="color:#f92672">ul</span> {
+    <span style="color:#f92672">padding</span><span style="color:#a6e22e">:</span> <span style="color:#f92672">0</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">list-style-type</span><span style="color:#a6e22e">:</span> <span style="color:#f92672">none</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">//</span> <span style="color:#f92672">font-size</span><span style="color:#a6e22e">:0</span><span style="color:#a6e22e">.95em</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">a</span> <span style="color:#f92672">+</span> <span style="color:#f92672">ul</span> {
+      <span style="color:#f92672">padding-left</span><span style="color:#a6e22e">:1em</span><span style="color:#f92672">;</span>
+    }
+  }
+}</code></pre></div>
 <p>Yep, that&rsquo;ll do.</p>
 
 <p>I would be eager to reintroduce list-style-type as decimals for the top level followed by roman numerals beneath. But I&rsquo;m slightly concerned by the results of an experiment in doing that. It works, but we also wind up with the decimal numbers for empty levels as well. Although with the positioning choices I&rsquo;ve made, you can&rsquo;t necessarily see them as they are covered by identical lower-level decimal numbers. But they are there&hellip; and I can&rsquo;t yet think of a solution for that.</p>
