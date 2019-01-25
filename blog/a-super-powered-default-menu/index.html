@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+  <title>
+  
+    A Super-Powered Default Menu | HugoModo - A modular Hugo framework.
+  
+</title>
+
+
+  <meta name="description" content="A modular Hugo framework." />
+
+  
+  
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+  
+
+  
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.min.c3627058e68b9c301a20c95aced18e78bb84732a24c71c997df1b9e41caff06a.css" integrity="sha256-w2JwWOaLnDAaIMlaztGOeLuEcyokxxyZffG55Byv8Go=" crossorigin="anonymous">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+
+<meta itemprop="name" content="A Super-Powered Default Menu">
+<meta itemprop="description" content="I put off redoing the menu setup for HugoModo for a little while. Hugo&rsquo;s menu system, I remembered, was a challenge I&rsquo;d previously overcome. The required changes were going to take, I dunno, anywhere from a few hours to a day. But I was wrong. Hugo&rsquo;s menu system is actually very simple, and I was done in a matter of minutes.
+The reason I thought it was going to be difficult is because I&rsquo;d previously made it difficult for myself, but the result of that was a powerful default menu behaviour that went leagues beyond Hugo&rsquo;s &ldquo;Section Menu for Lazy Bloggers&rdquo;.">
+
+
+<meta itemprop="datePublished" content="2019-01-25T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-01-25T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="652">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+  
+  <meta property="og:title" content="A Super-Powered Default Menu" />
+  <meta property="og:description" content="I put off redoing the menu setup for HugoModo for a little while. Hugo&rsquo;s menu system, I remembered, was a challenge I&rsquo;d previously overcome. The required changes were going to take, I dunno, anywhere from a few hours to a day. But I was wrong. Hugo&rsquo;s menu system is actually very simple, and I was done in a matter of minutes.
+The reason I thought it was going to be difficult is because I&rsquo;d previously made it difficult for myself, but the result of that was a powerful default menu behaviour that went leagues beyond Hugo&rsquo;s &ldquo;Section Menu for Lazy Bloggers&rdquo;." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://hugomodo.github.io/blog/a-super-powered-default-menu/" />
+
+  
+
+
+<meta property="article:published_time" content="2019-01-25T00:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2019-01-25T00:00:00&#43;00:00"/>
+
+
+  
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A Super-Powered Default Menu"/>
+<meta name="twitter:description" content="I put off redoing the menu setup for HugoModo for a little while. Hugo&rsquo;s menu system, I remembered, was a challenge I&rsquo;d previously overcome. The required changes were going to take, I dunno, anywhere from a few hours to a day. But I was wrong. Hugo&rsquo;s menu system is actually very simple, and I was done in a matter of minutes.
+The reason I thought it was going to be difficult is because I&rsquo;d previously made it difficult for myself, but the result of that was a powerful default menu behaviour that went leagues beyond Hugo&rsquo;s &ldquo;Section Menu for Lazy Bloggers&rdquo;."/>
+
+
+  
+
+
+
+  
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+
+
+
+
+  
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+
+  
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left"
+})});
+</script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-58994131-3', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+</head>
+<body><header>
+  <strong id="siteTitle">
+    <a title="HugoModo" href="/">HugoModo</a>
+  </strong>
+  <nav>
+  <ul>
+    
+    
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/blog/" title="Blog">Blog</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/docs/" title="Docs">Docs</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/extensions/" title="Extensions">Extensions</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/themes/" title="Themes">Themes</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/search/" title="Search">Search</a>
+        </li>
+      
+    
+  </ul>
+</nav>
+
+</header>
+
+  <main>
+    <header>
+      <nav>
+  <ul class="breadcrumbs">
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/">HugoModo</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/blog/">Blog</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="active">
+    
+      
+        A Super-Powered Default Menu
+      
+    
+  </li>
+
+  </ul>
+</nav>
+
+
+
+    </header>
+    <article>
+      
+
+      <header>
+  <h1>A Super-Powered Default Menu</h1>
+</header>
+
+      <aside>
+  <dl>
+    <dt>Published</dt>
+<dd><time datetime="2019-01-25T00:00:00&#43;00:00" itemprop="datePublished">25 Jan 2019</time></dd>
+
+
+    
+
+    
+  <dt>Reading time</dt>
+  <dd><time datetime="4m">4 minutes</time></dd>
+
+
+
+    
+
+
+
+   
+  
+  
+    <dt>Authors</dt>
+    
+      
+      
+      
+        <dd>
+          <a href="/authors/thom-bruce">
+            Thom Bruce
+          </a>
+        </dd>
+      
+    
+  
+
+   
+  
+  
+
+   
+  
+  
+
+   
+  
+  
+
+
+  </dl>
+</aside>
+
+      
+
+
+  <aside>
+    <header>
+      <h2>Table of Contents</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hugo-s-section-menu-for-lazy-bloggers">Hugo&rsquo;s Section Menu for Lazy Bloggers</a></li>
+<li><a href="#hugomodo-s-super-powered-default-menu">HugoModo&rsquo;s Super-Powered Default Menu</a></li>
+<li><a href="#adding-menu-items">Adding Menu Items</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+      <div>
+  
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    
+
+    
+
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+      
+      <p>I put off redoing the menu setup for HugoModo for a little while. Hugo&rsquo;s menu system, I remembered, was a challenge I&rsquo;d previously overcome. The required changes were going to take, I dunno, anywhere from a few hours to a day. But I was wrong. Hugo&rsquo;s menu system is actually very simple, and I was done in a matter of minutes.</p>
+
+<p>The reason I thought it was going to be difficult is because I&rsquo;d previously made it difficult for myself, but the result of that was a powerful default menu behaviour that went leagues beyond Hugo&rsquo;s &ldquo;Section Menu for Lazy Bloggers&rdquo;. Hugo recommends that setup as a starting point, so we&rsquo;ll start there too.</p>
+
+<h2 id="hugo-s-section-menu-for-lazy-bloggers">Hugo&rsquo;s Section Menu for Lazy Bloggers</h2>
+
+<p>Hugo&rsquo;s <a href="https://gohugo.io/templates/menu-templates/#section-menu-for-lazy-bloggers" title="Hugo's Default Menu">Section Menu for Lazy Bloggers</a> lists all site sections that have content. It&rsquo;s a really quick and simple way to add site-wide navigation to a Hugo site.</p>
+
+<p>Here&rsquo;s how I&rsquo;ve implemented it in HugoModo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">  &lt;<span style="color:#f92672">nav</span>&gt;
+    &lt;<span style="color:#f92672">ul</span>&gt;
+      <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$currentPage</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+      <span style="color:#75715e">{{</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">.Site.Menus.main</span> <span style="color:#75715e">}}</span>
+        &lt;<span style="color:#f92672">li</span>&gt;
+          &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sidebar-nav-item</span><span style="color:#75715e">{{</span><span style="color:#66d9ef">if</span> <span style="color:#66d9ef">or</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">$currentPage</span><span style="color:#a6e22e">.IsMenuCurrent</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#a6e22e">.</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">$currentPage</span><span style="color:#a6e22e">.HasMenuCurrent</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#a6e22e">.</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span><span style="color:#e6db74"> active</span><span style="color:#75715e">{{</span><span style="color:#66d9ef">end</span><span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.URL</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Title</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Name</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">a</span>&gt;
+        &lt;/<span style="color:#f92672">li</span>&gt;
+      <span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+    &lt;/<span style="color:#f92672">ul</span>&gt;
+  &lt;/<span style="color:#f92672">nav</span>&gt;</code></pre></div>
+<p>As of today, HugoModo supports this menu with minimal setup. To activate this menu, all that&rsquo;s needed is this line in your site&rsquo;s <code>config.toml</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">sectionPagesMenu</span> = <span style="color:#e6db74">&#34;main&#34;</span></code></pre></div>
+<p>That&rsquo;s it, you&rsquo;re all set!</p>
+
+<h2 id="hugomodo-s-super-powered-default-menu">HugoModo&rsquo;s Super-Powered Default Menu</h2>
+
+<p>Now, to the reason I had assumed I was in for a challenge with menus! I did this some time back when I wasn&rsquo;t as well-versed in Hugo&rsquo;s architecture as I am now., so at the time it took a lot of effort. And yet, it now looks so deceptively simple:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">  &lt;<span style="color:#f92672">nav</span>&gt;
+    &lt;<span style="color:#f92672">ul</span>&gt;
+      <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$sections</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">.Site.Sections</span> <span style="color:#75715e">}}</span>
+      <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$pages</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">where</span> <span style="color:#a6e22e">.Site.RegularPages</span> <span style="color:#e6db74">&#34;Section&#34;</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#75715e">}}</span>
+      <span style="color:#75715e">{{</span> <span style="color:#66d9ef">range</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">union</span> <span style="color:#a6e22e">$sections</span> <span style="color:#a6e22e">$pages</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+        <span style="color:#75715e">{{</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">not</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">eq</span> <span style="color:#a6e22e">.Name</span> <span style="color:#a6e22e">.Site.Title</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+          &lt;<span style="color:#f92672">li</span>&gt;
+            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Permalink</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Title</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Name</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">a</span>&gt;
+          &lt;/<span style="color:#f92672">li</span>&gt;
+        <span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+      <span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+    &lt;/<span style="color:#f92672">ul</span>&gt;
+  &lt;/<span style="color:#f92672">nav</span>&gt;</code></pre></div>
+<p>You&rsquo;ll see there the standard markup for an unordered HTML menu, the elements used: <code>&lt;nav&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code> and <code>&lt;a&gt;</code>.</p>
+
+<p>You&rsquo;ll notice my menu also includes a site&rsquo;s sections, via the <code>$sections</code> variable. But it also brings in some of a site&rsquo;s pages. Here&rsquo;s the all-important line:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$pages</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">where</span> <span style="color:#a6e22e">.Site.RegularPages</span> <span style="color:#e6db74">&#34;Section&#34;</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#75715e">}}</span></code></pre></div>
+<p>The <code>where</code> query here finds only those pages whose <code>Section</code> is blank. This is effectively asking, &ldquo;is it in the root folder?&rdquo;</p>
+
+<p>The resultant set of sections and pages is the collection of those at the root of the Hugo content folder.</p>
+
+<pre><code>content/
+  blog/							&lt;- Appears in menu
+    my-first-blog-post.md
+  career/						&lt;- Appears in menu
+    experience/
+      my-first-job.md
+    projects/
+      my-project.md
+    _index.md
+  about.md						&lt;- Appears in menu
+  contact.md					&lt;- Appears in menu
+</code></pre>
+
+<p>Contrast to Hugo&rsquo;s lazy menu:</p>
+
+<pre><code>content/
+  blog/							&lt;- Appears in menu
+    my-first-blog-post.md
+  career/
+    experience/					&lt;- Appears in menu
+      my-first-job.md
+    projects/					&lt;- Appears in menu
+      my-project.md
+    _index.md
+  about.md
+  contact.md
+</code></pre>
+
+<p>With the basic setup, Hugo does not list our about or contact pages in the main menu. It also skips root sections, that contain no content files and shows deeper sections that do.</p>
+
+<p>Hugo&rsquo;s menu is a great way to get started for really simple websites. But I think the HugoModo default presents a stronger starting point for complex site structures.</p>
+
+<p>Importantly, neither limits what you can do with menus. For even greater control, you can still manually configure menu entries in a couple of ways.</p>
+
+<h2 id="adding-menu-items">Adding Menu Items</h2>
+
+<p>With either of the above configured, adding menu items works just as it would with any other Hugo site.</p>
+
+<p>You can add menu items to your site config:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">menu</span>]
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;about&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span></code></pre></div>
+<p>Or you can add them to your content frontmatter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+menu: <span style="color:#e6db74">&#34;main&#34;</span>
+---</code></pre></div>
+<p>Instead of the lazy sections menu or the HugoModo default, the menu will now be populated by the items specified in your site config or content frontmatter (or indeed both).</p>
+
+<p>Consult Hugo&rsquo;s own <a href="https://gohugo.io/content-management/menus/" title="Hugo's Menu Documentation">documentation</a> for further possibilities.</p>
+
+    
+  
+</div>
+
+      
+        
+
+
+  <footer>
+    
+    <section class="authors">
+      <header>
+        <h2>Author</h2>
+      </header>
+      
+        
+        
+        
+          <article class="author">
+  
+
+
+
+  
+  
+    <figure>
+      <a href="https://hugomodo.github.io/authors/thom-bruce/">
+        <img src="/uploads/thombruce.jpg" alt="Thom Bruce author image"/>
+      </a>
+    </figure>
+  
+  <header>
+    <h4>
+      <a href="https://hugomodo.github.io/authors/thom-bruce/">
+        Thom Bruce
+      </a>
+    </h4>
+  </header>
+  <div class="bio">
+    
+      <p>Author, coder.</p>
+    
+  </div>
+  
+  <address>
+    <dl>
+      
+        <dt>Email</dt>
+        <dd><a href="mailto:thom@thombruce.com">thom@thombruce.com</a></dd>
+      
+      
+  
+    <dt>Website</dt>
+    <dd><a href="https://thombruce.com/">https://thombruce.com/</a></dd>
+  
+  
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/thombruce">thombruce</a></dd>
+  
+  
+    <dt>Facebook</dt>
+    <dd><a href="https://facebook.com/thombruce">thombruce</a></dd>
+  
+  
+    <dt>Twitter</dt>
+    <dd><a href="https://twitter.com/thombruce">thombruce</a></dd>
+  
+  
+  
+    <dt>LinkedIn</dt>
+    <dd><a href="https://linkedin.com/in/thombruce">thombruce</a></dd>
+  
+  
+
+
+    </dl>
+  </address>
+
+
+
+
+</article>
+
+        
+      
+    </section>
+  </footer>
+
+
+      
+    </article>
+    <footer>
+      
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugomodo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </footer>
+  </main>
+<footer>
+  
+    <section><h2>About HugoModo</h2>
+
+
+  <p>A modular Hugo framework.</p>
+
+
+
+  
+  
+  <address>
+    <dl>
+      
+      
+  
+  
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/hugomodo">hugomodo</a></dd>
+  
+  
+  
+  
+  
+  
+
+
+    </dl>
+  </address>
+
+
+
+</section>
+  
+
+  <section><h2>Sitemap</h2>
+<nav>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+      <li>
+        <a href="/blog/" title="Blog">Blog</a>
+      </li>
+    
+      <li>
+        <a href="/docs/" title="Docs">Docs</a>
+      </li>
+    
+      <li>
+        <a href="/extensions/" title="Extensions">Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/themes/" title="Themes">Themes</a>
+      </li>
+    
+    
+      
+        <li>
+          <a href="https://hugomodo.github.io/search/" title="Search">Search</a>
+        </li>
+      
+    
+    
+      
+        <li>
+          <a href="/authors" title="Authors">Authors</a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="/tags" title="Tags">Tags</a>
+        </li>
+      
+    
+    <li>
+      <a title="Subscribe" aria-label="Subscribe" href="/index.xml">
+        RSS Feed
+      </a>
+    </li>
+  </ul>
+</nav>
+</section>
+
+  
+
+
+
+
+
+
+
+
+  <aside>
+    <p>
+  &copy; 2019 HugoModo.
+  Built with <a href='https://hugomodo.github.io/' target='_blank'>HugoModo</a>.
+</p>
+
+  </aside>
+</footer>
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  <div id="contrast">
+  Add more contrast
+</div>
+
+<div id="invmode">
+  Inverted mode
+</div>
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+
+  
+    
+    <script src="https://hugomodo.github.io/js/global.min.a0eb8d3d97ebd9f8dc07d64b140c5820c24085a8df9d53ab1b2faf15d64436ca.js" integrity="sha256-oOuNPZfr2fjcB9ZLFAxYIMJAhajfnVOrGy&#43;vFdZENso=" crossorigin="anonymous"></script>
+  
+
+
+
+
+</body>
+</html>
