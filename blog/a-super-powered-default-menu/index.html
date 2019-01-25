@@ -455,36 +455,30 @@ if (!doNotTrack) {
 <p>The <code>where</code> query here finds only those pages whose <code>Section</code> is blank. This is effectively asking, &ldquo;is it in the root folder?&rdquo;</p>
 
 <p>The resultant set of sections and pages is the collection of those at the root of the Hugo content folder.</p>
-
-<pre><code>content/
-  blog/  &lt;- Appears in menu
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">content/
+  blog/                   &lt;- Appears in menu
     my-first-blog-post.md
-  career/  &lt;- Appears in menu
+  career/                 &lt;- Appears in menu
     experience/
       my-first-job.md
     projects/
       my-project.md
     _index.md
-  about.md  &lt;- Appears in menu
-  contact.md  &lt;- Appears in menu
-</code></pre>
-
+  about.md                &lt;- Appears in menu
+  contact.md              &lt;- Appears in menu</code></pre></div>
 <p>Contrast to Hugo&rsquo;s lazy menu:</p>
-
-<pre><code>content/
-  blog/	 &lt;- Appears in menu
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">content/
+  blog/	                  &lt;- Appears in menu
     my-first-blog-post.md
   career/
-    experience/  &lt;- Appears in menu
+    experience/           &lt;- Appears in menu
       my-first-job.md
-    projects/  &lt;- Appears in menu
+    projects/             &lt;- Appears in menu
       my-project.md
     _index.md
   about.md
-  contact.md
-</code></pre>
-
-<p>With the basic setup, Hugo does not list our about or contact pages in the main menu. It also skips root sections, that contain no content files and shows deeper sections that do.</p>
+  contact.md</code></pre></div>
+<p>With the basic setup, Hugo does not list our about or contact pages in the main menu. It also skips root sections that contain no content files and shows deeper sections that do.</p>
 
 <p>Hugo&rsquo;s menu is a great way to get started for really simple websites. But I think the HugoModo default presents a stronger starting point for complex site structures.</p>
 
