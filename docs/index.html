@@ -226,7 +226,7 @@ if (!doNotTrack) {
 
   <main>
     <header>
-      <nav>
+      <nav id="breadcrumbNav" aria-label="breadcrumb">
   <ul class="breadcrumbs">
     
   
@@ -541,8 +541,9 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
     </article>
   </main>
 <footer>
-  
-    <section><h2>About HugoModo</h2>
+  <div id="footerWrapper">
+    
+      <section><h2>About HugoModo</h2>
 
 
   <p>A modular Hugo framework.</p>
@@ -573,9 +574,9 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
 
 
 </section>
-  
+    
 
-  <section><h2>Sitemap</h2>
+    <section><h2>Sitemap</h2>
 
 
 
@@ -637,7 +638,7 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
 
 </section>
 
-  
+    
 
 
 
@@ -646,13 +647,14 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
 
 
 
-  <aside>
-    <p>
+    <aside id="copyrightNotice">
+      <p>
   &copy; 2019 HugoModo.
   Built with <a href='https://hugomodo.github.io/' target='_blank'>HugoModo</a>.
 </p>
 
-  </aside>
+    </aside>
+  </div>
 </footer>
 
 

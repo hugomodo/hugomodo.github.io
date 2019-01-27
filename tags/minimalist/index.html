@@ -226,7 +226,7 @@ if (!doNotTrack) {
 
   <main>
     <header>
-      <nav>
+      <nav id="breadcrumbNav" aria-label="breadcrumb">
   <ul class="breadcrumbs">
     
   
@@ -443,8 +443,9 @@ if (!doNotTrack) {
     
   </main>
 <footer>
-  
-    <section><h2>About HugoModo</h2>
+  <div id="footerWrapper">
+    
+      <section><h2>About HugoModo</h2>
 
 
   <p>A modular Hugo framework.</p>
@@ -475,9 +476,9 @@ if (!doNotTrack) {
 
 
 </section>
-  
+    
 
-  <section><h2>Sitemap</h2>
+    <section><h2>Sitemap</h2>
 
 
 
@@ -539,7 +540,7 @@ if (!doNotTrack) {
 
 </section>
 
-  
+    
 
 
 
@@ -548,13 +549,14 @@ if (!doNotTrack) {
 
 
 
-  <aside>
-    <p>
+    <aside id="copyrightNotice">
+      <p>
   &copy; 2019 HugoModo.
   Built with <a href='https://hugomodo.github.io/' target='_blank'>HugoModo</a>.
 </p>
 
-  </aside>
+    </aside>
+  </div>
 </footer>
 
 

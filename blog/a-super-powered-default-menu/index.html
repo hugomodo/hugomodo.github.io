@@ -236,7 +236,7 @@ if (!doNotTrack) {
 
   <main>
     <header>
-      <nav>
+      <nav id="breadcrumbNav" aria-label="breadcrumb">
   <ul class="breadcrumbs">
     
   
@@ -625,8 +625,9 @@ menu: <span style="color:#e6db74">&#34;main&#34;</span>
     </footer>
   </main>
 <footer>
-  
-    <section><h2>About HugoModo</h2>
+  <div id="footerWrapper">
+    
+      <section><h2>About HugoModo</h2>
 
 
   <p>A modular Hugo framework.</p>
@@ -657,9 +658,9 @@ menu: <span style="color:#e6db74">&#34;main&#34;</span>
 
 
 </section>
-  
+    
 
-  <section><h2>Sitemap</h2>
+    <section><h2>Sitemap</h2>
 
 
 
@@ -721,7 +722,7 @@ menu: <span style="color:#e6db74">&#34;main&#34;</span>
 
 </section>
 
-  
+    
 
 
 
@@ -730,13 +731,14 @@ menu: <span style="color:#e6db74">&#34;main&#34;</span>
 
 
 
-  <aside>
-    <p>
+    <aside id="copyrightNotice">
+      <p>
   &copy; 2019 HugoModo.
   Built with <a href='https://hugomodo.github.io/' target='_blank'>HugoModo</a>.
 </p>
 
-  </aside>
+    </aside>
+  </div>
 </footer>
 
 

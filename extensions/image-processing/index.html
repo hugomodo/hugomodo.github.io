@@ -233,7 +233,7 @@ if (!doNotTrack) {
 
   <main>
     <header>
-      <nav>
+      <nav id="breadcrumbNav" aria-label="breadcrumb">
   <ul class="breadcrumbs">
     
   
@@ -558,8 +558,9 @@ git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre>
     </footer>
   </main>
 <footer>
-  
-    <section><h2>About HugoModo</h2>
+  <div id="footerWrapper">
+    
+      <section><h2>About HugoModo</h2>
 
 
   <p>A modular Hugo framework.</p>
@@ -590,9 +591,9 @@ git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre>
 
 
 </section>
-  
+    
 
-  <section><h2>Sitemap</h2>
+    <section><h2>Sitemap</h2>
 
 
 
@@ -654,7 +655,7 @@ git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre>
 
 </section>
 
-  
+    
 
 
 
@@ -663,13 +664,14 @@ git clone https://github.com/hugomodo/hugomodo-image-processing.git</code></pre>
 
 
 
-  <aside>
-    <p>
+    <aside id="copyrightNotice">
+      <p>
   &copy; 2019 HugoModo.
   Built with <a href='https://hugomodo.github.io/' target='_blank'>HugoModo</a>.
 </p>
 
-  </aside>
+    </aside>
+  </div>
 </footer>
 
 

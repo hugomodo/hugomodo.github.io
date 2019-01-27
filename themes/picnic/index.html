@@ -233,7 +233,7 @@ if (!doNotTrack) {
 
   <main>
     <header>
-      <nav>
+      <nav id="breadcrumbNav" aria-label="breadcrumb">
   <ul class="breadcrumbs">
     
   
@@ -449,8 +449,9 @@ git submodule add https://github.com/hugomodo/hugomodo-picnic.git themes/hugomod
     </footer>
   </main>
 <footer>
-  
-    <section><h2>About HugoModo</h2>
+  <div id="footerWrapper">
+    
+      <section><h2>About HugoModo</h2>
 
 
   <p>A modular Hugo framework.</p>
@@ -481,9 +482,9 @@ git submodule add https://github.com/hugomodo/hugomodo-picnic.git themes/hugomod
 
 
 </section>
-  
+    
 
-  <section><h2>Sitemap</h2>
+    <section><h2>Sitemap</h2>
 
 
 
@@ -545,7 +546,7 @@ git submodule add https://github.com/hugomodo/hugomodo-picnic.git themes/hugomod
 
 </section>
 
-  
+    
 
 
 
@@ -554,13 +555,14 @@ git submodule add https://github.com/hugomodo/hugomodo-picnic.git themes/hugomod
 
 
 
-  <aside>
-    <p>
+    <aside id="copyrightNotice">
+      <p>
   &copy; 2019 HugoModo.
   Built with <a href='https://hugomodo.github.io/' target='_blank'>HugoModo</a>.
 </p>
 
-  </aside>
+    </aside>
+  </div>
 </footer>
 
 
