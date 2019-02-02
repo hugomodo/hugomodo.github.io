@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>On Hugo&#39;s Coattails</title>
+      <link>https://hugomodo.github.io/blog/on-hugo-s-coattails/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/on-hugo-s-coattails/</guid>
+      <description>Hugo v0.54.0 is Released Today is the day I&amp;rsquo;ve been waiting for. I&amp;rsquo;ve had a keen eye on Hugo&amp;rsquo;s v0.54 milestone for a while now. I know that it was delayed, pushed back, and then - surprise! - released ahead of the rescheduled date.
+The new version contains fixes for some issues I&amp;rsquo;ve banged my head against while developing HugoModo. There&amp;rsquo;s a fix for getJSON causing build aborts, which is something I ran into when trying to have the theme and extension pages of this very website load README files from their respective repos - time to revisit that, I guess.</description>
+    </item>
+    
+    <item>
       <title>A Super-Powered Default Menu</title>
       <link>https://hugomodo.github.io/blog/a-super-powered-default-menu/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
