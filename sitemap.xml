@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hugomodo.github.io/blog/considerations-for-standalone-theme-releases/</loc>
+    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hugomodo.github.io/blog/on-hugo-s-coattails/</loc>
     <lastmod>2019-02-02T00:00:00+00:00</lastmod>
   </url>

@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Considerations for Standalone Theme Releases</title>
+      <link>https://hugomodo.github.io/blog/considerations-for-standalone-theme-releases/</link>
+      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/considerations-for-standalone-theme-releases/</guid>
+      <description>With the release of HugoModo version 0.1, I&amp;rsquo;ve turned my consideration to the child themes which inherit its features. The plan is to introduce versioning to these as well, but also an additional flavour called standalone. So as well as a 0.1.0 branch, child themes will also feature a 0.1.0-standalone branch and release files that will ultimately make it easier to use HugoModo themes that may have one or two to many levels of inheritance.</description>
+    </item>
+    
+    <item>
       <title>On Hugo&#39;s Coattails</title>
       <link>https://hugomodo.github.io/blog/on-hugo-s-coattails/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
