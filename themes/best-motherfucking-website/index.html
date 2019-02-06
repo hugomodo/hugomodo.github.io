@@ -81,7 +81,7 @@
 
 <meta itemprop="datePublished" content="2018-12-29T14:39:14&#43;00:00" />
 <meta itemprop="dateModified" content="2018-12-29T14:39:14&#43;00:00" />
-<meta itemprop="wordCount" content="64">
+<meta itemprop="wordCount" content="183">
 
 
 
@@ -355,7 +355,15 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#hugomodo-best-motherfucking-website">HugoModo Best Motherfucking Website</a>
 <ul>
-<li><a href="#installation">Installation</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#simple">Simple</a></li>
+<li><a href="#advanced-options">Advanced Options</a>
+<ul>
+<li><a href="#standalone">Standalone</a></li>
+<li><a href="#original">Original</a></li>
+</ul></li>
+</ul></li>
 <li><a href="#support-on-beerpay">Support on Beerpay</a></li>
 </ul></li>
 </ul>
@@ -421,8 +429,24 @@ if (!doNotTrack) {
 <p>Based on <a href="https://thebestmotherfucking.website">The Best Motherfucking Website</a>, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.</p>
 
 <h2 id="installation">Installation</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add https://github.com/hugomodo/hugomodo themes/hugomodo
-git submodule add https://github.com/hugomodo/hugomodo-best-motherfucking-website themes/hugomodo-best-motherfucking-website</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">themes</span> = [<span style="color:#e6db74">&#34;hugomodo-best-motherfucking-website&#34;</span>]</code></pre></div>
+
+<h3 id="simple">Simple</h3>
+
+<p>The recommended way to install and use the <em>HugoModo Best Motherfucking Website</em> theme is to install the latest standalone version as a Git Submodule using the <code>-b 0.1.0-standalone</code> flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">git submodule add -b 0.1.0-standalone https://github.com/hugomodo/hugomodo-best-motherfucking-website themes/hugomodo-best-motherfucking-website</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">themes</span> = [<span style="color:#e6db74">&#34;hugomodo-best-motherfucking-website&#34;</span>]</code></pre></div>
+<h3 id="advanced-options">Advanced Options</h3>
+
+<h4 id="standalone">Standalone</h4>
+
+<p>If you&rsquo;re happy targeting an edge branch, you can drop the version number when installing. Use the <code>-b standalone</code> flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">git submodule add -b standalone https://github.com/hugomodo/hugomodo-best-motherfucking-website themes/hugomodo-best-motherfucking-website</code></pre></div>
+<h4 id="original">Original</h4>
+
+<p>For the most advanced usage that will let you update the <em>HugoModo</em> core independently of the theme, install both independently using a versioned branch flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">git submodule add -b 0.1.1 https://github.com/hugomodo/hugomodo themes/hugomodo
+git submodule add -b 0.1.0 https://github.com/hugomodo/hugomodo-best-motherfucking-website themes/hugomodo-best-motherfucking-website</code></pre></div>
+<p><em>Note that you can also use <code>-b master</code> or forego the flag entirely to get the very latest edge version of each.</em></p>
+
 <h2 id="support-on-beerpay">Support on Beerpay</h2>
 
 <p>Hey dude! Help me out for a couple of 🍻!</p>

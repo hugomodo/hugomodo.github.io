@@ -235,7 +235,7 @@ contentShim = true This will break other shortcodes on your site, so you may als
       
       <guid>https://hugomodo.github.io/themes/best-motherfucking-website/</guid>
       <description>HugoModo Best Motherfucking Website Based on The Best Motherfucking Website, this theme provides minimal style definitions to create a clean, highly readable theme to be used as the base for customisation or for websites with a minimalist feel.
-Installation git submodule add https://github.com/hugomodo/hugomodo themes/hugomodo git submodule add https://github.com/hugomodo/hugomodo-best-motherfucking-website themes/hugomodo-best-motherfucking-websitethemes = [&amp;#34;hugomodo-best-motherfucking-website&amp;#34;] Support on Beerpay Hey dude! Help me out for a couple of 🍻!</description>
+Installation Simple The recommended way to install and use the HugoModo Best Motherfucking Website theme is to install the latest standalone version as a Git Submodule using the -b 0.1.0-standalone flag:</description>
     </item>
     
     <item>
