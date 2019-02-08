@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Taxonomies</title>
+      <link>https://hugomodo.github.io/docs/taxonomies/</link>
+      <pubDate>Fri, 08 Feb 2019 18:59:58 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/docs/taxonomies/</guid>
+      <description>HugoModo is configured to add seamless taxonomy support to your Hugo website. Simply add a taxonomy, start using it, and your sites will be populated with taxonomy pages and footer navigation links by default. You can add taxonomy pages to customise the leading content which displays on those pages.
+A great taxonomy to start with is the authors taxonomy. Let&amp;rsquo;s take a look.
+Add a Taxonomy By default, Hugo has taxonomies enabled for categories, series and tags.</description>
+    </item>
+    
+    <item>
       <title>Considerations for Standalone Theme Releases</title>
       <link>https://hugomodo.github.io/blog/considerations-for-standalone-theme-releases/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>

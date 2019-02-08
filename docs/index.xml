@@ -6,10 +6,21 @@
     <description>Recent content in Docs on HugoModo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Jan 2019 20:09:38 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Feb 2019 18:59:58 +0000</lastBuildDate>
     
 	<atom:link href="https://hugomodo.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Taxonomies</title>
+      <link>https://hugomodo.github.io/docs/taxonomies/</link>
+      <pubDate>Fri, 08 Feb 2019 18:59:58 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/docs/taxonomies/</guid>
+      <description>HugoModo is configured to add seamless taxonomy support to your Hugo website. Simply add a taxonomy, start using it, and your sites will be populated with taxonomy pages and footer navigation links by default. You can add taxonomy pages to customise the leading content which displays on those pages.
+A great taxonomy to start with is the authors taxonomy. Let&amp;rsquo;s take a look.
+Add a Taxonomy By default, Hugo has taxonomies enabled for categories, series and tags.</description>
+    </item>
     
     <item>
       <title>Table of Contents</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hugomodo.github.io/docs/taxonomies/</loc>
+    <lastmod>2019-02-08T18:59:58+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hugomodo.github.io/blog/considerations-for-standalone-theme-releases/</loc>
     <lastmod>2019-02-04T00:00:00+00:00</lastmod>
   </url>
@@ -154,7 +159,7 @@
   
   <url>
     <loc>https://hugomodo.github.io/docs/</loc>
-    <lastmod>2019-01-21T20:09:38+00:00</lastmod>
+    <lastmod>2019-02-08T18:59:58+00:00</lastmod>
     <priority>0</priority>
   </url>
   
