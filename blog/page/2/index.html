@@ -226,10 +226,11 @@ if (!doNotTrack) {
 </header>
 
   <main id="hugoModule-main">
-    <header id="hugoModule-mainHeader">
-      <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
-  <ul class="breadcrumbs">
-    
+    <article id="hugoModule-mainArticle">
+  <aside id="hugoModule-breadcrumb">
+  <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
+    <ul class="breadcrumbs">
+      
   
     
   
@@ -258,29 +259,30 @@ if (!doNotTrack) {
     
   </li>
 
-  </ul>
-</nav>
+    </ul>
+  </nav>
+</aside>
 
 
+ 
 
-    </header>
-    <article id="hugoModule-mainArticle">
-      
+  
+ 
 
-      <header id="hugoModule-mainArticleHeader">
+  <header id="hugoModule-mainArticleHeader">
   <h1>Blog</h1>
 </header>
+ 
 
-      
-      <div id="hugoModule-mainArticleContent">
-        <p>The latest news from the HugoModo project.</p>
+  
+  <div><p>The latest news from the HugoModo project.</p>
+</div> 
 
-      </div>
-
-      
-      
-      
-        <article class="hugoComponent-article">
+  <div id="hugoModule-articleList">
+  
+  
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -290,7 +292,7 @@ if (!doNotTrack) {
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2018-12-31T22:57:07&#43;00:00" itemprop="datePublished">31 Dec 2018</time></dd>
@@ -339,7 +341,7 @@ if (!doNotTrack) {
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -355,9 +357,9 @@ Of course, HugoModo deliberately does a lot differently, emphasising the princip
     
   </div>
 </article>
-
-      
-        <article class="hugoComponent-article">
+ 
+  
+    <article class="hugoComponent-article">
   
   <figure>
     <a href="/blog/forestry-compatible/">
@@ -422,7 +424,7 @@ Of course, HugoModo deliberately does a lot differently, emphasising the princip
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2018-12-31T00:00:00&#43;00:00" itemprop="datePublished">31 Dec 2018</time></dd>
@@ -471,7 +473,7 @@ Of course, HugoModo deliberately does a lot differently, emphasising the princip
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -488,9 +490,9 @@ But Forestry has offered configuration for using a content directory instead for
     
   </div>
 </article>
-
-      
-        <article class="hugoComponent-article">
+ 
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -500,7 +502,7 @@ But Forestry has offered configuration for using a content directory instead for
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2018-12-29T01:11:18&#43;00:00" itemprop="datePublished">29 Dec 2018</time></dd>
@@ -549,7 +551,7 @@ But Forestry has offered configuration for using a content directory instead for
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -564,11 +566,14 @@ But Forestry has offered configuration for using a content directory instead for
     
   </div>
 </article>
+ 
+  
+</div>
+ 
 
-      
-
-      <footer id="hugoModule-mainArticleFooter">
-        
+  <aside id="hugoModule-pagination">
+  <nav>
+    
 
 <ul class="pagination">
     
@@ -613,9 +618,11 @@ But Forestry has offered configuration for using a content directory instead for
     
 </ul>
 
+  </nav>
+</aside>
+ 
+</article>
 
-      </footer>
-    </article>
   </main>
 <footer id="hugoModule-siteFooter">
   <div id="hugoModule-siteFooterWrapper">

@@ -244,11 +244,12 @@ if (!doNotTrack) {
 
 </header>
 
-  <main>
-    <header>
-      <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
-  <ul class="breadcrumbs">
-    
+  <main id="hugoModule-main">
+    <article id="hugoModule-mainArticle">
+  <aside id="hugoModule-breadcrumb">
+  <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
+    <ul class="breadcrumbs">
+      
   
     
   
@@ -291,20 +292,22 @@ if (!doNotTrack) {
     
   </li>
 
-  </ul>
-</nav>
+    </ul>
+  </nav>
+</aside>
 
 
+ 
 
-    </header>
-    <article>
-      
+  
+ 
 
-      <header id="hugoModule-mainArticleHeader">
+  <header id="hugoModule-mainArticleHeader">
   <h1>Fusejs</h1>
 </header>
+ 
 
-      <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2019-01-03T03:09:44&#43;00:00" itemprop="datePublished">03 Jan 2019</time></dd>
@@ -340,13 +343,13 @@ if (!doNotTrack) {
 
 
   </dl>
-</aside>
+</footer>
+ 
+
+  
 
 
-      
-
-
-  <aside>
+  <nav>
     <header>
       <h2>Table of Contents</h2>
     </header>
@@ -360,13 +363,11 @@ if (!doNotTrack) {
 </ul></li>
 </ul>
 </nav>
-  </aside>
+  </nav>
 
+ 
 
-
-      
-
-      <div>
+  <div>
   
     
       
@@ -384,6 +385,7 @@ if (!doNotTrack) {
 
     
 
+    
     
 
     
@@ -459,14 +461,20 @@ layout: search
     
   
 </div>
+ 
 
+  
 
-      
-        
-      
-    </article>
-    <footer>
-      
+  
+    
+  
+
+  
+
+ 
+
+  
+<section id="hugoModule-articleComments">
   <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -487,9 +495,11 @@ layout: search
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 
+ 
+</article>
 
-    </footer>
   </main>
 <footer id="hugoModule-siteFooter">
   <div id="hugoModule-siteFooterWrapper">

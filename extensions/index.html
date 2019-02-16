@@ -226,10 +226,11 @@ if (!doNotTrack) {
 </header>
 
   <main id="hugoModule-main">
-    <header id="hugoModule-mainHeader">
-      <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
-  <ul class="breadcrumbs">
-    
+    <article id="hugoModule-mainArticle">
+  <aside id="hugoModule-breadcrumb">
+  <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
+    <ul class="breadcrumbs">
+      
   
     
   
@@ -258,28 +259,29 @@ if (!doNotTrack) {
     
   </li>
 
-  </ul>
-</nav>
+    </ul>
+  </nav>
+</aside>
 
 
+ 
 
-    </header>
-    <article id="hugoModule-mainArticle">
-      
+  
+ 
 
-      <header id="hugoModule-mainArticleHeader">
+  <header id="hugoModule-mainArticleHeader">
   <h1>Extensions</h1>
 </header>
+ 
 
-      
-      <div id="hugoModule-mainArticleContent">
-        
-      </div>
+  
+  <div></div> 
 
-      
-      
-      
-        <article class="hugoComponent-article">
+  <div id="hugoModule-articleList">
+  
+  
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -289,7 +291,7 @@ if (!doNotTrack) {
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2019-01-16T18:29:53&#43;00:00" itemprop="datePublished">16 Jan 2019</time></dd>
@@ -325,7 +327,7 @@ if (!doNotTrack) {
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -339,9 +341,9 @@ Installation git submodule add https://github.com/hugomodo/hugomodo-cookie-conse
     
   </div>
 </article>
-
-      
-        <article class="hugoComponent-article">
+ 
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -351,7 +353,7 @@ Installation git submodule add https://github.com/hugomodo/hugomodo-cookie-conse
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2019-01-03T03:09:44&#43;00:00" itemprop="datePublished">03 Jan 2019</time></dd>
@@ -387,7 +389,7 @@ Installation git submodule add https://github.com/hugomodo/hugomodo-cookie-conse
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -406,9 +408,9 @@ Installation Follow the usual steps for installing a HugoModo extension, then:
     
   </div>
 </article>
-
-      
-        <article class="hugoComponent-article">
+ 
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -418,7 +420,7 @@ Installation Follow the usual steps for installing a HugoModo extension, then:
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2018-12-31T20:08:37&#43;00:00" itemprop="datePublished">31 Dec 2018</time></dd>
@@ -454,7 +456,7 @@ Installation Follow the usual steps for installing a HugoModo extension, then:
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -472,9 +474,9 @@ What&rsquo;s the issue? HugoModo strives for third-party compatibility. The base
     
   </div>
 </article>
-
-      
-        <article class="hugoComponent-article">
+ 
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -484,7 +486,7 @@ What&rsquo;s the issue? HugoModo strives for third-party compatibility. The base
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2018-12-30T16:54:08&#43;00:00" itemprop="datePublished">30 Dec 2018</time></dd>
@@ -520,7 +522,7 @@ What&rsquo;s the issue? HugoModo strives for third-party compatibility. The base
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -530,15 +532,20 @@ What&rsquo;s the issue? HugoModo strives for third-party compatibility. The base
     
   </div>
 </article>
+ 
+  
+</div>
+ 
 
-      
+  <aside id="hugoModule-pagination">
+  <nav>
+    
 
-      <footer id="hugoModule-mainArticleFooter">
-        
+  </nav>
+</aside>
+ 
+</article>
 
-
-      </footer>
-    </article>
   </main>
 <footer id="hugoModule-siteFooter">
   <div id="hugoModule-siteFooterWrapper">

@@ -226,10 +226,11 @@ if (!doNotTrack) {
 </header>
 
   <main id="hugoModule-main">
-    <header id="hugoModule-mainHeader">
-      <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
-  <ul class="breadcrumbs">
-    
+    <article id="hugoModule-mainArticle">
+  <aside id="hugoModule-breadcrumb">
+  <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
+    <ul class="breadcrumbs">
+      
   
     
   
@@ -258,28 +259,29 @@ if (!doNotTrack) {
     
   </li>
 
-  </ul>
-</nav>
+    </ul>
+  </nav>
+</aside>
 
 
+ 
 
-    </header>
-    <article id="hugoModule-mainArticle">
-      
+  
+ 
 
-      <header id="hugoModule-mainArticleHeader">
+  <header id="hugoModule-mainArticleHeader">
   <h1>Docs</h1>
 </header>
+ 
 
-      
-      <div id="hugoModule-mainArticleContent">
-        
-      </div>
+  
+  <div></div> 
 
-      
-      
-      
-        <article class="hugoComponent-article">
+  <div id="hugoModule-articleList">
+  
+  
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -289,7 +291,7 @@ if (!doNotTrack) {
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2019-02-08T18:59:58&#43;00:00" itemprop="datePublished">08 Feb 2019</time></dd>
@@ -325,7 +327,7 @@ if (!doNotTrack) {
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -342,9 +344,9 @@ Add a Taxonomy By default, Hugo has taxonomies enabled for categories, series an
     
   </div>
 </article>
-
-      
-        <article class="hugoComponent-article">
+ 
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -354,7 +356,7 @@ Add a Taxonomy By default, Hugo has taxonomies enabled for categories, series an
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2019-01-21T20:09:38&#43;00:00" itemprop="datePublished">21 Jan 2019</time></dd>
@@ -390,7 +392,7 @@ Add a Taxonomy By default, Hugo has taxonomies enabled for categories, series an
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -409,9 +411,9 @@ include_toc = true Disable for a single page To disable the table of contents fo
     
   </div>
 </article>
-
-      
-        <article class="hugoComponent-article">
+ 
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -421,7 +423,7 @@ include_toc = true Disable for a single page To disable the table of contents fo
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2019-01-05T18:55:01&#43;00:00" itemprop="datePublished">05 Jan 2019</time></dd>
@@ -457,7 +459,7 @@ include_toc = true Disable for a single page To disable the table of contents fo
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -472,9 +474,9 @@ git submodule update --recursive --remote
     
   </div>
 </article>
-
-      
-        <article class="hugoComponent-article">
+ 
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -484,7 +486,7 @@ git submodule update --recursive --remote
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2019-01-02T00:00:00&#43;00:00" itemprop="datePublished">02 Jan 2019</time></dd>
@@ -520,7 +522,7 @@ git submodule update --recursive --remote
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -538,9 +540,9 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
     
   </div>
 </article>
-
-      
-        <article class="hugoComponent-article">
+ 
+  
+    <article class="hugoComponent-article">
   
 
   <header  class="hugoComponent-articleHeader">
@@ -550,7 +552,7 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
       </a>
     </h2>
   </header>
-  <aside>
+  <footer>
   <dl>
     <dt>Published</dt>
 <dd><time datetime="2018-12-29T12:58:37&#43;00:00" itemprop="datePublished">29 Dec 2018</time></dd>
@@ -586,7 +588,7 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
 
 
   </dl>
-</aside>
+</footer>
 
 
   
@@ -596,15 +598,20 @@ Unfortunately, it appears that Forestry can only handle project-based GitHub Pag
     
   </div>
 </article>
+ 
+  
+</div>
+ 
 
-      
+  <aside id="hugoModule-pagination">
+  <nav>
+    
 
-      <footer id="hugoModule-mainArticleFooter">
-        
+  </nav>
+</aside>
+ 
+</article>
 
-
-      </footer>
-    </article>
   </main>
 <footer id="hugoModule-siteFooter">
   <div id="hugoModule-siteFooterWrapper">
