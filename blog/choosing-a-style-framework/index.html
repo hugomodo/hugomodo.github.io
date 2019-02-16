@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+  <title>
+  
+    Choosing a Style Framework | HugoModo - A modular Hugo framework.
+  
+</title>
+
+
+  <meta name="description" content="A modular Hugo framework." />
+
+  
+  
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+  
+
+  
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.min.7bcf70efe123e59b8eca3f268e1203e293ac8c371c18298dbc943277388a60ee.css" integrity="sha256-e89w7&#43;Ej5ZuOyj8mjhID4pOsjDccGCmNvJQydziKYO4=" crossorigin="anonymous">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+
+<meta itemprop="name" content="Choosing a Style Framework">
+<meta itemprop="description" content="Been a while since I&rsquo;ve updated the blog here, but I&rsquo;ve been busy whittling away at things in the background. HugoModo has made some developments with the introduction of two new themes, one based on Bootstrap and one on Foundation, but&hellip;
+Well, I&rsquo;ve been going about it all wrong. And now I&rsquo;m thinking we&rsquo;ll have to drop support for not only the Foundation theme but also for the simpler Picnic and Milligram themes in order to focus purely on integrating with Bootstrap.">
+
+
+<meta itemprop="datePublished" content="2019-02-16T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-02-16T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="920">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+  
+  <meta property="og:title" content="Choosing a Style Framework" />
+  <meta property="og:description" content="Been a while since I&rsquo;ve updated the blog here, but I&rsquo;ve been busy whittling away at things in the background. HugoModo has made some developments with the introduction of two new themes, one based on Bootstrap and one on Foundation, but&hellip;
+Well, I&rsquo;ve been going about it all wrong. And now I&rsquo;m thinking we&rsquo;ll have to drop support for not only the Foundation theme but also for the simpler Picnic and Milligram themes in order to focus purely on integrating with Bootstrap." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://hugomodo.github.io/blog/choosing-a-style-framework/" />
+
+  
+
+
+<meta property="article:published_time" content="2019-02-16T00:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2019-02-16T00:00:00&#43;00:00"/>
+
+
+  
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Choosing a Style Framework"/>
+<meta name="twitter:description" content="Been a while since I&rsquo;ve updated the blog here, but I&rsquo;ve been busy whittling away at things in the background. HugoModo has made some developments with the introduction of two new themes, one based on Bootstrap and one on Foundation, but&hellip;
+Well, I&rsquo;ve been going about it all wrong. And now I&rsquo;m thinking we&rsquo;ll have to drop support for not only the Foundation theme but also for the simpler Picnic and Milligram themes in order to focus purely on integrating with Bootstrap."/>
+
+
+  
+
+
+
+  
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+
+
+
+
+  
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+
+  
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left"
+})});
+</script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-58994131-3', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+</head>
+<body id="hugoModule-body">
+    <div id="hugoModule-bodyWrapper"><header id="hugoModule-siteHeader">
+  <strong id="hugoModule-siteTitle">
+    <a title="HugoModo" href="/">HugoModo</a>
+  </strong>
+  
+
+  
+  <nav id="hugoModule-siteNav">
+    <ul>
+      
+      
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/blog/" title="Blog">Blog</a>
+          </li>
+        
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/docs/" title="Docs">Docs</a>
+          </li>
+        
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/extensions/" title="Extensions">Extensions</a>
+          </li>
+        
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/themes/" title="Themes">Themes</a>
+          </li>
+        
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/search/" title="Search">Search</a>
+          </li>
+        
+      
+    </ul>
+  </nav>
+
+
+
+
+</header>
+
+  <main id="hugoModule-main">
+    <header id="hugoModule-mainHeader">
+      <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
+  <ul class="breadcrumbs">
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/">HugoModo</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/blog/">Blog</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="active">
+    
+      
+        Choosing a Style Framework
+      
+    
+  </li>
+
+  </ul>
+</nav>
+
+
+
+    </header>
+    <article id="hugoModule-mainArticle">
+      
+
+      <header id="hugoModule-mainArticleHeader">
+  <h1>Choosing a Style Framework</h1>
+</header>
+
+      <aside>
+  <dl>
+    <dt>Published</dt>
+<dd><time datetime="2019-02-16T00:00:00&#43;00:00" itemprop="datePublished">16 Feb 2019</time></dd>
+
+
+    
+
+    
+  <dt>Reading time</dt>
+  <dd><time datetime="5m">5 minutes</time></dd>
+
+
+
+    
+
+
+
+   
+  
+  
+    <dt>Authors</dt>
+    
+      
+      
+      
+        <dd>
+          <a href="/authors/thom-bruce">
+            Thom Bruce
+          </a>
+        </dd>
+      
+    
+  
+
+   
+  
+  
+
+   
+  
+  
+
+   
+  
+  
+
+
+  </dl>
+</aside>
+
+      
+
+
+  <aside>
+    <header>
+      <h2>Table of Contents</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hugomodo-is-still-a-really-clean-semantic-html-framework">HugoModo is still a really clean, semantic HTML framework</a></li>
+<li><a href="#out-with-the-new">Out with the new</a></li>
+<li><a href="#i-still-think-a-minimalist-css-framework-with-advanced-functionality-is-possible">I still think a minimalist CSS framework with advanced functionality is possible</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+      <div>
+  
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    
+
+    
+
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+      
+      <p>Been a while since I&rsquo;ve updated the blog here, but I&rsquo;ve been busy whittling away at things in the background. HugoModo has made some developments with the introduction of two new themes, one based on Bootstrap and one on Foundation, but&hellip;</p>
+
+<p>Well, I&rsquo;ve been going about it all wrong. And now I&rsquo;m thinking we&rsquo;ll have to drop support for not only the Foundation theme but also for the simpler Picnic and Milligram themes in order to focus purely on integrating with Bootstrap.</p>
+
+<p>It&rsquo;s not ideal&hellip; but make no mistake, I do think those other options will make a return in the future. For now, I&rsquo;ve tried to do too much with too little, and it&rsquo;s showing as I try to put things in their proper place with the Bootstrap theme.</p>
+
+<h2 id="hugomodo-is-still-a-really-clean-semantic-html-framework">HugoModo is still a really clean, semantic HTML framework</h2>
+
+<p>The trouble is, I started out with the cleanest, simplest approach possible. The base HugoModo framework had only the essential HTML markup, the vast majority of it semantic and purposeful.</p>
+
+<p>My theory was that I could leave the base theme that way and do everything I&rsquo;d want in child themes via the CSS alone, no changes to the markup.</p>
+
+<p>And it worked! For the really simple, <a href="/themes/best-motherfucking-website" title="HugoModo Best Motherfucking Website theme">Best Motherfucking Website theme</a>, and for the truly minimalist and elegant frameworks, Milligram and Picnic.</p>
+
+<p>So most recently, I&rsquo;ve tried to extend the same approach to the more advanced frameworks, Bootstrap and Foundation.</p>
+
+<p>Foundation has some&hellip; other problems, which despite my beginnings forced me to rule it out relatively early in development. Namely the use of pseudo-classes in Foundation just to achieve a sticky navbar. I still love Foundation, but that isn&rsquo;t going to fly for HugoModo - perhaps we&rsquo;ll revisit it later.</p>
+
+<p>But the problem that Bootstrap and Foundation both have is the use of deep nesting in order to achieve grid and flexbox based layouts. It forced me to add additional divs to the base HugoModo theme, whose only purpose was to support advanced theming in these frameworks.</p>
+
+<p>And that was fine, for a while. They didn&rsquo;t impeded other frameworks, and I had a vision of the base template being capable of supporting any of these theming frameworks.</p>
+
+<p>The trouble came when attempting to make a big, full-width featured image for articles and then also a narrower, centred article with meta information aligned to the side.</p>
+
+<p>To achieve that, I would have to&hellip; place the article content and meta in a shared container div. But this interrupts the document flow in a way that restricts further reordering and theming considerations, particularly when it comes to working with other themes.</p>
+
+<p>It&rsquo;s the first blockade to a universal approach to markup, but it&rsquo;s a critical one.</p>
+
+<p>Thus far, no other styling div I&rsquo;d added had interrupted the overarching document structure, but this one would. And I can&rsquo;t have that; HugoModo is still, and should remain, a really clean and semantic HTML framework.</p>
+
+<h2 id="out-with-the-new">Out with the new</h2>
+
+<p>So here&rsquo;s what&rsquo;s gonna happen&hellip;</p>
+
+<p>Rather than attempt to make HugoModo a one-size-fits-all framework with universal markup that can be styled by any framework with CSS alone&hellip; I&rsquo;m gonna return it to its roots.</p>
+
+<p>HugoModo will return to purely the necessary, purely the semantic HTML that makes it great for SEO and accessibility.</p>
+
+<p>Going forwards, the plan will be to make HugoModo&rsquo;s component partials as well-organised and modular as possible, so that styling frameworks have the minimum possible footprint when overwriting files.</p>
+
+<p>But that&rsquo;s what they&rsquo;ll do&hellip; Styling frameworks will now overwrite partials, to provide whatever specific markup they need. The required changes are too flow-breaking to introduce to the base, so this is now an essential step.</p>
+
+<p>It&rsquo;s a little more work, but ultimately a more familiar and customisable experience.</p>
+
+<p>To focus on it, I&rsquo;m dropping support for all themes other than <em>Best Motherfucking Website</em> and <em>Bootstrap</em>. The former is tremendously minimalist but beautiful, and requires little reconfiguration. Bootstrap will require a little more work, hence the lack of time for others&hellip; and probably breaking changes for them for now. <em>That said, the Milligram and Picnic themes should continue to work in their current (incomplete) state with HugoModo v0.1.1 for the time being.</em></p>
+
+<h2 id="i-still-think-a-minimalist-css-framework-with-advanced-functionality-is-possible">I still think a minimalist CSS framework with advanced functionality is possible</h2>
+
+<p>This puts a bit of an obstacle in front of something I&rsquo;ve wanted to do for a long time. I&rsquo;ve long thought about developing a CSS framework that doesn&rsquo;t require all of these additional markup considerations - ideally one which can duplicate all of the functionality of, say, Bootstrap or Foundation with purely the semantic markup of HTML5.</p>
+
+<p>I&rsquo;ll need to look more into Picnic, which I think comes pretty close to this ideal. And in fact, I&rsquo;ll probably revisit the Picnic HugoModo theme next after finishing up the Bootstrap theme.</p>
+
+<p>It may be a pipe dream. It might be unachievable - indeed, attempting it with these sophisticated frameworks at this time has proven it can&rsquo;t be done with them. But I think it&rsquo;s well-worth exploring, and I as yet have no reason to believe it can&rsquo;t be done with either Flexbox or CSS Grid Layouts, the former of which is highly supported in modern browsers, the latter&hellip; only quite reasonably so but ready for consideration, I think.</p>
+
+<p>So that&rsquo;s a future consideration. And to explore it, HugoModo having a really clean and purely semantic base markup system will be ideal.</p>
+
+<p>But for now, I&rsquo;ll work with a known and long-trusted approach in Bootstrap, and hope to release an initial theme version soon.</p>
+
+    
+  
+</div>
+
+      
+      
+        
+
+
+  <footer>
+    
+    <section class="authors">
+      <header>
+        <h2>Author</h2>
+      </header>
+      
+        
+        
+        
+          <article class="author">
+  <div class="hugoComponent-authorWrapper">
+  
+  
+
+  
+    
+    
+      <figure>
+        <a href="https://hugomodo.github.io/authors/thom-bruce/">
+          <img src="/uploads/thombruce.jpg" alt="Thom Bruce author image"/>
+        </a>
+      </figure>
+    
+    <header>
+      <h4>
+        <a href="https://hugomodo.github.io/authors/thom-bruce/">
+          Thom Bruce
+        </a>
+      </h4>
+    </header>
+    <div class="bio">
+      
+        <p>Author, coder.</p>
+      
+    </div>
+    
+  <address>
+    <dl>
+      
+        <dt>Email</dt>
+        <dd><a href="mailto:thom@thombruce.com">thom@thombruce.com</a></dd>
+      
+      
+  
+    <dt>Website</dt>
+    <dd><a href="https://thombruce.com/">https://thombruce.com/</a></dd>
+  
+  
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/thombruce">thombruce</a></dd>
+  
+  
+    <dt>Facebook</dt>
+    <dd><a href="https://facebook.com/thombruce">thombruce</a></dd>
+  
+  
+    <dt>Twitter</dt>
+    <dd><a href="https://twitter.com/thombruce">thombruce</a></dd>
+  
+  
+  
+    <dt>LinkedIn</dt>
+    <dd><a href="https://linkedin.com/in/thombruce">thombruce</a></dd>
+  
+  
+
+
+    </dl>
+  </address>
+
+
+  
+</div>
+
+</article>
+
+        
+      
+    </section>
+  </footer>
+
+
+      
+    </article>
+    
+
+
+    <footer id="hugoModule-mainFooter">
+      
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugomodo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </footer>
+  </main>
+<footer id="hugoModule-siteFooter">
+  <div id="hugoModule-siteFooterWrapper">
+    
+      <section id="hugoModule-siteFooterAboutSection"><h2>About HugoModo</h2>
+
+
+  <p>A modular Hugo framework.</p>
+
+
+
+  
+  
+  <address>
+    <dl>
+      
+      
+  
+  
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/hugomodo">hugomodo</a></dd>
+  
+  
+  
+  
+  
+  
+
+
+    </dl>
+  </address>
+
+
+
+</section>
+    
+
+    <section id="hugoModule-siteFooterNavSection"><h2>Sitemap</h2>
+
+
+
+  <nav id="hugoModule-siteFooterNav">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+        <li>
+          <a href="/blog/" title="Blog">Blog</a>
+        </li>
+      
+        <li>
+          <a href="/docs/" title="Docs">Docs</a>
+        </li>
+      
+        <li>
+          <a href="/extensions/" title="Extensions">Extensions</a>
+        </li>
+      
+        <li>
+          <a href="/themes/" title="Themes">Themes</a>
+        </li>
+      
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/search/" title="Search">Search</a>
+          </li>
+        
+      
+      
+        
+          <li>
+            <a href="/authors" title="Authors">Authors</a>
+          </li>
+        
+      
+        
+      
+        
+      
+        
+          <li>
+            <a href="/tags" title="Tags">Tags</a>
+          </li>
+        
+      
+      <li>
+        <a title="Subscribe" aria-label="Subscribe" href="/index.xml">
+          RSS Feed
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</section>
+
+    
+
+
+
+
+
+
+
+
+    <aside id="hugoModule-siteFooterCopyright">
+      <p>
+  &copy; 2019 HugoModo.
+  Built with <a href='https://hugomodo.github.io/' target='_blank'>HugoModo</a>.
+</p>
+
+    </aside>
+  </div>
+</footer>
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  <div id="contrast">
+  Add more contrast
+</div>
+
+<div id="invmode">
+  Inverted mode
+</div>
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+
+  
+    
+    <script src="https://hugomodo.github.io/js/global.min.a0eb8d3d97ebd9f8dc07d64b140c5820c24085a8df9d53ab1b2faf15d64436ca.js" integrity="sha256-oOuNPZfr2fjcB9ZLFAxYIMJAhajfnVOrGy&#43;vFdZENso=" crossorigin="anonymous"></script>
+  
+
+
+
+
+</div>
+  </body>
+</html>

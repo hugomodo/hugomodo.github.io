@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Choosing a Style Framework</title>
+      <link>https://hugomodo.github.io/blog/choosing-a-style-framework/</link>
+      <pubDate>Sat, 16 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/choosing-a-style-framework/</guid>
+      <description>Been a while since I&amp;rsquo;ve updated the blog here, but I&amp;rsquo;ve been busy whittling away at things in the background. HugoModo has made some developments with the introduction of two new themes, one based on Bootstrap and one on Foundation, but&amp;hellip;
+Well, I&amp;rsquo;ve been going about it all wrong. And now I&amp;rsquo;m thinking we&amp;rsquo;ll have to drop support for not only the Foundation theme but also for the simpler Picnic and Milligram themes in order to focus purely on integrating with Bootstrap.</description>
+    </item>
+    
+    <item>
       <title>Taxonomies</title>
       <link>https://hugomodo.github.io/docs/taxonomies/</link>
       <pubDate>Fri, 08 Feb 2019 18:59:58 +0000</pubDate>
