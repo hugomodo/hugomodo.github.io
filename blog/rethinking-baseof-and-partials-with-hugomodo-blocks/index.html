@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+  <title>
+  
+    Rethinking baseof and Partials with HugoModo Blocks | HugoModo - A modular Hugo framework.
+  
+</title>
+
+
+  <meta name="description" content="A modular Hugo framework." />
+
+  
+  
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+  
+
+  
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.min.8a805e3e85e1f7e5f831c3aa2503dc9fa3eda89ef76ab3ddea3577b1e6e55413.css" integrity="sha256-ioBePoXh9&#43;X4McOqJQPcn6PtqJ73arPd6jV3seblVBM=" crossorigin="anonymous">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+
+<meta itemprop="name" content="Rethinking baseof and Partials with HugoModo Blocks">
+<meta itemprop="description" content="So, I think I mentioned this idea of &ldquo;blocks&rdquo; in my previous blog post but just in case, here&rsquo;s a primer:
+Blocks would differ from regular content files (which take a single HTML content field) by allowing numerous HTML content areas that can be reordered, and that can be any one of several block types either native to HugoModo or custom in your own theme or site. Block types like &ldquo;photo gallery&rdquo; and &ldquo;carousel&rdquo;.">
+
+
+<meta itemprop="datePublished" content="2019-02-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-02-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1084">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+  
+  <meta property="og:title" content="Rethinking baseof and Partials with HugoModo Blocks" />
+  <meta property="og:description" content="So, I think I mentioned this idea of &ldquo;blocks&rdquo; in my previous blog post but just in case, here&rsquo;s a primer:
+Blocks would differ from regular content files (which take a single HTML content field) by allowing numerous HTML content areas that can be reordered, and that can be any one of several block types either native to HugoModo or custom in your own theme or site. Block types like &ldquo;photo gallery&rdquo; and &ldquo;carousel&rdquo;." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://hugomodo.github.io/blog/rethinking-baseof-and-partials-with-hugomodo-blocks/" />
+
+  
+
+
+<meta property="article:published_time" content="2019-02-24T00:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2019-02-24T00:00:00&#43;00:00"/>
+
+
+  
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rethinking baseof and Partials with HugoModo Blocks"/>
+<meta name="twitter:description" content="So, I think I mentioned this idea of &ldquo;blocks&rdquo; in my previous blog post but just in case, here&rsquo;s a primer:
+Blocks would differ from regular content files (which take a single HTML content field) by allowing numerous HTML content areas that can be reordered, and that can be any one of several block types either native to HugoModo or custom in your own theme or site. Block types like &ldquo;photo gallery&rdquo; and &ldquo;carousel&rdquo;."/>
+
+
+  
+
+
+
+  
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+
+
+
+
+  
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+
+  
+  <script>
+  
+  function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+</script>
+
+<script>
+  if (getCookie('invmode') === "true") {
+    var el = document.getElementsByTagName("html")[0];
+
+    el.classList['add']('inverted');
+  }
+
+  if (getCookie('contrast') === "true") {
+    var el = document.getElementsByTagName("html")[0];
+
+    el.classList['add']('contrast');
+  }
+</script>
+
+
+  
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left"
+})});
+</script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-58994131-3', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+</head>
+<body id="hugoModule-body">
+    <div id="hugoModule-bodyWrapper"><header id="hugoModule-siteHeader">
+  
+  <strong id="hugoModule-siteTitle">
+    <a title="HugoModo" href="/">HugoModo</a>
+  </strong>
+
+
+  
+
+  
+  <nav id="hugoModule-siteNav">
+    <ul>
+      
+      
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/blog/" title="Blog">Blog</a>
+          </li>
+        
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/docs/" title="Docs">Docs</a>
+          </li>
+        
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/extensions/" title="Extensions">Extensions</a>
+          </li>
+        
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/themes/" title="Themes">Themes</a>
+          </li>
+        
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/search/" title="Search">Search</a>
+          </li>
+        
+      
+    </ul>
+  </nav>
+
+
+
+
+</header>
+
+  <main id="hugoModule-main">
+    <article id="hugoModule-mainArticle">
+  
+ 
+
+  <aside id="hugoModule-breadcrumb">
+  <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
+    <ul class="breadcrumbs">
+      
+  
+    
+  
+    
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/">HugoModo</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="">
+    
+      <a href="https://hugomodo.github.io/blog/">Blog</a>
+    
+  </li>
+
+  
+
+  
+    
+  
+
+  <li class="active">
+    
+      
+        Rethinking baseof and Partials with HugoModo Blocks
+      
+    
+  </li>
+
+    </ul>
+  </nav>
+</aside>
+
+
+ 
+
+  <header id="hugoModule-mainArticleHeader">
+  <h1>Rethinking baseof and Partials with HugoModo Blocks</h1>
+</header>
+ 
+
+  <footer class="hugoComponent-articleMeta">
+  <dl>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-02-24T00:00:00&#43;00:00" itemprop="datePublished">24 Feb 2019</time></dd>
+</div>
+
+
+    
+
+    
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="6m">6 minutes</time></dd>
+  </div>
+
+
+
+    
+
+
+
+   
+  
+  
+    <div>
+      <dt>Authors</dt>
+      
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
+      
+    </div>
+  
+
+   
+  
+  
+
+   
+  
+  
+
+   
+  
+  
+
+
+  </dl>
+</footer>
+ 
+
+  
+
+
+  <nav>
+    <header>
+      <h2>Table of Contents</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hugo-s-baseof-layout">Hugo&rsquo;s baseof Layout</a></li>
+<li><a href="#an-alternative-approach">An Alternative Approach</a></li>
+<li><a href="#in-favour-of-approach-one">In Favour of Approach One</a></li>
+<li><a href="#in-favour-of-approach-two">In Favour of Approach Two</a></li>
+<li><a href="#the-decision-approach-one">The Decision: Approach One</a></li>
+</ul></li>
+</ul>
+</nav>
+  </nav>
+
+ 
+
+  <div>
+  
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    
+
+    
+    
+
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+      
+      <p>So, I think I mentioned this idea of &ldquo;blocks&rdquo; in my previous blog post but just in case, here&rsquo;s a primer:</p>
+
+<p>Blocks would differ from regular content files (which take a single HTML content field) by allowing numerous HTML content areas that can be reordered, and that can be any one of several block types either native to HugoModo or custom in your own theme or site. Block types like &ldquo;photo gallery&rdquo; and &ldquo;carousel&rdquo;. Using these, you could then build a page with numerous, highly stylised features instead of having to write heaps of custom HTML for the same result.</p>
+
+<p>Blocks are an idea at this stage, but HugoModo already has some similar features, with the footer in particular already supporting footer modules.</p>
+
+<p>All of that said, there is something that gets in the way of creating a totally unique page from scratch.</p>
+
+<h2 id="hugo-s-baseof-layout">Hugo&rsquo;s baseof Layout</h2>
+
+<p>The Hugo <code>baseof.html</code> file sits in the <code>_default</code> directory of layouts, and acts as the base for every other page.</p>
+
+<p>At present, HugoModo&rsquo;s baseof file looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Site.Language.Lang</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">itemscope</span> <span style="color:#a6e22e">itemtype</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://schema.org/WebPage&#34;</span>&gt;
+  <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+  &lt;<span style="color:#f92672">body</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hugoModule-body&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hugoModule-bodyWrapper&#34;</span>&gt;
+      <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+
+      <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">block</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+
+      <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+
+      <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;foot.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>Standard stuff there. You have the DOCTYPE declaration, then the typical HTML markup including <code>head</code> as a partial and the <code>body</code> comprised of a header, footer and main section. The <code>foot</code> mainly adds additional JavaScript for some features; it&rsquo;s not strictly layout, nor is it getting in the way of what we&rsquo;d like to achieve.</p>
+
+<p>It&rsquo;s the <code>header</code> and <code>footer</code> partials. They&rsquo;re the problem. Those partials contain the main title and navigation components that, yes, typically would feature on every page of a website&hellip; but that&rsquo;s an assumption. And actually both partials are somewhat opinionated, which limits HugoModo&rsquo;s utility for sites that want to stray even just slightly from the norm.</p>
+
+<p>We do, yes, still want to provide a default that sticks with the norm and is highly opinionated for the benefit of those users who want a quick start. But we do too want to allow far more flexibility.</p>
+
+<p>Preferably, then, header and footer would be moved into the <em>main</em> layouts, and our baseof would look a little more like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+  &lt;<span style="color:#f92672">body</span>&gt;
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">block</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;foot.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>Then, individual layouts could specify whether or not to include the header and footer - useful for designing big splash pages.</p>
+
+<h2 id="an-alternative-approach">An Alternative Approach</h2>
+
+<p>Okay, so call the above <em>approach one</em>. There is another way&hellip; I think. <a href="https://gohugo.io/templates/base/#base-template-lookup-order" title="Hugo's Base Template Lookup Order">Hugo&rsquo;s base template lookup order</a> searches first by <code>&lt;TYPE&gt;</code> then by <code>&lt;SECTION&gt;</code> for a base template&hellip;</p>
+
+<p>With <em>approach one</em>, above, layout would be definable by means of a <code>layout</code> attribute in a page&rsquo;s frontmatter. Sections and types are different things&hellip;</p>
+
+<p>Sections I know well enough are defined by a content file&rsquo;s location in the directory structure. A page at <code>content/blog/my-first-post.md</code> for example would be considered as being in the <em>blog</em> section.</p>
+
+<p>Type&hellip; I think I&rsquo;m less familiar with. Reading <a href="https://gohugo.io/content-management/types/" title="Hugo's Content Types">the docs</a> it looks like by default, <em>section</em> and <em>type</em> are one and the same, but <code>type</code> is provided as a means to override this, meaning that a content file in the <code>blog</code> directory could be given the type <code>blogpost</code> instead, or even <code>photograph</code> or <code>academicpost</code>. Certainly handy for altering the output of individual pages&hellip; maybe also how they present on list pages, but will have to look into that.</p>
+
+<p>So I could conceivably present alternative <code>baseof</code> files for a <code>blocks</code> type and a <code>blank</code> type and a <code>default</code> type, rendering HugoModo layouts selectable by this attribute.</p>
+
+<p>But is it right?</p>
+
+<p><code>layout</code> or <code>type</code>&hellip; those are my options, where layout is <em>approach one</em> and type we&rsquo;ll call <em>approach two</em>.</p>
+
+<h2 id="in-favour-of-approach-one">In Favour of Approach One</h2>
+
+<p>I think this best represents, semantically, the behaviour we&rsquo;re aiming to achieve.</p>
+
+<p>The trouble is&hellip; we don&rsquo;t override baseof, which would mean that everything we put in the main block would render. This matters if and when additional section or type baseofs are added in a manner like <em>approach two</em>. It&rsquo;s a problem, but&hellip;</p>
+
+<p>We can make use of Hugo blocks other than <em>main</em>. The docs give an example where <a href="https://gohugo.io/templates/base/#define-the-base-template" title="Hugo Blocks Usage">both <em>main</em> and <em>footer</em> blocks are defined</a>.</p>
+
+<p>I don&rsquo;t think there&rsquo;s any major limiting factor here.</p>
+
+<h2 id="in-favour-of-approach-two">In Favour of Approach Two</h2>
+
+<p>With <em>approach two</em>, we&rsquo;d actually override the <code>baseof</code> file, which is beneficial as it would mean a default <code>baseof</code> file could remain in tact which presents an opinionated layout.</p>
+
+<p>As a second benefit, by targeting the <code>type</code> attribute, we&rsquo;d also have layouts that are overwritable per section. The lookup order goes a little something like this: <strong>First</strong>, <em>does a baseof exist for this section and type;</em> <strong>Second</strong>, <em>does a baseof exist for this type;</em> <strong>Third</strong>, <em>does a baseof exist for this section</em>. Which means that an end use could override the <em>type-based</em> layout completely, or for a certain section, and they could define their own for other sections.</p>
+
+<p><strong>But there&rsquo;s one major drawback&hellip;</strong> Because <code>type</code> is based on the <code>section</code> name, there&rsquo;s a chance that an end user would wind up using a custom type unexpectedly, as they create content in a certain directory or <em>section</em>. That&rsquo;s a big kicker&hellip;</p>
+
+<h2 id="the-decision-approach-one">The Decision: Approach One</h2>
+
+<p>Because of the major drawback to approach two, even though it did have more going for it on the whole, it looks like <em>Approach One</em> is the way to go. That&rsquo;s great, I preferred it semantically anyway&hellip; although I do wish it drilled a little deeper like <em>approach two</em> does.</p>
+
+<p>So a tentative example of a new default <code>baseof</code> would look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+  &lt;<span style="color:#f92672">body</span>&gt;
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">block</span> <span style="color:#e6db74">&#34;header&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">block</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">block</span> <span style="color:#e6db74">&#34;footer&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;foot.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">-}}</span>
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>The <code>header</code> and <code>footer</code> partials are replaced with blocks, to be defined in the layout. The layout would then provide the definitions for these blocks. And the definitions could be absent or black, in which case Hugo would fallback to the contents of the block as defined in <code>baseof</code> (empty in the above example).</p>
+
+<p>To my immediate knowledge, this won&rsquo;t present any conflicts as <em>approach two</em> inevitably would. And it offers us total control over page layouts as desired.</p>
+
+<p>I&rsquo;m going to start working on this this afternoon.</p>
+
+    
+  
+</div>
+ 
+
+  
+
+  
+    
+
+
+  <aside class="authors">
+    <header>
+      <h2>Author</h2>
+    </header>
+    
+      
+      
+      
+        <article class="author">
+  
+
+
+
+  
+  
+    <figure>
+      <a href="https://hugomodo.github.io/authors/thom-bruce/">
+        <img src="/uploads/thombruce.jpg" alt="Thom Bruce author image"/>
+      </a>
+    </figure>
+  
+  <header>
+    <h4>
+      <a href="https://hugomodo.github.io/authors/thom-bruce/">
+        Thom Bruce
+      </a>
+    </h4>
+  </header>
+  <div class="bio">
+    
+      <p>Author, coder.</p>
+    
+  </div>
+  
+  <address>
+    <dl>
+      
+        <dt>Email</dt>
+        <dd><a href="mailto:thom@thombruce.com">thom@thombruce.com</a></dd>
+      
+      
+  
+    <dt>Website</dt>
+    <dd><a href="https://thombruce.com/">https://thombruce.com/</a></dd>
+  
+  
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/thombruce">thombruce</a></dd>
+  
+  
+    <dt>Facebook</dt>
+    <dd><a href="https://facebook.com/thombruce">thombruce</a></dd>
+  
+  
+    <dt>Twitter</dt>
+    <dd><a href="https://twitter.com/thombruce">thombruce</a></dd>
+  
+  
+  
+    <dt>LinkedIn</dt>
+    <dd><a href="https://linkedin.com/in/thombruce">thombruce</a></dd>
+  
+  
+
+
+    </dl>
+  </address>
+
+
+
+
+</article>
+
+      
+    
+  </aside>
+
+ 
+  
+
+  
+
+ 
+
+  
+<section id="hugoModule-articleComments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugomodo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+ 
+</article>
+
+  </main>
+<footer id="hugoModule-siteFooter">
+  <div id="hugoModule-siteFooterWrapper">
+    
+      <section id="hugoModule-siteFooterAboutSection"><h2>About HugoModo</h2>
+
+
+  <p>A modular Hugo framework.</p>
+
+
+
+  
+  
+  <address>
+    <dl>
+      
+      
+  
+  
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/hugomodo">hugomodo</a></dd>
+  
+  
+  
+  
+  
+  
+
+
+    </dl>
+  </address>
+
+
+
+</section>
+    
+
+    <section id="hugoModule-siteFooterNavSection"><h2>Sitemap</h2>
+
+
+
+  <nav id="hugoModule-siteFooterNav">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+        <li>
+          <a href="/blog/" title="Blog">Blog</a>
+        </li>
+      
+        <li>
+          <a href="/docs/" title="Docs">Docs</a>
+        </li>
+      
+        <li>
+          <a href="/extensions/" title="Extensions">Extensions</a>
+        </li>
+      
+        <li>
+          <a href="/themes/" title="Themes">Themes</a>
+        </li>
+      
+      
+        
+          <li>
+            <a href="https://hugomodo.github.io/search/" title="Search">Search</a>
+          </li>
+        
+      
+      
+        
+          <li>
+            <a href="/authors" title="Authors">Authors</a>
+          </li>
+        
+      
+        
+      
+        
+      
+        
+          <li>
+            <a href="/tags" title="Tags">Tags</a>
+          </li>
+        
+      
+      <li>
+        <a title="Subscribe" aria-label="Subscribe" href="/index.xml">
+          RSS Feed
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</section>
+
+    
+
+
+
+
+
+
+
+
+    <aside id="hugoModule-siteFooterCopyright">
+      <p>
+  &copy; 2019 HugoModo.
+  Built with <a href='https://hugomodo.github.io/' target='_blank'>HugoModo</a>.
+</p>
+
+    </aside>
+  </div>
+</footer>
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  <div id="contrast">
+  Add more contrast
+</div>
+
+<div id="invmode">
+  Inverted mode
+</div>
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+
+  
+    
+    <script src="https://hugomodo.github.io/js/global.min.494e0881545277f777c381c4cf4cfbafccb98c85333d9d9b808240903dcac63c.js" integrity="sha256-SU4IgVRSd/d3w4HEz0z7r8y5jIUzPZ2bgIJAkD3Kxjw=" crossorigin="anonymous"></script>
+  
+
+
+
+
+</div>
+  </body>
+</html>

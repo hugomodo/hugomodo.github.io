@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Rethinking baseof and Partials with HugoModo Blocks</title>
+      <link>https://hugomodo.github.io/blog/rethinking-baseof-and-partials-with-hugomodo-blocks/</link>
+      <pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugomodo.github.io/blog/rethinking-baseof-and-partials-with-hugomodo-blocks/</guid>
+      <description>So, I think I mentioned this idea of &amp;ldquo;blocks&amp;rdquo; in my previous blog post but just in case, here&amp;rsquo;s a primer:
+Blocks would differ from regular content files (which take a single HTML content field) by allowing numerous HTML content areas that can be reordered, and that can be any one of several block types either native to HugoModo or custom in your own theme or site. Block types like &amp;ldquo;photo gallery&amp;rdquo; and &amp;ldquo;carousel&amp;rdquo;.</description>
+    </item>
+    
+    <item>
       <title>Choosing a Style Framework</title>
       <link>https://hugomodo.github.io/blog/choosing-a-style-framework/</link>
       <pubDate>Sat, 16 Feb 2019 00:00:00 +0000</pubDate>
