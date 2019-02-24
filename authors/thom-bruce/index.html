@@ -60,7 +60,7 @@
 
   
     
-    <link rel="stylesheet" type="text/css" href="/css/style.min.7bcf70efe123e59b8eca3f268e1203e293ac8c371c18298dbc943277388a60ee.css" integrity="sha256-e89w7&#43;Ej5ZuOyj8mjhID4pOsjDccGCmNvJQydziKYO4=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.min.8a805e3e85e1f7e5f831c3aa2503dc9fa3eda89ef76ab3ddea3577b1e6e55413.css" integrity="sha256-ioBePoXh9&#43;X4McOqJQPcn6PtqJ73arPd6jV3seblVBM=" crossorigin="anonymous">
   
 
 
@@ -129,6 +129,47 @@
 
 
   
+  <script>
+  
+  function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+</script>
+
+<script>
+  if (getCookie('invmode') === "true") {
+    var el = document.getElementsByTagName("html")[0];
+
+    el.classList['add']('inverted');
+  }
+
+  if (getCookie('contrast') === "true") {
+    var el = document.getElementsByTagName("html")[0];
+
+    el.classList['add']('contrast');
+  }
+</script>
+
+
+  
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
 <script>
@@ -176,9 +217,12 @@ if (!doNotTrack) {
 </head>
 <body id="hugoModule-body">
     <div id="hugoModule-bodyWrapper"><header id="hugoModule-siteHeader">
+  
   <strong id="hugoModule-siteTitle">
     <a title="HugoModo" href="/">HugoModo</a>
   </strong>
+
+
   
 
   
@@ -226,7 +270,70 @@ if (!doNotTrack) {
 </header>
 
   <main id="hugoModule-main">
-    <header id="hugoModule-mainHeader">
+    <article id="hugoModule-mainArticle" class="author">
+      
+
+
+
+  
+  
+    <figure>
+      
+        <img src="/uploads/thombruce.jpg" alt="Thom Bruce author image"/>
+      
+    </figure>
+  
+  <header>
+    <h2>
+      
+        Thom Bruce
+      
+    </h2>
+  </header>
+  <div class="bio">
+    
+      <p>Author, coder.</p>
+    
+  </div>
+  
+  <address>
+    <dl>
+      
+        <dt>Email</dt>
+        <dd><a href="mailto:thom@thombruce.com">thom@thombruce.com</a></dd>
+      
+      
+  
+    <dt>Website</dt>
+    <dd><a href="https://thombruce.com/">https://thombruce.com/</a></dd>
+  
+  
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/thombruce">thombruce</a></dd>
+  
+  
+    <dt>Facebook</dt>
+    <dd><a href="https://facebook.com/thombruce">thombruce</a></dd>
+  
+  
+    <dt>Twitter</dt>
+    <dd><a href="https://twitter.com/thombruce">thombruce</a></dd>
+  
+  
+  
+    <dt>LinkedIn</dt>
+    <dd><a href="https://linkedin.com/in/thombruce">thombruce</a></dd>
+  
+  
+
+
+    </dl>
+  </address>
+
+
+
+
+
       <aside id="hugoModule-breadcrumb">
   <nav class="hugoComponent-breadcrumbNav" aria-label="breadcrumb">
     <ul class="breadcrumbs">
@@ -270,72 +377,6 @@ if (!doNotTrack) {
 
 
 
-    </header>
-    <article id="hugoModule-mainArticle" class="author">
-      <div class="hugoComponent-authorWrapper">
-  
-  
-
-  
-    
-    
-      <figure>
-        
-          <img src="/uploads/thombruce.jpg" alt="Thom Bruce author image"/>
-        
-      </figure>
-    
-    <header>
-      <h2>
-        
-          Thom Bruce
-        
-      </h2>
-    </header>
-    <div class="bio">
-      
-        <p>Author, coder.</p>
-      
-    </div>
-    
-  <address>
-    <dl>
-      
-        <dt>Email</dt>
-        <dd><a href="mailto:thom@thombruce.com">thom@thombruce.com</a></dd>
-      
-      
-  
-    <dt>Website</dt>
-    <dd><a href="https://thombruce.com/">https://thombruce.com/</a></dd>
-  
-  
-    <dt>GitHub</dt>
-    <dd><a href="https://github.com/thombruce">thombruce</a></dd>
-  
-  
-    <dt>Facebook</dt>
-    <dd><a href="https://facebook.com/thombruce">thombruce</a></dd>
-  
-  
-    <dt>Twitter</dt>
-    <dd><a href="https://twitter.com/thombruce">thombruce</a></dd>
-  
-  
-  
-    <dt>LinkedIn</dt>
-    <dd><a href="https://linkedin.com/in/thombruce">thombruce</a></dd>
-  
-  
-
-
-    </dl>
-  </address>
-
-
-  
-</div>
-
 
       
       
@@ -349,17 +390,21 @@ if (!doNotTrack) {
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-02-16T00:00:00&#43;00:00" itemprop="datePublished">16 Feb 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-02-16T00:00:00&#43;00:00" itemprop="datePublished">16 Feb 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="5m">5 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="5m">5 minutes</time></dd>
+  </div>
 
 
 
@@ -370,18 +415,20 @@ if (!doNotTrack) {
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -426,17 +473,21 @@ Well, I&rsquo;ve been going about it all wrong. And now I&rsquo;m thinking we&rs
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-02-04T00:00:00&#43;00:00" itemprop="datePublished">04 Feb 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-02-04T00:00:00&#43;00:00" itemprop="datePublished">04 Feb 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="7m">7 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="7m">7 minutes</time></dd>
+  </div>
 
 
 
@@ -447,18 +498,20 @@ Well, I&rsquo;ve been going about it all wrong. And now I&rsquo;m thinking we&rs
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -502,17 +555,21 @@ Well, I&rsquo;ve been going about it all wrong. And now I&rsquo;m thinking we&rs
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-02-02T00:00:00&#43;00:00" itemprop="datePublished">02 Feb 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-02-02T00:00:00&#43;00:00" itemprop="datePublished">02 Feb 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="4m">4 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="4m">4 minutes</time></dd>
+  </div>
 
 
 
@@ -523,18 +580,20 @@ Well, I&rsquo;ve been going about it all wrong. And now I&rsquo;m thinking we&rs
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -579,17 +638,21 @@ The new version contains fixes for some issues I&rsquo;ve banged my head against
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-01-25T00:00:00&#43;00:00" itemprop="datePublished">25 Jan 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-01-25T00:00:00&#43;00:00" itemprop="datePublished">25 Jan 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="4m">4 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="4m">4 minutes</time></dd>
+  </div>
 
 
 
@@ -600,18 +663,20 @@ The new version contains fixes for some issues I&rsquo;ve banged my head against
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -656,17 +721,21 @@ The reason I thought it was going to be difficult is because I&rsquo;d previousl
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-01-21T00:00:00&#43;00:00" itemprop="datePublished">21 Jan 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-01-21T00:00:00&#43;00:00" itemprop="datePublished">21 Jan 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="11m">11 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="11m">11 minutes</time></dd>
+  </div>
 
 
 
@@ -677,18 +746,20 @@ The reason I thought it was going to be difficult is because I&rsquo;d previousl
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -732,17 +803,21 @@ The reason I thought it was going to be difficult is because I&rsquo;d previousl
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-01-09T00:00:00&#43;00:00" itemprop="datePublished">09 Jan 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-01-09T00:00:00&#43;00:00" itemprop="datePublished">09 Jan 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="6m">6 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="6m">6 minutes</time></dd>
+  </div>
 
 
 
@@ -753,18 +828,20 @@ The reason I thought it was going to be difficult is because I&rsquo;d previousl
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -808,17 +885,21 @@ The reason I thought it was going to be difficult is because I&rsquo;d previousl
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-01-07T00:00:00&#43;00:00" itemprop="datePublished">07 Jan 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-01-07T00:00:00&#43;00:00" itemprop="datePublished">07 Jan 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="5m">5 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="5m">5 minutes</time></dd>
+  </div>
 
 
 
@@ -829,18 +910,20 @@ The reason I thought it was going to be difficult is because I&rsquo;d previousl
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -885,17 +968,21 @@ I characterise HugoModo as a framework built around Hugo that provides an approa
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-01-04T00:00:00&#43;00:00" itemprop="datePublished">04 Jan 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-01-04T00:00:00&#43;00:00" itemprop="datePublished">04 Jan 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="3m">3 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="3m">3 minutes</time></dd>
+  </div>
 
 
 
@@ -906,18 +993,20 @@ I characterise HugoModo as a framework built around Hugo that provides an approa
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -1007,17 +1096,21 @@ So, how does search work? Classically, you&rsquo;d require a server. Your search
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-01-03T00:00:00&#43;00:00" itemprop="datePublished">03 Jan 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-01-03T00:00:00&#43;00:00" itemprop="datePublished">03 Jan 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="4m">4 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="4m">4 minutes</time></dd>
+  </div>
 
 
 
@@ -1028,18 +1121,20 @@ So, how does search work? Classically, you&rsquo;d require a server. Your search
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -1084,17 +1179,21 @@ A config setting may also be adjusted to have the extension interpret image mark
       </a>
     </h2>
   </header>
-  <footer>
+  <footer class="hugoComponent-articleMeta">
   <dl>
-    <dt>Published</dt>
-<dd><time datetime="2019-01-02T13:05:15&#43;00:00" itemprop="datePublished">02 Jan 2019</time></dd>
+    <div>
+  <dt>Published</dt>
+  <dd><time datetime="2019-01-02T13:05:15&#43;00:00" itemprop="datePublished">02 Jan 2019</time></dd>
+</div>
 
 
     
 
     
-  <dt>Reading time</dt>
-  <dd><time datetime="3m">3 minutes</time></dd>
+  <div>
+    <dt>Reading time</dt>
+    <dd><time datetime="3m">3 minutes</time></dd>
+  </div>
 
 
 
@@ -1105,18 +1204,20 @@ A config setting may also be adjusted to have the extension interpret image mark
    
   
   
-    <dt>Authors</dt>
-    
+    <div>
+      <dt>Authors</dt>
       
+        
+        
+        
+          <dd>
+            <a href="/authors/thom-bruce">
+              Thom Bruce
+            </a>
+          </dd>
+        
       
-      
-        <dd>
-          <a href="/authors/thom-bruce">
-            Thom Bruce
-          </a>
-        </dd>
-      
-    
+    </div>
   
 
    
@@ -1151,8 +1252,7 @@ A config setting may also be adjusted to have the extension interpret image mark
 
       
 
-      <footer id="hugoModule-mainArticleFooter">
-        <aside id="hugoModule-pagination">
+      <aside id="hugoModule-pagination">
   <nav>
     
 
@@ -1202,7 +1302,6 @@ A config setting may also be adjusted to have the extension interpret image mark
   </nav>
 </aside>
 
-      </footer>
     </article>
   </main>
 <footer id="hugoModule-siteFooter">
@@ -1400,7 +1499,7 @@ A config setting may also be adjusted to have the extension interpret image mark
 
   
     
-    <script src="https://hugomodo.github.io/js/global.min.a0eb8d3d97ebd9f8dc07d64b140c5820c24085a8df9d53ab1b2faf15d64436ca.js" integrity="sha256-oOuNPZfr2fjcB9ZLFAxYIMJAhajfnVOrGy&#43;vFdZENso=" crossorigin="anonymous"></script>
+    <script src="https://hugomodo.github.io/js/global.min.494e0881545277f777c381c4cf4cfbafccb98c85333d9d9b808240903dcac63c.js" integrity="sha256-SU4IgVRSd/d3w4HEz0z7r8y5jIUzPZ2bgIJAkD3Kxjw=" crossorigin="anonymous"></script>
   
 
 
